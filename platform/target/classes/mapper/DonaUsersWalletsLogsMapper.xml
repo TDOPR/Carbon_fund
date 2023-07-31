@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.summer.mapper.DonaUsersWalletsLogsMapper">
+
+    <update id="lockUpdateAddWallet">
+        update
+            wallets
+        set walletAmount=walletAmount + #{amount}
+        where userId = #{userId}
+    </update>
+
+
+    <update id="lockUpdateAddIntegralWallet">
+        update
+            dona_users_wallets
+        set integralWalletAmount=integralWalletAmount + #{amount}
+        where userId = #{userId}
+    </update>
+
+    <update id="lockUpdateReduceWallet">
+        update
+            wallets
+        set walletAmount=walletAmount - #{amount}
+        where userId = #{userId}
+    </update>
+
+    <update id="frozenAmount">
+        update
+            wallets
+        set usdWalletAmount=usdWalletAmount - #{amount},
+            frozenAmount=frozenAmount + #{amount}
+        where userId = #{userId}
+    </update>
+
+    <update id="unFrozenAmount">
+        update
+            wallets
+        set usdWalletAmount=usdWalletAmount + #{amount},
+            frozenAmount=frozenAmount - #{amount}
+        where userId = #{userId}
+    </update>
+
+    <update id="reduceFrozenAmount">
+        update
+            wallets
+        set frozenAmount=frozenAmount - #{amount}
+        where userId = #{userId}
+    </update>
+
+    <update id="lockUpdateAddUsdWallet">
+        update
+            wallets
+        set usdWalletAmount=usdWalletAmount + #{amount}
+        where userId = #{userId}
+    </update>
+
+    <update id="lockUpdateReduceUsdWallet">
+        update
+            wallets
+        set usdWalletAmount=usdWalletAmount - #{amount}
+        where userId = #{userId}
+    </update>
+
+    <update id="buyTaskNumPackage">
+        update
+            wallets
+        set usdWalletAmount=usdWalletAmount - #{amount},
+            totalTaskNum=totalTaskNum + #{num},
+            hasTaskNum=hasTaskNum + #{num}
+        where userId = #{userId}
+    </update>
+
+    <update id="reduceHasTaskNum">
+        update
+            wallets
+        set hasTaskNum=hasTaskNum - #{num}
+        where userId = #{userId}
+    </update>
+
+    <update id="tttConversionUsd">
+        update
+            wallets
+        set usdWalletAmount=usdWalletAmount + #{usdAmount},
+            walletAmount   = walletAmount - #{tttAmount}
+        where userId = #{userId}
+    </update>
+
+    <select id="selectUserWalletsDTOListByUserLevelGtAndPrincipalAmountGe"
+            resultType="com.summer.model.dto.UserWalletsDTO">
+        select w.walletAmount,
+               w.userId,
+               u.level
+        from wallets w
+                 left join
+             app_users u
+             on w.userId = u.id
+        where u.level >= #{level}
+    </select>
+
+    <select id="findHoldingCoinUserInfo" resultType="com.summer.model.dto.AppUsersAmountDTO">
+        select w.walletAmount totalAmount,
+               w.userId,
+               u.level
+        from wallets w
+                 left join
+             app_users u
+             ON w.userId = u.id
+        where u.valid = 1
+          and w.walletAmount > 0
+    </select>
+
+    <select id="sumUsdAmount" resultType="java.math.BigDecimal">
+        select sum(usdWalletAmount)
+        from wallets
+    </select>
+
+    <select id="donaUsersLevel" resultType="com.summer.model.dto.MedalDTO">
+        select a.donaLevel
+        from dona_users_wallets_logs a
+        left join
+            medal b
+        a.donaLevel = b.id
+        where a.type = 2
+          and a.userId = #{userId}
+    </select>
+
+    <select id="donaUsersMedalDTO" resultType="com.summer.model.dto.MedalDTO">
+        select b.id, b.title, b.description, b.imgUrl, b.certificate, b.amount, b.status
+        from dona_users_wallets_logs a
+                 left join
+             medal b
+             on
+
+                 a.donaLevel = b.id
+        where a.type = 2
+          and a.userId = #{userId}
+        GROUP BY
+            b.id
+    </select>
+
+    <select id="selectWalletsLogsRecord" resultType="com.summer.model.dto.WalletRecordInfoDTO">
+        select a.typeZh,
+        a.amount,
+        a.createTime
+        from dona_users_wallets_logs a
+        where type in
+        <foreach collection="typeList" item="type" separator="," open="(" close=")">
+            #{type}
+        </foreach>
+        and a.userId = #{userId}
+    </select>
+
+    <select id="sumTttAmount" resultType="java.math.BigDecimal">
+        select sum(walletAmount)
+        from wallets
+    </select>
+
+    <select id="buyLevel" resultType="com.summer.model.dto.MedalDTO">
+        select a.donaLevel, b.title, b.description, b.certificate, b.imgUrl
+        from dona_users_wallets_logs a
+                 left join
+             medal b
+             on
+                 a.donaLevel = b.id
+        where a.type = 2
+          and a.userId = {#userId}
+        group by a.buyLevel
+    </select>
+
+    <select id="medalInfo" resultType="com.summer.model.dto.MedalDTO">
+        select *
+        from medal
+    </select>
+
+
+</mapper>

@@ -1,0 +1,1225 @@
+2023-07-26 01:00:00 [scheduling-1] - -------------执行清理过期文件任务--------------
+2023-07-26 01:00:00 [scheduling-1] - -------------执行清理过期文件任务--------------
+2023-07-26 10:23:21 [http-nio-8989-exec-1] - 发送成功!
+2023-07-26 10:23:21 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"127.0.0.1","requestParams":{"type":1,"email":"zbowen856@gmail.com"},"result":{"code":200,"data":{"uuid":"f312a74c22934d1597c0aa9f974e8b31"},"msg":"ok"},"timeCost":1335,"url":"http://localhost:8989/sendCaptchaToEmail/zbowen856@gmail.com/1"}
+2023-07-26 10:28:06 [http-nio-8989-exec-2] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"73435","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"f312a74c22934d1597c0aa9f974e8b31"}},"result":{"code":500,"msg":"return.code_expire"},"timeCost":89,"url":"http://localhost:8989/home/register"}
+2023-07-26 10:29:04 [http-nio-8989-exec-4] - 发送成功!
+2023-07-26 10:29:04 [http-nio-8989-exec-4] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"127.0.0.1","requestParams":{"type":1,"email":"zbowen856@gmail.com"},"result":{"code":200,"data":{"uuid":"d1b03c9b4f024111bd156805f1ac2ee4"},"msg":"ok"},"timeCost":747,"url":"http://localhost:8989/sendCaptchaToEmail/zbowen856@gmail.com/1"}
+2023-07-26 10:29:20 [http-nio-8989-exec-6] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"59115","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"d1b03c9b4f024111bd156805f1ac2ee4"}},"timeCost":117,"url":"http://localhost:8989/home/register"}
+2023-07-26 10:29:41 [http-nio-8989-exec-8] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"59115","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"d1b03c9b4f024111bd156805f1ac2ee4"}},"timeCost":18,"url":"http://localhost:8989/home/register"}
+2023-07-26 10:31:06 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 10:31:06 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 10:33:16 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 51788 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 10:33:16 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 10:33:16 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 10:33:17 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 10:33:17 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 10:33:17 [main] - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-07-26 10:33:17 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 10:33:17 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@61f6d381' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 10:33:17 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 10:33:18 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 10:33:18 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 10:33:18 [main] - Starting service [Tomcat]
+2023-07-26 10:33:18 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 10:33:18 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 10:33:18 [main] - Root WebApplicationContext: initialization completed in 2019 ms
+2023-07-26 10:33:18 [main] - Init DruidDataSource
+2023-07-26 10:33:19 [main] - {dataSource-1} inited
+2023-07-26 10:33:21 [main] - Redisson 3.17.6
+2023-07-26 10:33:22 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 10:33:22 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 10:33:23 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 10:33:24 [main] - 根据注解获取需要忽略认证的耗时：8ms
+2023-07-26 10:33:24 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 10:33:24 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/proxylogin","/user/login"]
+2023-07-26 10:33:24 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*"]
+2023-07-26 10:33:24 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 10:33:25 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 10:33:25 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60b721c9, org.springframework.security.web.context.SecurityContextPersistenceFilter@f53db1a, org.springframework.security.web.header.HeaderWriterFilter@3bbab2c9, org.springframework.web.filter.CorsFilter@4f2ab774, org.springframework.security.web.authentication.logout.LogoutFilter@219bad15, com.summer.security.JwtAuthenticationTokenFilter@176e839e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52811dc1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@22cbbe87, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f57ced1, org.springframework.security.web.session.SessionManagementFilter@34fde3a3, org.springframework.security.web.access.ExceptionTranslationFilter@3a3f1703, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65c75870]
+2023-07-26 10:33:26 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 10:33:26 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 10:33:26 [main] - Started PlatformApplication in 10.124 seconds (JVM running for 10.778)
+2023-07-26 10:33:26 [RMI TCP Connection(4)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 10:33:26 [RMI TCP Connection(4)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 10:33:26 [RMI TCP Connection(4)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 10:33:38 [http-nio-8989-exec-1] - 发送成功!
+2023-07-26 10:33:38 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"127.0.0.1","requestParams":{"type":1,"email":"zbowen856@gmail.com"},"result":{"code":200,"data":{"uuid":"ba8920b616d84abf8043f19c8b561ff2"},"msg":"ok"},"timeCost":742,"url":"http://localhost:8989/sendCaptchaToEmail/zbowen856@gmail.com/1"}
+2023-07-26 10:34:02 [http-nio-8989-exec-2] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"40132","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"ba8920b616d84abf8043f19c8b561ff2"}},"timeCost":78,"url":"http://localhost:8989/home/register"}
+2023-07-26 10:38:26 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 10:38:26 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 10:41:47 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 46124 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 10:41:47 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 10:41:47 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 10:41:48 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 10:41:48 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 10:41:48 [main] - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2023-07-26 10:41:48 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 10:41:48 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@39e69ea7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 10:41:48 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 10:41:48 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 10:41:48 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 10:41:48 [main] - Starting service [Tomcat]
+2023-07-26 10:41:48 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 10:41:48 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 10:41:48 [main] - Root WebApplicationContext: initialization completed in 1682 ms
+2023-07-26 10:41:49 [main] - Init DruidDataSource
+2023-07-26 10:41:50 [main] - {dataSource-1} inited
+2023-07-26 10:41:52 [main] - Redisson 3.17.6
+2023-07-26 10:41:53 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 10:41:53 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 10:41:54 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 10:41:54 [main] - 根据注解获取需要忽略认证的耗时：8ms
+2023-07-26 10:41:54 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 10:41:54 [main] - 忽略认证的Post接口名称=["/user/login","/user/proxylogin","/user/getGoogleQRCode"]
+2023-07-26 10:41:54 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*"]
+2023-07-26 10:41:55 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 10:41:55 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 10:41:55 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79dcd7f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f289126, org.springframework.security.web.header.HeaderWriterFilter@3f4fd0dc, org.springframework.web.filter.CorsFilter@485902cd, org.springframework.security.web.authentication.logout.LogoutFilter@445adbd7, com.summer.security.JwtAuthenticationTokenFilter@53564a4c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@162c89ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@306a9cd8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75abbb61, org.springframework.security.web.session.SessionManagementFilter@f53db1a, org.springframework.security.web.access.ExceptionTranslationFilter@74832504, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e78213c]
+2023-07-26 10:41:56 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 10:41:56 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 10:41:56 [main] - Started PlatformApplication in 9.595 seconds (JVM running for 10.275)
+2023-07-26 10:41:56 [RMI TCP Connection(6)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 10:41:56 [RMI TCP Connection(6)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 10:41:56 [RMI TCP Connection(6)-192.168.2.116] - Completed initialization in 2 ms
+2023-07-26 10:42:07 [http-nio-8989-exec-1] - 发送成功!
+2023-07-26 10:42:07 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"127.0.0.1","requestParams":{"type":1,"email":"zbowen856@gmail.com"},"result":{"code":200,"data":{"uuid":"ea21602ab198441fa8935b3fb4d643d0"},"msg":"ok"},"timeCost":700,"url":"http://localhost:8989/sendCaptchaToEmail/zbowen856@gmail.com/1"}
+2023-07-26 10:42:30 [http-nio-8989-exec-2] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"66968","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"ea21602ab198441fa8935b3fb4d643d0"}},"timeCost":77,"url":"http://localhost:8989/home/register"}
+2023-07-26 10:51:21 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 10:51:21 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 10:53:14 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 41016 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 10:53:14 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 10:53:14 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 10:53:15 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 10:53:15 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 10:53:15 [main] - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2023-07-26 10:53:15 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 10:53:15 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@39e69ea7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 10:53:15 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 10:53:16 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 10:53:16 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 10:53:16 [main] - Starting service [Tomcat]
+2023-07-26 10:53:16 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 10:53:16 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 10:53:16 [main] - Root WebApplicationContext: initialization completed in 1941 ms
+2023-07-26 10:53:16 [main] - Init DruidDataSource
+2023-07-26 10:53:17 [main] - {dataSource-1} inited
+2023-07-26 10:53:19 [main] - Redisson 3.17.6
+2023-07-26 10:53:20 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 10:53:20 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 10:53:21 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 10:53:22 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 10:53:22 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 10:53:22 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/proxylogin","/user/login"]
+2023-07-26 10:53:22 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*"]
+2023-07-26 10:53:22 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 10:53:22 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 10:53:22 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d2ec8b2, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f289126, org.springframework.security.web.header.HeaderWriterFilter@3f4fd0dc, org.springframework.web.filter.CorsFilter@43905ade, org.springframework.security.web.authentication.logout.LogoutFilter@445adbd7, com.summer.security.JwtAuthenticationTokenFilter@53564a4c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@162c89ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@306a9cd8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@502326b3, org.springframework.security.web.session.SessionManagementFilter@f53db1a, org.springframework.security.web.access.ExceptionTranslationFilter@74832504, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5f0bcadb]
+2023-07-26 10:53:23 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 10:53:23 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 10:53:23 [main] - Started PlatformApplication in 9.868 seconds (JVM running for 10.444)
+2023-07-26 10:53:24 [RMI TCP Connection(3)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 10:53:24 [RMI TCP Connection(3)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 10:53:24 [RMI TCP Connection(3)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 10:53:31 [http-nio-8989-exec-1] - 发送成功!
+2023-07-26 10:53:31 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"127.0.0.1","requestParams":{"type":1,"email":"zbowen856@gmail.com"},"result":{"code":200,"data":{"uuid":"4494ae0cbdb04bd780437e13dc1baf3f"},"msg":"ok"},"timeCost":1047,"url":"http://localhost:8989/sendCaptchaToEmail/zbowen856@gmail.com/1"}
+2023-07-26 10:53:49 [http-nio-8989-exec-2] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"39408","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"4494ae0cbdb04bd780437e13dc1baf3f"}},"timeCost":82,"url":"http://localhost:8989/home/register"}
+2023-07-26 10:56:29 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 10:56:29 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 10:56:37 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 31224 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 10:56:37 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 10:56:37 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 10:56:38 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 10:56:38 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 10:56:38 [main] - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2023-07-26 10:56:38 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 10:56:38 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@672a1c62' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 10:56:38 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 10:56:38 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 10:56:38 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 10:56:38 [main] - Starting service [Tomcat]
+2023-07-26 10:56:38 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 10:56:39 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 10:56:39 [main] - Root WebApplicationContext: initialization completed in 1731 ms
+2023-07-26 10:56:39 [main] - Init DruidDataSource
+2023-07-26 10:56:40 [main] - {dataSource-1} inited
+2023-07-26 10:56:42 [main] - Redisson 3.17.6
+2023-07-26 10:56:43 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 10:56:43 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 10:56:44 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 10:56:44 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 10:56:45 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 10:56:45 [main] - 忽略认证的Post接口名称=["/user/proxylogin","/user/getGoogleQRCode","/user/login"]
+2023-07-26 10:56:45 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*"]
+2023-07-26 10:56:45 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 10:56:45 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 10:56:45 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e23e1ef, org.springframework.security.web.context.SecurityContextPersistenceFilter@4a723adf, org.springframework.security.web.header.HeaderWriterFilter@6860c000, org.springframework.web.filter.CorsFilter@79dcd7f1, org.springframework.security.web.authentication.logout.LogoutFilter@537fb7bf, com.summer.security.JwtAuthenticationTokenFilter@1734b1a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77c7d3f4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41413c5a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@485902cd, org.springframework.security.web.session.SessionManagementFilter@4b37b01e, org.springframework.security.web.access.ExceptionTranslationFilter@331fe6d4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c66be14]
+2023-07-26 10:56:46 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 10:56:46 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 10:56:46 [main] - Started PlatformApplication in 9.964 seconds (JVM running for 10.703)
+2023-07-26 10:56:47 [RMI TCP Connection(4)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 10:56:47 [RMI TCP Connection(4)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 10:56:47 [RMI TCP Connection(4)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 10:56:57 [http-nio-8989-exec-1] - 发送成功!
+2023-07-26 10:56:57 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"127.0.0.1","requestParams":{"type":1,"email":"zbowen856@gmail.com"},"result":{"code":200,"data":{"uuid":"39293d30e0f9460287a669709af156af"},"msg":"ok"},"timeCost":688,"url":"http://localhost:8989/sendCaptchaToEmail/zbowen856@gmail.com/1"}
+2023-07-26 10:57:36 [http-nio-8989-exec-2] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"39408","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"39293d30e0f9460287a669709af156af"}},"result":{"code":500,"msg":"return.code_error"},"timeCost":26,"url":"http://localhost:8989/home/register"}
+2023-07-26 10:57:48 [http-nio-8989-exec-4] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"88611","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"39293d30e0f9460287a669709af156af"}},"timeCost":68,"url":"http://localhost:8989/home/register"}
+2023-07-26 11:00:56 [http-nio-8989-exec-6] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"88611","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"39293d30e0f9460287a669709af156af"}},"result":{"code":500,"msg":"return.code_expire"},"timeCost":24,"url":"http://localhost:8989/home/register"}
+2023-07-26 11:01:06 [http-nio-8989-exec-8] - 发送成功!
+2023-07-26 11:01:06 [http-nio-8989-exec-8] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"127.0.0.1","requestParams":{"type":1,"email":"zbowen856@gmail.com"},"result":{"code":200,"data":{"uuid":"352d9be0d6de4c4d8f3d968a90e1bc7f"},"msg":"ok"},"timeCost":1327,"url":"http://localhost:8989/sendCaptchaToEmail/zbowen856@gmail.com/1"}
+2023-07-26 11:01:22 [http-nio-8989-exec-10] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"52453","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"352d9be0d6de4c4d8f3d968a90e1bc7f"}},"timeCost":13,"url":"http://localhost:8989/home/register"}
+2023-07-26 11:08:24 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 11:08:24 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 11:08:32 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 30140 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 11:08:32 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 11:08:32 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 11:08:33 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 11:08:33 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 11:08:33 [main] - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-07-26 11:08:33 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 11:08:34 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@39e69ea7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 11:08:34 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 11:08:34 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 11:08:34 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 11:08:34 [main] - Starting service [Tomcat]
+2023-07-26 11:08:34 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 11:08:34 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 11:08:34 [main] - Root WebApplicationContext: initialization completed in 1821 ms
+2023-07-26 11:08:35 [main] - Init DruidDataSource
+2023-07-26 11:08:36 [main] - {dataSource-1} inited
+2023-07-26 11:08:39 [main] - Redisson 3.17.6
+2023-07-26 11:08:39 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 11:08:39 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 11:08:41 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 11:08:42 [main] - 根据注解获取需要忽略认证的耗时：13ms
+2023-07-26 11:08:42 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 11:08:42 [main] - 忽略认证的Post接口名称=["/user/proxylogin","/user/getGoogleQRCode","/user/login"]
+2023-07-26 11:08:42 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*"]
+2023-07-26 11:08:42 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 11:08:43 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 11:08:43 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25d73ca6, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f289126, org.springframework.security.web.header.HeaderWriterFilter@3f4fd0dc, org.springframework.web.filter.CorsFilter@7902b006, org.springframework.security.web.authentication.logout.LogoutFilter@445adbd7, com.summer.security.JwtAuthenticationTokenFilter@53564a4c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@162c89ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@306a9cd8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ee63d9, org.springframework.security.web.session.SessionManagementFilter@f53db1a, org.springframework.security.web.access.ExceptionTranslationFilter@74832504, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4afb2c90]
+2023-07-26 11:08:45 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 11:08:45 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 11:08:45 [main] - Started PlatformApplication in 12.47 seconds (JVM running for 13.127)
+2023-07-26 11:08:45 [RMI TCP Connection(7)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 11:08:45 [RMI TCP Connection(7)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 11:08:45 [RMI TCP Connection(7)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 11:08:50 [http-nio-8989-exec-1] - 发送成功!
+2023-07-26 11:08:50 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"127.0.0.1","requestParams":{"type":1,"email":"zbowen856@gmail.com"},"result":{"code":200,"data":{"uuid":"875bf6f2fbfc43cb8504c3cfe029dddf"},"msg":"ok"},"timeCost":839,"url":"http://localhost:8989/sendCaptchaToEmail/zbowen856@gmail.com/1"}
+2023-07-26 11:09:04 [http-nio-8989-exec-2] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"96796","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"875bf6f2fbfc43cb8504c3cfe029dddf"}},"timeCost":73,"url":"http://localhost:8989/home/register"}
+2023-07-26 11:12:37 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 11:12:37 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 11:12:43 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 11:12:43 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 50632 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 11:12:43 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 11:12:44 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 11:12:44 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 11:12:44 [main] - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2023-07-26 11:12:44 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 11:12:44 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@61f6d381' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 11:12:44 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 11:12:45 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 11:12:45 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 11:12:45 [main] - Starting service [Tomcat]
+2023-07-26 11:12:45 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 11:12:45 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 11:12:45 [main] - Root WebApplicationContext: initialization completed in 1796 ms
+2023-07-26 11:12:45 [main] - Init DruidDataSource
+2023-07-26 11:12:46 [main] - {dataSource-1} inited
+2023-07-26 11:12:48 [main] - Redisson 3.17.6
+2023-07-26 11:12:49 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 11:12:49 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 11:12:50 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 11:12:50 [main] - 根据注解获取需要忽略认证的耗时：8ms
+2023-07-26 11:12:51 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 11:12:51 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login","/user/proxylogin"]
+2023-07-26 11:12:51 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*"]
+2023-07-26 11:12:51 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 11:12:51 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 11:12:51 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@60b721c9, org.springframework.security.web.context.SecurityContextPersistenceFilter@441798ce, org.springframework.security.web.header.HeaderWriterFilter@453961d7, org.springframework.web.filter.CorsFilter@4f2ab774, org.springframework.security.web.authentication.logout.LogoutFilter@1f8e1096, com.summer.security.JwtAuthenticationTokenFilter@7c8f803d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b4cce5a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@79ef8115, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f57ced1, org.springframework.security.web.session.SessionManagementFilter@59d8a968, org.springframework.security.web.access.ExceptionTranslationFilter@461e479c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65c75870]
+2023-07-26 11:12:52 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 11:12:52 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 11:12:52 [main] - Started PlatformApplication in 9.691 seconds (JVM running for 10.391)
+2023-07-26 11:12:53 [RMI TCP Connection(5)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 11:12:53 [RMI TCP Connection(5)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 11:12:53 [RMI TCP Connection(5)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 11:13:01 [http-nio-8989-exec-1] - 发送成功!
+2023-07-26 11:13:01 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"127.0.0.1","requestParams":{"type":1,"email":"zbowen856@gmail.com"},"result":{"code":200,"data":{"uuid":"1a5441236098452f894b7858ca98d491"},"msg":"ok"},"timeCost":715,"url":"http://localhost:8989/sendCaptchaToEmail/zbowen856@gmail.com/1"}
+2023-07-26 11:13:16 [http-nio-8989-exec-3] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"60759","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"1a5441236098452f894b7858ca98d491"}},"timeCost":74,"url":"http://localhost:8989/home/register"}
+2023-07-26 11:16:09 [http-nio-8989-exec-5] - 发送成功!
+2023-07-26 11:16:09 [http-nio-8989-exec-5] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"127.0.0.1","requestParams":{"type":1,"email":"zbowen856@gmail.com"},"result":{"code":200,"data":{"uuid":"7e711753e1b94d8fb0319fc2515647d4"},"msg":"ok"},"timeCost":688,"url":"http://localhost:8989/sendCaptchaToEmail/zbowen856@gmail.com/1"}
+2023-07-26 11:16:21 [http-nio-8989-exec-7] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"56146","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"7e711753e1b94d8fb0319fc2515647d4"}},"timeCost":76,"url":"http://localhost:8989/home/register"}
+2023-07-26 11:17:48 [http-nio-8989-exec-9] - 发送成功!
+2023-07-26 11:17:48 [http-nio-8989-exec-9] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"127.0.0.1","requestParams":{"type":1,"email":"zbowen856@gmail.com"},"result":{"code":200,"data":{"uuid":"5a22c7536d094cd183c19389b9240f48"},"msg":"ok"},"timeCost":571,"url":"http://localhost:8989/sendCaptchaToEmail/zbowen856@gmail.com/1"}
+2023-07-26 11:18:05 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"35763","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"5a22c7536d094cd183c19389b9240f48"}},"timeCost":20,"url":"http://localhost:8989/home/register"}
+2023-07-26 11:19:08 [http-nio-8989-exec-3] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"35763","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"5a22c7536d094cd183c19389b9240f48"}},"timeCost":16,"url":"http://localhost:8989/home/register"}
+2023-07-26 11:20:03 [http-nio-8989-exec-5] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"35763","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"5a22c7536d094cd183c19389b9240f48"}},"timeCost":20,"url":"http://localhost:8989/home/register"}
+2023-07-26 11:20:17 [http-nio-8989-exec-7] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"35763","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"5a22c7536d094cd183c19389b9240f48"}},"timeCost":209,"url":"http://localhost:8989/home/register"}
+2023-07-26 11:21:06 [http-nio-8989-exec-9] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"35763","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"5a22c7536d094cd183c19389b9240f48"}},"result":{"code":500,"msg":"return.code_expire"},"timeCost":6,"url":"http://localhost:8989/home/register"}
+2023-07-26 11:21:14 [http-nio-8989-exec-1] - 发送成功!
+2023-07-26 11:21:14 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"127.0.0.1","requestParams":{"type":1,"email":"zbowen856@gmail.com"},"result":{"code":200,"data":{"uuid":"5789c1863a1640d8af5e3a866db002c2"},"msg":"ok"},"timeCost":560,"url":"http://localhost:8989/sendCaptchaToEmail/zbowen856@gmail.com/1"}
+2023-07-26 11:21:32 [http-nio-8989-exec-3] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"43795","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"5789c1863a1640d8af5e3a866db002c2"}},"result":{"code":200,"data":{"integralAmount":100,"token":"app_token:7:bba44f526328478bab94dd7827357fdb"},"msg":"return.ok"},"timeCost":22,"url":"http://localhost:8989/home/register"}
+2023-07-26 11:32:57 [http-nio-8989-exec-10] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"192.168.2.118","requestParams":{"appDonaUserRegisterDTO":{"code":"43795","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"5789c1863a1640d8af5e3a866db002c2"}},"result":{"code":500,"msg":"return.code_expire"},"timeCost":6,"url":"http://192.168.2.116:8989/home/register"}
+2023-07-26 11:33:28 [http-nio-8989-exec-1] - 发送成功!
+2023-07-26 11:33:28 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"127.0.0.1","requestParams":{"type":1,"email":"zbowen856@gmail.com"},"result":{"code":200,"data":{"uuid":"3a1626f71de44a309a30824d74a65432"},"msg":"ok"},"timeCost":608,"url":"http://localhost:8989/sendCaptchaToEmail/zbowen856@gmail.com/1"}
+2023-07-26 14:17:26 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"appDonaUserRegisterDTO":{"code":"43795","email":"zbowen856@gmail.com","password":"25083xxx","uuid":"5789c1863a1640d8af5e3a866db002c2"}},"result":{"code":500,"msg":"return.code_expire"},"timeCost":46,"url":"http://localhost:8989/home/register"}
+2023-07-26 14:17:36 [http-nio-8989-exec-3] - 发送成功!
+2023-07-26 14:17:36 [http-nio-8989-exec-3] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"127.0.0.1","requestParams":{"type":1,"email":"zbowen856@gmail.com"},"result":{"code":200,"data":{"uuid":"ef41ed367fae41d5a768fa73ab40dbd0"},"msg":"ok"},"timeCost":679,"url":"http://localhost:8989/sendCaptchaToEmail/zbowen856@gmail.com/1"}
+2023-07-26 14:19:20 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 14:19:20 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 14:19:27 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 38104 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 14:19:27 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 14:19:27 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 14:19:28 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 14:19:28 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 14:19:28 [main] - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2023-07-26 14:19:28 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:19:29 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@490c7a83' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:19:29 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:19:29 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 14:19:29 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 14:19:29 [main] - Starting service [Tomcat]
+2023-07-26 14:19:29 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 14:19:29 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 14:19:29 [main] - Root WebApplicationContext: initialization completed in 1748 ms
+2023-07-26 14:19:29 [main] - Init DruidDataSource
+2023-07-26 14:19:30 [main] - {dataSource-1} inited
+2023-07-26 14:19:32 [main] - Redisson 3.17.6
+2023-07-26 14:19:33 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 14:19:33 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 14:19:34 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 14:19:35 [main] - 根据注解获取需要忽略认证的耗时：8ms
+2023-07-26 14:19:35 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 14:19:35 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/proxylogin","/user/login"]
+2023-07-26 14:19:35 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/*"]
+2023-07-26 14:19:35 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 14:19:36 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 14:19:36 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@485902cd, org.springframework.security.web.context.SecurityContextPersistenceFilter@8fd3eee, org.springframework.security.web.header.HeaderWriterFilter@796687de, org.springframework.web.filter.CorsFilter@75abbb61, org.springframework.security.web.authentication.logout.LogoutFilter@460a4935, com.summer.security.JwtAuthenticationTokenFilter@7c359808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@306a9cd8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46c5747f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@740610a2, org.springframework.security.web.session.SessionManagementFilter@561b4c61, org.springframework.security.web.access.ExceptionTranslationFilter@301434fb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79c48ad5]
+2023-07-26 14:19:37 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 14:19:37 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 14:19:37 [main] - Started PlatformApplication in 9.713 seconds (JVM running for 10.35)
+2023-07-26 14:19:37 [RMI TCP Connection(4)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 14:19:37 [RMI TCP Connection(4)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 14:19:37 [RMI TCP Connection(4)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 14:21:37 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 14:21:37 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 14:21:40 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 39300 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 14:21:40 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 14:21:40 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 14:21:41 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 14:21:41 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 14:21:41 [main] - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2023-07-26 14:21:41 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:21:42 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@490c7a83' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:21:42 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:21:42 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 14:21:42 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 14:21:42 [main] - Starting service [Tomcat]
+2023-07-26 14:21:42 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 14:21:42 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 14:21:42 [main] - Root WebApplicationContext: initialization completed in 1771 ms
+2023-07-26 14:21:42 [main] - Init DruidDataSource
+2023-07-26 14:21:44 [main] - {dataSource-1} inited
+2023-07-26 14:21:46 [main] - Redisson 3.17.6
+2023-07-26 14:21:47 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 14:21:47 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 14:21:49 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 14:21:50 [main] - 根据注解获取需要忽略认证的耗时：9ms
+2023-07-26 14:21:50 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 14:21:50 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/proxylogin","/user/login"]
+2023-07-26 14:21:50 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/*"]
+2023-07-26 14:21:50 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 14:21:51 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 14:21:51 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@485902cd, org.springframework.security.web.context.SecurityContextPersistenceFilter@8fd3eee, org.springframework.security.web.header.HeaderWriterFilter@796687de, org.springframework.web.filter.CorsFilter@75abbb61, org.springframework.security.web.authentication.logout.LogoutFilter@460a4935, com.summer.security.JwtAuthenticationTokenFilter@7c359808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@306a9cd8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46c5747f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@740610a2, org.springframework.security.web.session.SessionManagementFilter@561b4c61, org.springframework.security.web.access.ExceptionTranslationFilter@301434fb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79c48ad5]
+2023-07-26 14:21:53 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 14:21:53 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 14:21:53 [main] - Started PlatformApplication in 12.742 seconds (JVM running for 13.486)
+2023-07-26 14:21:53 [RMI TCP Connection(9)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 14:21:53 [RMI TCP Connection(9)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 14:21:53 [RMI TCP Connection(9)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 14:25:02 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 14:25:02 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 14:25:05 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 51048 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 14:25:05 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 14:25:05 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 14:25:06 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 14:25:06 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 14:25:06 [main] - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2023-07-26 14:25:06 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:25:06 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@490c7a83' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:25:06 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:25:07 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 14:25:07 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 14:25:07 [main] - Starting service [Tomcat]
+2023-07-26 14:25:07 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 14:25:07 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 14:25:07 [main] - Root WebApplicationContext: initialization completed in 1628 ms
+2023-07-26 14:25:07 [main] - Init DruidDataSource
+2023-07-26 14:25:08 [main] - {dataSource-1} inited
+2023-07-26 14:25:10 [main] - Redisson 3.17.6
+2023-07-26 14:25:11 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 14:25:11 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 14:25:12 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 14:25:12 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 14:25:12 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 14:25:12 [main] - 忽略认证的Post接口名称=["/user/login","/user/proxylogin","/user/getGoogleQRCode"]
+2023-07-26 14:25:12 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/*"]
+2023-07-26 14:25:13 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 14:25:13 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 14:25:13 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79dcd7f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@8fd3eee, org.springframework.security.web.header.HeaderWriterFilter@796687de, org.springframework.web.filter.CorsFilter@485902cd, org.springframework.security.web.authentication.logout.LogoutFilter@460a4935, com.summer.security.JwtAuthenticationTokenFilter@7c359808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@306a9cd8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46c5747f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75abbb61, org.springframework.security.web.session.SessionManagementFilter@561b4c61, org.springframework.security.web.access.ExceptionTranslationFilter@301434fb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e78213c]
+2023-07-26 14:25:14 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 14:25:14 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 14:25:14 [main] - Started PlatformApplication in 9.395 seconds (JVM running for 10.027)
+2023-07-26 14:25:15 [RMI TCP Connection(3)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 14:25:15 [RMI TCP Connection(3)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 14:25:15 [RMI TCP Connection(3)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 14:26:08 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 14:26:08 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 14:26:11 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 9248 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 14:26:11 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 14:26:11 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 14:26:12 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 14:26:12 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 14:26:12 [main] - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-07-26 14:26:12 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:26:12 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@490c7a83' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:26:12 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:26:13 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 14:26:13 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 14:26:13 [main] - Starting service [Tomcat]
+2023-07-26 14:26:13 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 14:26:13 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 14:26:13 [main] - Root WebApplicationContext: initialization completed in 1670 ms
+2023-07-26 14:26:13 [main] - Init DruidDataSource
+2023-07-26 14:26:14 [main] - {dataSource-1} inited
+2023-07-26 14:26:16 [main] - Redisson 3.17.6
+2023-07-26 14:26:17 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 14:26:17 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 14:26:18 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 14:26:19 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 14:26:19 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 14:26:19 [main] - 忽略认证的Post接口名称=["/user/proxylogin","/user/getGoogleQRCode","/user/login"]
+2023-07-26 14:26:19 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/*"]
+2023-07-26 14:26:19 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 14:26:19 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 14:26:19 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5bf9bb2, org.springframework.security.web.context.SecurityContextPersistenceFilter@d9ff1cd, org.springframework.security.web.header.HeaderWriterFilter@225d93aa, org.springframework.web.filter.CorsFilter@76c5599b, org.springframework.security.web.authentication.logout.LogoutFilter@28c38eeb, com.summer.security.JwtAuthenticationTokenFilter@399fd710, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c52df60, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6eaa8abf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7231c423, org.springframework.security.web.session.SessionManagementFilter@313c3cb, org.springframework.security.web.access.ExceptionTranslationFilter@1641dfb3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4fc41cba]
+2023-07-26 14:26:20 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 14:26:20 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 14:26:20 [main] - Started PlatformApplication in 9.528 seconds (JVM running for 10.189)
+2023-07-26 14:26:21 [RMI TCP Connection(1)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 14:26:21 [RMI TCP Connection(1)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 14:26:21 [RMI TCP Connection(1)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 14:27:17 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 14:27:17 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 14:27:20 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 20936 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 14:27:20 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 14:27:20 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 14:27:20 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 14:27:20 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 14:27:20 [main] - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2023-07-26 14:27:21 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:27:21 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6d0b0da6' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:27:21 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:27:21 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 14:27:21 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 14:27:21 [main] - Starting service [Tomcat]
+2023-07-26 14:27:21 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 14:27:21 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 14:27:21 [main] - Root WebApplicationContext: initialization completed in 1664 ms
+2023-07-26 14:27:21 [main] - Init DruidDataSource
+2023-07-26 14:27:23 [main] - {dataSource-1} inited
+2023-07-26 14:27:25 [main] - Redisson 3.17.6
+2023-07-26 14:27:25 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 14:27:25 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 14:27:26 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 14:27:27 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 14:27:27 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 14:27:27 [main] - 忽略认证的Post接口名称=["/user/proxylogin","/user/getGoogleQRCode","/user/login"]
+2023-07-26 14:27:27 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/*"]
+2023-07-26 14:27:27 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 14:27:28 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 14:27:28 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14b53f58, org.springframework.security.web.context.SecurityContextPersistenceFilter@8fd3eee, org.springframework.security.web.header.HeaderWriterFilter@796687de, org.springframework.web.filter.CorsFilter@1e23e1ef, org.springframework.security.web.authentication.logout.LogoutFilter@460a4935, com.summer.security.JwtAuthenticationTokenFilter@7c359808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@306a9cd8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46c5747f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79dcd7f1, org.springframework.security.web.session.SessionManagementFilter@561b4c61, org.springframework.security.web.access.ExceptionTranslationFilter@301434fb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17caf362]
+2023-07-26 14:27:29 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 14:27:29 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 14:27:29 [main] - Started PlatformApplication in 9.493 seconds (JVM running for 10.098)
+2023-07-26 14:27:30 [RMI TCP Connection(4)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 14:27:30 [RMI TCP Connection(4)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 14:27:30 [RMI TCP Connection(4)-192.168.2.116] - Completed initialization in 4 ms
+2023-07-26 14:45:51 [http-nio-8989-exec-9] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"192.168.2.118","requestParams":{"type":1,"email":"123456"},"result":{"code":500,"msg":"return.send_eamil_error"},"timeCost":630,"url":"http://192.168.2.116:8989/sendCaptchaToEmail/123456/1"}
+2023-07-26 14:46:19 [http-nio-8989-exec-10] - 发送成功!
+2023-07-26 14:46:19 [http-nio-8989-exec-10] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"192.168.2.118","requestParams":{"type":1,"email":"123456@qq.com"},"result":{"code":200,"data":{"uuid":"ed68e07e56d543a6aa4b38d5fd94edb5"},"msg":"ok"},"timeCost":775,"url":"http://192.168.2.116:8989/sendCaptchaToEmail/123456@qq.com/1"}
+2023-07-26 14:59:38 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 14:59:38 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 14:59:44 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 29012 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 14:59:44 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 14:59:44 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 14:59:45 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 14:59:45 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 14:59:45 [main] - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2023-07-26 14:59:45 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:59:45 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@630b6190' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:59:45 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 14:59:46 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 14:59:46 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 14:59:46 [main] - Starting service [Tomcat]
+2023-07-26 14:59:46 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 14:59:46 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 14:59:46 [main] - Root WebApplicationContext: initialization completed in 1724 ms
+2023-07-26 14:59:46 [main] - Init DruidDataSource
+2023-07-26 14:59:47 [main] - {dataSource-1} inited
+2023-07-26 14:59:49 [main] - Redisson 3.17.6
+2023-07-26 14:59:50 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 14:59:50 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 14:59:51 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 14:59:52 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 14:59:52 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 14:59:52 [main] - 忽略认证的Post接口名称=["/user/login","/user/proxylogin","/user/getGoogleQRCode"]
+2023-07-26 14:59:52 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/*"]
+2023-07-26 14:59:52 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 14:59:52 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 14:59:52 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1243ad9a, org.springframework.security.web.context.SecurityContextPersistenceFilter@34986491, org.springframework.security.web.header.HeaderWriterFilter@490b8f1e, org.springframework.web.filter.CorsFilter@30c085f3, org.springframework.security.web.authentication.logout.LogoutFilter@6b9ce7a3, com.summer.security.JwtAuthenticationTokenFilter@565c887e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c69ea30, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@26864891, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5479abd8, org.springframework.security.web.session.SessionManagementFilter@796687de, org.springframework.security.web.access.ExceptionTranslationFilter@56d189d0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6803b02d]
+2023-07-26 14:59:53 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 14:59:53 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 14:59:53 [main] - Started PlatformApplication in 9.567 seconds (JVM running for 10.142)
+2023-07-26 14:59:54 [RMI TCP Connection(1)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 14:59:54 [RMI TCP Connection(1)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 14:59:54 [RMI TCP Connection(1)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 15:00:50 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 15:00:50 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 15:00:53 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 15:00:53 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 15756 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 15:00:53 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 15:00:55 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 15:00:55 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 15:00:55 [main] - Finished Spring Data repository scanning in 57 ms. Found 0 Redis repository interfaces.
+2023-07-26 15:00:55 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:00:55 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@656922a0' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:00:55 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:00:56 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 15:00:56 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:00:56 [main] - Starting service [Tomcat]
+2023-07-26 15:00:56 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 15:00:56 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 15:00:56 [main] - Root WebApplicationContext: initialization completed in 3177 ms
+2023-07-26 15:00:56 [main] - Init DruidDataSource
+2023-07-26 15:00:57 [main] - {dataSource-1} inited
+2023-07-26 15:00:59 [main] - Redisson 3.17.6
+2023-07-26 15:01:00 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:01:00 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:01:01 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 15:01:01 [main] - 根据注解获取需要忽略认证的耗时：9ms
+2023-07-26 15:01:01 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 15:01:01 [main] - 忽略认证的Post接口名称=["/user/login","/user/proxylogin","/user/getGoogleQRCode"]
+2023-07-26 15:01:01 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/*"]
+2023-07-26 15:01:02 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 15:01:02 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 15:01:02 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5479abd8, org.springframework.security.web.context.SecurityContextPersistenceFilter@4a1cafb2, org.springframework.security.web.header.HeaderWriterFilter@4eb43d2f, org.springframework.web.filter.CorsFilter@2004f99, org.springframework.security.web.authentication.logout.LogoutFilter@7a9e44ff, com.summer.security.JwtAuthenticationTokenFilter@1317ac2c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35800dea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@651a399, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d200d3e, org.springframework.security.web.session.SessionManagementFilter@35ef158f, org.springframework.security.web.access.ExceptionTranslationFilter@7d776105, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4c0e09b5]
+2023-07-26 15:01:03 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 15:01:03 [main] - Started PlatformApplication in 10.803 seconds (JVM running for 11.406)
+2023-07-26 15:01:03 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 15:01:03 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 15:01:06 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 16368 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 15:01:06 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 15:01:06 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 15:01:07 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 15:01:07 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 15:01:07 [main] - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2023-07-26 15:01:07 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:01:07 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@459b6c53' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:01:07 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:01:08 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 15:01:08 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:01:08 [main] - Starting service [Tomcat]
+2023-07-26 15:01:08 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 15:01:08 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 15:01:08 [main] - Root WebApplicationContext: initialization completed in 1610 ms
+2023-07-26 15:01:08 [main] - Init DruidDataSource
+2023-07-26 15:01:09 [main] - {dataSource-1} inited
+2023-07-26 15:01:11 [main] - Redisson 3.17.6
+2023-07-26 15:01:12 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:01:12 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:01:13 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 15:01:13 [main] - 根据注解获取需要忽略认证的耗时：8ms
+2023-07-26 15:01:13 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 15:01:13 [main] - 忽略认证的Post接口名称=["/user/login","/user/proxylogin","/user/getGoogleQRCode"]
+2023-07-26 15:01:13 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/*"]
+2023-07-26 15:01:14 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 15:01:14 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 15:01:14 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@485902cd, org.springframework.security.web.context.SecurityContextPersistenceFilter@1d1c5bb5, org.springframework.security.web.header.HeaderWriterFilter@47b72d3b, org.springframework.web.filter.CorsFilter@75abbb61, org.springframework.security.web.authentication.logout.LogoutFilter@556a5e70, com.summer.security.JwtAuthenticationTokenFilter@7bd7d71c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26c349fc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@678a7489, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@740610a2, org.springframework.security.web.session.SessionManagementFilter@34986491, org.springframework.security.web.access.ExceptionTranslationFilter@56a63c28, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79c48ad5]
+2023-07-26 15:01:15 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:01:15 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 15:01:15 [main] - Started PlatformApplication in 9.34 seconds (JVM running for 9.983)
+2023-07-26 15:01:16 [RMI TCP Connection(3)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 15:01:16 [RMI TCP Connection(3)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 15:01:16 [RMI TCP Connection(3)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 15:02:24 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 15:02:24 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 15:02:27 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 38616 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 15:02:27 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 15:02:27 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 15:02:28 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 15:02:28 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 15:02:28 [main] - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2023-07-26 15:02:28 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:02:29 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@490c7a83' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:02:29 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:02:29 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 15:02:29 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:02:29 [main] - Starting service [Tomcat]
+2023-07-26 15:02:29 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 15:02:29 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 15:02:29 [main] - Root WebApplicationContext: initialization completed in 1904 ms
+2023-07-26 15:02:29 [main] - Init DruidDataSource
+2023-07-26 15:02:30 [main] - {dataSource-1} inited
+2023-07-26 15:02:32 [main] - Redisson 3.17.6
+2023-07-26 15:02:33 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:02:33 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:02:34 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 15:02:35 [main] - 根据注解获取需要忽略认证的耗时：13ms
+2023-07-26 15:02:35 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 15:02:35 [main] - 忽略认证的Post接口名称=["/user/proxylogin","/user/login","/user/getGoogleQRCode"]
+2023-07-26 15:02:35 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/*"]
+2023-07-26 15:02:36 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 15:02:36 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 15:02:36 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7231c423, org.springframework.security.web.context.SecurityContextPersistenceFilter@8fd3eee, org.springframework.security.web.header.HeaderWriterFilter@796687de, org.springframework.web.filter.CorsFilter@5c4c4e96, org.springframework.security.web.authentication.logout.LogoutFilter@460a4935, com.summer.security.JwtAuthenticationTokenFilter@7c359808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@306a9cd8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46c5747f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25d73ca6, org.springframework.security.web.session.SessionManagementFilter@561b4c61, org.springframework.security.web.access.ExceptionTranslationFilter@301434fb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74c997b1]
+2023-07-26 15:02:38 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:02:38 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 15:02:38 [main] - Started PlatformApplication in 11.081 seconds (JVM running for 11.677)
+2023-07-26 15:02:38 [RMI TCP Connection(4)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 15:02:38 [RMI TCP Connection(4)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 15:02:38 [RMI TCP Connection(4)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 15:04:13 [http-nio-8989-exec-1] - 发送成功!
+2023-07-26 15:04:13 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"192.168.2.118","requestParams":{"type":1,"email":"304045482@qq.com"},"result":{"code":200,"data":{"uuid":"3b6fd07a97e04c368f2c27b184755bd5"},"msg":"ok"},"timeCost":822,"url":"http://192.168.2.116:8989/sendCaptchaToEmail/304045482@qq.com/1"}
+2023-07-26 15:05:53 [http-nio-8989-exec-3] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"192.168.2.118","requestParams":{"type":1,"email":"123"},"result":{"code":500,"msg":"return.send_eamil_error"},"timeCost":467,"url":"http://192.168.2.116:8989/sendCaptchaToEmail/123/1"}
+2023-07-26 15:06:22 [http-nio-8989-exec-4] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"192.168.2.118","requestParams":{"type":1,"email":"123"},"result":{"code":500,"msg":"return.send_eamil_error"},"timeCost":608,"url":"http://192.168.2.116:8989/sendCaptchaToEmail/123/1"}
+2023-07-26 15:06:53 [http-nio-8989-exec-5] - 发送成功!
+2023-07-26 15:06:53 [http-nio-8989-exec-5] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"192.168.2.118","requestParams":{"type":1,"email":"304045482@qq.com"},"result":{"code":200,"data":{"uuid":"245a50b08894499e9625bcb75c3dd214"},"msg":"ok"},"timeCost":566,"url":"http://192.168.2.116:8989/sendCaptchaToEmail/304045482@qq.com/1"}
+2023-07-26 15:07:03 [http-nio-8989-exec-6] - 发送成功!
+2023-07-26 15:07:03 [http-nio-8989-exec-6] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"192.168.2.118","requestParams":{"type":1,"email":"304045482@qq.com"},"result":{"code":200,"data":{"uuid":"f7f14b984574498899812676f2da0805"},"msg":"ok"},"timeCost":2138,"url":"http://192.168.2.116:8989/sendCaptchaToEmail/304045482@qq.com/1"}
+2023-07-26 15:07:25 [http-nio-8989-exec-7] - 发送成功!
+2023-07-26 15:07:25 [http-nio-8989-exec-7] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"192.168.2.118","requestParams":{"type":1,"email":"304045482@qq.com"},"result":{"code":200,"data":{"uuid":"7bd858dd5eb9405692172763add2eec8"},"msg":"ok"},"timeCost":573,"url":"http://192.168.2.116:8989/sendCaptchaToEmail/304045482@qq.com/1"}
+2023-07-26 15:08:06 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 15:08:06 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 15:08:12 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 50300 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 15:08:12 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 15:08:12 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 15:08:12 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 15:08:12 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 15:08:12 [main] - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2023-07-26 15:08:13 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:08:13 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@490c7a83' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:08:13 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:08:13 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 15:08:13 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:08:13 [main] - Starting service [Tomcat]
+2023-07-26 15:08:13 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 15:08:13 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 15:08:13 [main] - Root WebApplicationContext: initialization completed in 1655 ms
+2023-07-26 15:08:14 [main] - Init DruidDataSource
+2023-07-26 15:08:15 [main] - {dataSource-1} inited
+2023-07-26 15:08:17 [main] - Redisson 3.17.6
+2023-07-26 15:08:17 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:08:17 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:08:18 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 15:08:19 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 15:08:19 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 15:08:19 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login","/user/proxylogin"]
+2023-07-26 15:08:19 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/*"]
+2023-07-26 15:08:19 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 15:08:20 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 15:08:20 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@485902cd, org.springframework.security.web.context.SecurityContextPersistenceFilter@8fd3eee, org.springframework.security.web.header.HeaderWriterFilter@796687de, org.springframework.web.filter.CorsFilter@75abbb61, org.springframework.security.web.authentication.logout.LogoutFilter@460a4935, com.summer.security.JwtAuthenticationTokenFilter@7c359808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@306a9cd8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46c5747f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@740610a2, org.springframework.security.web.session.SessionManagementFilter@561b4c61, org.springframework.security.web.access.ExceptionTranslationFilter@301434fb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79c48ad5]
+2023-07-26 15:08:21 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:08:21 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 15:08:21 [main] - Started PlatformApplication in 9.411 seconds (JVM running for 10.087)
+2023-07-26 15:08:21 [RMI TCP Connection(1)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 15:08:21 [RMI TCP Connection(1)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 15:08:21 [RMI TCP Connection(1)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 15:09:13 [http-nio-8989-exec-2] - 发送成功!
+2023-07-26 15:09:13 [http-nio-8989-exec-2] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"192.168.2.118","requestParams":{"type":1,"email":"304045482@qq.com"},"result":{"code":200,"data":{"uuid":"cf60769ca2e54fc899d80ed62b9fa243"},"msg":"ok"},"timeCost":740,"url":"http://192.168.2.116:8989/sendCaptchaToEmail/304045482@qq.com/1"}
+2023-07-26 15:09:50 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 15:09:50 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 15:09:53 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 13084 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 15:09:53 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 15:09:53 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 15:09:54 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 15:09:54 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 15:09:54 [main] - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2023-07-26 15:09:54 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:09:54 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@459b6c53' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:09:54 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:09:54 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 15:09:54 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:09:54 [main] - Starting service [Tomcat]
+2023-07-26 15:09:54 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 15:09:55 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 15:09:55 [main] - Root WebApplicationContext: initialization completed in 1632 ms
+2023-07-26 15:09:55 [main] - Init DruidDataSource
+2023-07-26 15:09:56 [main] - {dataSource-1} inited
+2023-07-26 15:09:58 [main] - Redisson 3.17.6
+2023-07-26 15:09:59 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:09:59 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:10:00 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 15:10:01 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 15:10:01 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 15:10:01 [main] - 忽略认证的Post接口名称=["/user/login","/user/proxylogin","/user/getGoogleQRCode"]
+2023-07-26 15:10:01 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/*"]
+2023-07-26 15:10:01 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 15:10:01 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 15:10:01 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79dcd7f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@58178b69, org.springframework.security.web.header.HeaderWriterFilter@3725242e, org.springframework.web.filter.CorsFilter@485902cd, org.springframework.security.web.authentication.logout.LogoutFilter@549dfe1d, com.summer.security.JwtAuthenticationTokenFilter@69a294d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c64ee53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a513627, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75abbb61, org.springframework.security.web.session.SessionManagementFilter@402d45c6, org.springframework.security.web.access.ExceptionTranslationFilter@3fae1ec9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e78213c]
+2023-07-26 15:10:02 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:10:02 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 15:10:02 [main] - Started PlatformApplication in 9.841 seconds (JVM running for 10.481)
+2023-07-26 15:10:03 [http-nio-8989-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 15:10:03 [http-nio-8989-exec-1] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 15:10:03 [http-nio-8989-exec-1] - Completed initialization in 2 ms
+2023-07-26 15:10:36 [http-nio-8989-exec-8] - 发送成功!
+2023-07-26 15:10:36 [http-nio-8989-exec-8] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"192.168.2.118","requestParams":{"type":1,"email":"304045482@qq.com"},"result":{"code":200,"data":{"uuid":"56ffab980274471aa16bca04408980f4"},"msg":"ok"},"timeCost":681,"url":"http://192.168.2.116:8989/sendCaptchaToEmail/304045482@qq.com/1"}
+2023-07-26 15:10:37 [http-nio-8989-exec-9] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"192.168.2.118","requestParams":{"appDonaUserRegisterDTO":{"code":"123456","email":"304045482@qq.com","password":"132","uuid":"56ffab980274471aa16bca04408980f4"}},"result":{"code":500,"msg":"return.code_error"},"timeCost":26,"url":"http://192.168.2.116:8989/home/register"}
+2023-07-26 15:27:24 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 15:27:24 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 15:27:30 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 7416 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 15:27:30 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 15:27:30 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 15:27:31 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 15:27:31 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 15:27:31 [main] - Finished Spring Data repository scanning in 38 ms. Found 0 Redis repository interfaces.
+2023-07-26 15:27:32 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:27:32 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@490c7a83' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:27:32 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:27:32 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 15:27:32 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:27:32 [main] - Starting service [Tomcat]
+2023-07-26 15:27:32 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 15:27:32 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 15:27:32 [main] - Root WebApplicationContext: initialization completed in 2804 ms
+2023-07-26 15:27:33 [main] - Init DruidDataSource
+2023-07-26 15:27:34 [main] - {dataSource-1} inited
+2023-07-26 15:27:36 [main] - Redisson 3.17.6
+2023-07-26 15:27:36 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:27:36 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:27:37 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 15:27:38 [main] - 根据注解获取需要忽略认证的耗时：10ms
+2023-07-26 15:27:38 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 15:27:38 [main] - 忽略认证的Post接口名称=["/user/login","/user/proxylogin","/user/getGoogleQRCode"]
+2023-07-26 15:27:38 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/*"]
+2023-07-26 15:27:39 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 15:27:39 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 15:27:39 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14b53f58, org.springframework.security.web.context.SecurityContextPersistenceFilter@d9ff1cd, org.springframework.security.web.header.HeaderWriterFilter@225d93aa, org.springframework.web.filter.CorsFilter@1e23e1ef, org.springframework.security.web.authentication.logout.LogoutFilter@28c38eeb, com.summer.security.JwtAuthenticationTokenFilter@7c359808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c52df60, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6eaa8abf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@79dcd7f1, org.springframework.security.web.session.SessionManagementFilter@313c3cb, org.springframework.security.web.access.ExceptionTranslationFilter@1641dfb3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17caf362]
+2023-07-26 15:27:41 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:27:41 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 15:27:41 [main] - Started PlatformApplication in 11.97 seconds (JVM running for 12.646)
+2023-07-26 15:27:42 [RMI TCP Connection(9)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 15:27:42 [RMI TCP Connection(9)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 15:27:42 [RMI TCP Connection(9)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 15:29:52 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 15:29:52 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 15:29:55 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 51580 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 15:29:55 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 15:29:55 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 15:29:56 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 15:29:56 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 15:29:56 [main] - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2023-07-26 15:29:56 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:29:56 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@39e69ea7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:29:56 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:29:57 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 15:29:57 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:29:57 [main] - Starting service [Tomcat]
+2023-07-26 15:29:57 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 15:29:57 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 15:29:57 [main] - Root WebApplicationContext: initialization completed in 1656 ms
+2023-07-26 15:29:57 [main] - Init DruidDataSource
+2023-07-26 15:29:58 [main] - {dataSource-1} inited
+2023-07-26 15:30:00 [main] - Redisson 3.17.6
+2023-07-26 15:30:01 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:30:01 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:30:02 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 15:30:03 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 15:30:03 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 15:30:03 [main] - 忽略认证的Post接口名称=["/user/login","/user/proxylogin","/user/getGoogleQRCode"]
+2023-07-26 15:30:03 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*"]
+2023-07-26 15:30:03 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 15:30:03 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 15:30:03 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43905ade, org.springframework.security.web.context.SecurityContextPersistenceFilter@58178b69, org.springframework.security.web.header.HeaderWriterFilter@3725242e, org.springframework.web.filter.CorsFilter@502326b3, org.springframework.security.web.authentication.logout.LogoutFilter@549dfe1d, com.summer.security.JwtAuthenticationTokenFilter@53564a4c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c64ee53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a513627, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f51f320, org.springframework.security.web.session.SessionManagementFilter@402d45c6, org.springframework.security.web.access.ExceptionTranslationFilter@3fae1ec9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e182453]
+2023-07-26 15:30:04 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:30:04 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 15:30:04 [main] - Started PlatformApplication in 9.635 seconds (JVM running for 10.227)
+2023-07-26 15:30:05 [RMI TCP Connection(1)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 15:30:05 [RMI TCP Connection(1)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 15:30:05 [RMI TCP Connection(1)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 15:38:27 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 15:38:27 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 15:38:33 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 55132 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 15:38:33 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 15:38:33 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 15:38:34 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 15:38:34 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 15:38:34 [main] - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-07-26 15:38:34 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:38:34 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@39e69ea7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:38:34 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 15:38:34 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 15:38:34 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:38:34 [main] - Starting service [Tomcat]
+2023-07-26 15:38:34 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 15:38:35 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 15:38:35 [main] - Root WebApplicationContext: initialization completed in 1668 ms
+2023-07-26 15:38:35 [main] - Init DruidDataSource
+2023-07-26 15:38:36 [main] - {dataSource-1} inited
+2023-07-26 15:38:38 [main] - Redisson 3.17.6
+2023-07-26 15:38:39 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:38:39 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 15:38:40 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 15:38:40 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 15:38:40 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 15:38:40 [main] - 忽略认证的Post接口名称=["/user/login","/user/proxylogin","/user/getGoogleQRCode"]
+2023-07-26 15:38:40 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*"]
+2023-07-26 15:38:41 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 15:38:41 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 15:38:41 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7edab945, org.springframework.security.web.context.SecurityContextPersistenceFilter@58178b69, org.springframework.security.web.header.HeaderWriterFilter@3725242e, org.springframework.web.filter.CorsFilter@533d28aa, org.springframework.security.web.authentication.logout.LogoutFilter@549dfe1d, com.summer.security.JwtAuthenticationTokenFilter@53564a4c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c64ee53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a513627, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6bbd645, org.springframework.security.web.session.SessionManagementFilter@402d45c6, org.springframework.security.web.access.ExceptionTranslationFilter@3fae1ec9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@573f95b2]
+2023-07-26 15:38:42 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 15:38:42 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 15:38:42 [main] - Started PlatformApplication in 9.572 seconds (JVM running for 10.157)
+2023-07-26 15:38:43 [RMI TCP Connection(4)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 15:38:43 [RMI TCP Connection(4)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 15:38:43 [RMI TCP Connection(4)-192.168.2.116] - Completed initialization in 2 ms
+2023-07-26 16:22:54 [http-nio-8989-exec-9] - 发送成功!
+2023-07-26 16:22:54 [http-nio-8989-exec-9] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"192.168.2.118","requestParams":{"type":1,"email":"304045482@qq.com"},"result":{"code":200,"data":{"uuid":"8db92e65dbda4125ace459cc7ff71fe7"},"msg":"ok"},"timeCost":665,"url":"http://192.168.2.116:8989/sendCaptchaToEmail/304045482@qq.com/1"}
+2023-07-26 16:23:11 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"192.168.2.118","requestParams":{"appDonaUserRegisterDTO":{"code":"25770","email":"304045482@qq.com","password":"123456789","uuid":"8db92e65dbda4125ace459cc7ff71fe7"}},"result":{"code":200,"data":{"integralAmount":100,"token":"app_token:8:24282b10bfc04402a8aa619043607ae0"},"msg":"return.ok"},"timeCost":197,"url":"http://192.168.2.116:8989/home/register"}
+2023-07-26 16:23:55 [http-nio-8989-exec-6] - 发送成功!
+2023-07-26 16:23:55 [http-nio-8989-exec-6] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"192.168.2.118","requestParams":{"type":1,"email":"304045482@qq.com"},"result":{"code":200,"data":{"uuid":"72950f609c4a4dd68818e4c84806980f"},"msg":"ok"},"timeCost":2664,"url":"http://192.168.2.116:8989/sendCaptchaToEmail/304045482@qq.com/1"}
+2023-07-26 16:24:13 [http-nio-8989-exec-8] - Request Info: {"classMethod":"com.summer.controller.HomeController.register","httpMethod":"POST","ip":"192.168.2.118","requestParams":{"appDonaUserRegisterDTO":{"code":"98270","email":"304045482@qq.com","password":"123456","uuid":"72950f609c4a4dd68818e4c84806980f"}},"result":{"code":500,"msg":"return.email_esists"},"timeCost":10,"url":"http://192.168.2.116:8989/home/register"}
+2023-07-26 16:24:49 [http-nio-8989-exec-10] - 发送成功!
+2023-07-26 16:24:49 [http-nio-8989-exec-10] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"GET","ip":"192.168.2.118","requestParams":{"type":1,"email":"304045482@qq.com"},"result":{"code":200,"data":{"uuid":"58586fcc77fc403887d16b4791b10832"},"msg":"ok"},"timeCost":641,"url":"http://192.168.2.116:8989/sendCaptchaToEmail/304045482@qq.com/1"}
+2023-07-26 16:44:01 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 16:44:01 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 16:44:07 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 19844 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 16:44:07 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 16:44:07 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 16:44:08 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 16:44:08 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 16:44:08 [main] - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2023-07-26 16:44:08 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 16:44:08 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@490c7a83' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 16:44:08 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 16:44:09 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 16:44:09 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 16:44:09 [main] - Starting service [Tomcat]
+2023-07-26 16:44:09 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 16:44:09 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 16:44:09 [main] - Root WebApplicationContext: initialization completed in 1778 ms
+2023-07-26 16:44:09 [main] - Init DruidDataSource
+2023-07-26 16:44:10 [main] - {dataSource-1} inited
+2023-07-26 16:44:12 [main] - Redisson 3.17.6
+2023-07-26 16:44:13 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 16:44:13 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 16:44:14 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 16:44:14 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 16:44:14 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 16:44:14 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login","/user/proxylogin"]
+2023-07-26 16:44:14 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/allUsers"]
+2023-07-26 16:44:15 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 16:44:15 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 16:44:15 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@740610a2, org.springframework.security.web.context.SecurityContextPersistenceFilter@d9ff1cd, org.springframework.security.web.header.HeaderWriterFilter@225d93aa, org.springframework.web.filter.CorsFilter@6bfa228c, org.springframework.security.web.authentication.logout.LogoutFilter@28c38eeb, com.summer.security.JwtAuthenticationTokenFilter@7c359808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c52df60, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6eaa8abf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b351a54, org.springframework.security.web.session.SessionManagementFilter@313c3cb, org.springframework.security.web.access.ExceptionTranslationFilter@1641dfb3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7335aae5]
+2023-07-26 16:44:16 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 16:44:16 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 16:44:16 [main] - Started PlatformApplication in 9.56 seconds (JVM running for 10.213)
+2023-07-26 16:44:17 [RMI TCP Connection(1)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 16:44:17 [RMI TCP Connection(1)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 16:44:17 [RMI TCP Connection(1)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 16:55:39 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 16:55:39 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 16:55:45 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 32360 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 16:55:45 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 16:55:45 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 16:55:46 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 16:55:46 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 16:55:46 [main] - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2023-07-26 16:55:46 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 16:55:46 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@459b6c53' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 16:55:46 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 16:55:46 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 16:55:46 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 16:55:46 [main] - Starting service [Tomcat]
+2023-07-26 16:55:46 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 16:55:47 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 16:55:47 [main] - Root WebApplicationContext: initialization completed in 1680 ms
+2023-07-26 16:55:47 [main] - Init DruidDataSource
+2023-07-26 16:55:48 [main] - {dataSource-1} inited
+2023-07-26 16:55:50 [main] - Redisson 3.17.6
+2023-07-26 16:55:51 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 16:55:51 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 16:55:52 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 16:55:52 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 16:55:52 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 16:55:52 [main] - 忽略认证的Post接口名称=["/user/login","/user/proxylogin","/user/getGoogleQRCode"]
+2023-07-26 16:55:52 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/allUsers"]
+2023-07-26 16:55:53 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 16:55:53 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 16:55:53 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@740610a2, org.springframework.security.web.context.SecurityContextPersistenceFilter@58178b69, org.springframework.security.web.header.HeaderWriterFilter@3725242e, org.springframework.web.filter.CorsFilter@6bfa228c, org.springframework.security.web.authentication.logout.LogoutFilter@549dfe1d, com.summer.security.JwtAuthenticationTokenFilter@4866e0a7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c64ee53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a513627, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b351a54, org.springframework.security.web.session.SessionManagementFilter@402d45c6, org.springframework.security.web.access.ExceptionTranslationFilter@3fae1ec9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@20dab85c]
+2023-07-26 16:55:54 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 16:55:54 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 16:55:54 [main] - Started PlatformApplication in 9.466 seconds (JVM running for 10.049)
+2023-07-26 16:55:55 [RMI TCP Connection(2)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 16:55:55 [RMI TCP Connection(2)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 16:55:55 [RMI TCP Connection(2)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 17:05:33 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 17:05:33 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 17:05:36 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 36256 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 17:05:36 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 17:05:36 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 17:05:37 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 17:05:37 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 17:05:37 [main] - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-07-26 17:05:37 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:05:37 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@490c7a83' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:05:37 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:05:38 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 17:05:38 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:05:38 [main] - Starting service [Tomcat]
+2023-07-26 17:05:38 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 17:05:38 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 17:05:38 [main] - Root WebApplicationContext: initialization completed in 1645 ms
+2023-07-26 17:05:38 [main] - Init DruidDataSource
+2023-07-26 17:05:39 [main] - {dataSource-1} inited
+2023-07-26 17:05:41 [main] - Redisson 3.17.6
+2023-07-26 17:05:42 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:05:42 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:05:43 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 17:05:43 [main] - 根据注解获取需要忽略认证的耗时：9ms
+2023-07-26 17:05:43 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 17:05:43 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login","/user/proxylogin"]
+2023-07-26 17:05:43 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/allUsers"]
+2023-07-26 17:05:44 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 17:05:44 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 17:05:44 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6bfa228c, org.springframework.security.web.context.SecurityContextPersistenceFilter@d9ff1cd, org.springframework.security.web.header.HeaderWriterFilter@225d93aa, org.springframework.web.filter.CorsFilter@6b351a54, org.springframework.security.web.authentication.logout.LogoutFilter@28c38eeb, com.summer.security.JwtAuthenticationTokenFilter@7c359808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c52df60, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6eaa8abf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43edd4e0, org.springframework.security.web.session.SessionManagementFilter@313c3cb, org.springframework.security.web.access.ExceptionTranslationFilter@1641dfb3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35355074]
+2023-07-26 17:05:45 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:05:45 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 17:05:45 [main] - Started PlatformApplication in 9.303 seconds (JVM running for 9.895)
+2023-07-26 17:05:45 [RMI TCP Connection(2)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 17:05:45 [RMI TCP Connection(2)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 17:05:45 [RMI TCP Connection(2)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 17:06:40 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 17:06:40 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 17:06:48 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 44800 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 17:06:48 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 17:06:48 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 17:06:49 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 17:06:49 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 17:06:49 [main] - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2023-07-26 17:06:49 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:06:49 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@459b6c53' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:06:49 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:06:50 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 17:06:50 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:06:50 [main] - Starting service [Tomcat]
+2023-07-26 17:06:50 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 17:06:50 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 17:06:50 [main] - Root WebApplicationContext: initialization completed in 1714 ms
+2023-07-26 17:06:50 [main] - Init DruidDataSource
+2023-07-26 17:06:51 [main] - {dataSource-1} inited
+2023-07-26 17:06:53 [main] - Redisson 3.17.6
+2023-07-26 17:06:54 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:06:54 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:06:55 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 17:06:56 [main] - 根据注解获取需要忽略认证的耗时：15ms
+2023-07-26 17:06:56 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 17:06:56 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login","/user/proxylogin"]
+2023-07-26 17:06:56 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/allUsers"]
+2023-07-26 17:06:57 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 17:06:57 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 17:06:57 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dfef314, org.springframework.security.web.context.SecurityContextPersistenceFilter@58178b69, org.springframework.security.web.header.HeaderWriterFilter@3725242e, org.springframework.web.filter.CorsFilter@7edab945, org.springframework.security.web.authentication.logout.LogoutFilter@549dfe1d, com.summer.security.JwtAuthenticationTokenFilter@4866e0a7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c64ee53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a513627, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@533d28aa, org.springframework.security.web.session.SessionManagementFilter@402d45c6, org.springframework.security.web.access.ExceptionTranslationFilter@3fae1ec9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@18563d10]
+2023-07-26 17:06:59 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:06:59 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 17:06:59 [main] - Started PlatformApplication in 11.281 seconds (JVM running for 11.967)
+2023-07-26 17:07:00 [RMI TCP Connection(1)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 17:07:00 [RMI TCP Connection(1)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 17:07:00 [RMI TCP Connection(1)-192.168.2.116] - Completed initialization in 2 ms
+2023-07-26 17:08:53 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 17:08:53 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 17:08:59 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 42756 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 17:08:59 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 17:08:59 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 17:09:00 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 17:09:00 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 17:09:00 [main] - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2023-07-26 17:09:00 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:09:00 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@490c7a83' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:09:00 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:09:01 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 17:09:01 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:09:01 [main] - Starting service [Tomcat]
+2023-07-26 17:09:01 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 17:09:01 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 17:09:01 [main] - Root WebApplicationContext: initialization completed in 1760 ms
+2023-07-26 17:09:01 [main] - Init DruidDataSource
+2023-07-26 17:09:02 [main] - {dataSource-1} inited
+2023-07-26 17:09:04 [main] - Redisson 3.17.6
+2023-07-26 17:09:05 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:09:05 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:09:06 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 17:09:07 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 17:09:07 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 17:09:07 [main] - 忽略认证的Post接口名称=["/user/proxylogin","/user/getGoogleQRCode","/user/login"]
+2023-07-26 17:09:07 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/allUsers"]
+2023-07-26 17:09:07 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 17:09:08 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 17:09:08 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b68a50c, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c64ee53, org.springframework.security.web.header.HeaderWriterFilter@35ef158f, org.springframework.web.filter.CorsFilter@27c68ccb, org.springframework.security.web.authentication.logout.LogoutFilter@4ce9985f, com.summer.security.JwtAuthenticationTokenFilter@399fd710, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fe12ec3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fe91eed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ba88ab5, org.springframework.security.web.session.SessionManagementFilter@63fef83c, org.springframework.security.web.access.ExceptionTranslationFilter@49620576, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17f8c75e]
+2023-07-26 17:09:09 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:09:09 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 17:09:09 [main] - Started PlatformApplication in 10.148 seconds (JVM running for 10.712)
+2023-07-26 17:09:09 [http-nio-8989-exec-1] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 17:09:09 [http-nio-8989-exec-1] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 17:09:09 [http-nio-8989-exec-1] - Completed initialization in 1 ms
+2023-07-26 17:14:34 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 17:14:34 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 17:14:39 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 17:14:39 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 56028 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 17:14:39 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 17:14:40 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 17:14:40 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 17:14:40 [main] - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2023-07-26 17:14:40 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:14:41 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@672a1c62' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:14:41 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:14:41 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 17:14:41 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:14:41 [main] - Starting service [Tomcat]
+2023-07-26 17:14:41 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 17:14:41 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 17:14:41 [main] - Root WebApplicationContext: initialization completed in 1685 ms
+2023-07-26 17:14:41 [main] - Init DruidDataSource
+2023-07-26 17:14:43 [main] - {dataSource-1} inited
+2023-07-26 17:14:45 [main] - Redisson 3.17.6
+2023-07-26 17:14:45 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:14:45 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:14:47 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 17:14:47 [main] - 根据注解获取需要忽略认证的耗时：8ms
+2023-07-26 17:14:47 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 17:14:47 [main] - 忽略认证的Post接口名称=["/user/proxylogin","/user/login","/user/getGoogleQRCode"]
+2023-07-26 17:14:47 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/allUsers"]
+2023-07-26 17:14:48 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 17:14:48 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 17:14:48 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6dbfd081, org.springframework.security.web.context.SecurityContextPersistenceFilter@3b4cce5a, org.springframework.security.web.header.HeaderWriterFilter@6d8cbd1a, org.springframework.web.filter.CorsFilter@4691e2f5, org.springframework.security.web.authentication.logout.LogoutFilter@64dc0a5f, com.summer.security.JwtAuthenticationTokenFilter@7c6ab057, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d9ff1cd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8788194, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47cf41d7, org.springframework.security.web.session.SessionManagementFilter@6971c6b7, org.springframework.security.web.access.ExceptionTranslationFilter@47bcd95a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5bebdfcb]
+2023-07-26 17:14:49 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:14:49 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 17:14:49 [main] - Started PlatformApplication in 10.078 seconds (JVM running for 10.691)
+2023-07-26 17:14:50 [RMI TCP Connection(3)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 17:14:50 [RMI TCP Connection(3)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 17:14:50 [RMI TCP Connection(3)-192.168.2.116] - Completed initialization in 2 ms
+2023-07-26 17:16:49 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 17:16:49 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 17:16:57 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 19436 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 17:16:57 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 17:16:57 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 17:16:58 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 17:16:58 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 17:16:58 [main] - Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2023-07-26 17:16:58 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:16:58 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@490c7a83' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:16:58 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:16:58 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 17:16:58 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:16:58 [main] - Starting service [Tomcat]
+2023-07-26 17:16:58 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 17:16:59 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 17:16:59 [main] - Root WebApplicationContext: initialization completed in 1659 ms
+2023-07-26 17:16:59 [main] - Init DruidDataSource
+2023-07-26 17:17:00 [main] - {dataSource-1} inited
+2023-07-26 17:17:04 [main] - Redisson 3.17.6
+2023-07-26 17:17:04 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:17:04 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:17:06 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 17:17:07 [main] - 根据注解获取需要忽略认证的耗时：13ms
+2023-07-26 17:17:07 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 17:17:07 [main] - 忽略认证的Post接口名称=["/user/login","/user/getGoogleQRCode","/user/proxylogin"]
+2023-07-26 17:17:07 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/allUsers"]
+2023-07-26 17:17:08 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 17:17:09 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 17:17:09 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e23e1ef, org.springframework.security.web.context.SecurityContextPersistenceFilter@d9ff1cd, org.springframework.security.web.header.HeaderWriterFilter@225d93aa, org.springframework.web.filter.CorsFilter@79dcd7f1, org.springframework.security.web.authentication.logout.LogoutFilter@28c38eeb, com.summer.security.JwtAuthenticationTokenFilter@7c359808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c52df60, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6eaa8abf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@485902cd, org.springframework.security.web.session.SessionManagementFilter@313c3cb, org.springframework.security.web.access.ExceptionTranslationFilter@1641dfb3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c66be14]
+2023-07-26 17:17:11 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:17:11 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 17:17:11 [main] - Started PlatformApplication in 13.979 seconds (JVM running for 14.594)
+2023-07-26 17:17:11 [RMI TCP Connection(6)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 17:17:11 [RMI TCP Connection(6)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 17:17:11 [RMI TCP Connection(6)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 17:17:37 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 17:17:37 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 17:17:45 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 42924 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 17:17:45 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 17:17:45 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 17:17:47 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 17:17:47 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 17:17:47 [main] - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+2023-07-26 17:17:47 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:17:47 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@39e69ea7' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:17:47 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:17:48 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 17:17:48 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:17:48 [main] - Starting service [Tomcat]
+2023-07-26 17:17:48 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 17:17:48 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 17:17:48 [main] - Root WebApplicationContext: initialization completed in 2646 ms
+2023-07-26 17:17:48 [main] - Init DruidDataSource
+2023-07-26 17:17:49 [main] - {dataSource-1} inited
+2023-07-26 17:17:51 [main] - Redisson 3.17.6
+2023-07-26 17:17:51 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:17:51 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:17:53 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 17:17:54 [main] - 根据注解获取需要忽略认证的耗时：14ms
+2023-07-26 17:17:55 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 17:17:55 [main] - 忽略认证的Post接口名称=["/user/login","/user/getGoogleQRCode","/user/proxylogin"]
+2023-07-26 17:17:55 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/allUsers"]
+2023-07-26 17:17:55 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 17:17:56 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 17:17:56 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6b351a54, org.springframework.security.web.context.SecurityContextPersistenceFilter@651a399, org.springframework.security.web.header.HeaderWriterFilter@4a5dc126, org.springframework.web.filter.CorsFilter@43edd4e0, org.springframework.security.web.authentication.logout.LogoutFilter@4f3a8e3e, com.summer.security.JwtAuthenticationTokenFilter@318511f0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3448a248, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f1072ee, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72a4f3f, org.springframework.security.web.session.SessionManagementFilter@441798ce, org.springframework.security.web.access.ExceptionTranslationFilter@4c219c84, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@120bb5b5]
+2023-07-26 17:17:58 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:17:58 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 17:17:58 [main] - Started PlatformApplication in 13.376 seconds (JVM running for 14.511)
+2023-07-26 17:17:59 [RMI TCP Connection(3)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 17:17:59 [RMI TCP Connection(3)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 17:17:59 [RMI TCP Connection(3)-192.168.2.116] - Completed initialization in 2 ms
+2023-07-26 17:36:09 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 17:36:09 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 17:36:15 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 24552 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 17:36:15 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 17:36:15 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 17:36:16 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 17:36:16 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 17:36:16 [main] - Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2023-07-26 17:36:16 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:36:17 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@490c7a83' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:36:17 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:36:17 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 17:36:17 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:36:17 [main] - Starting service [Tomcat]
+2023-07-26 17:36:17 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 17:36:17 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 17:36:17 [main] - Root WebApplicationContext: initialization completed in 1759 ms
+2023-07-26 17:36:17 [main] - Init DruidDataSource
+2023-07-26 17:36:18 [main] - {dataSource-1} inited
+2023-07-26 17:36:20 [main] - Redisson 3.17.6
+2023-07-26 17:36:21 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:36:21 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:36:22 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 17:36:23 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 17:36:23 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 17:36:23 [main] - 忽略认证的Post接口名称=["/user/proxylogin","/user/login","/user/getGoogleQRCode"]
+2023-07-26 17:36:23 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/allUsers"]
+2023-07-26 17:36:23 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 17:36:23 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 17:36:24 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@79dcd7f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@2c64ee53, org.springframework.security.web.header.HeaderWriterFilter@35ef158f, org.springframework.web.filter.CorsFilter@485902cd, org.springframework.security.web.authentication.logout.LogoutFilter@4ce9985f, com.summer.security.JwtAuthenticationTokenFilter@399fd710, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fe12ec3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fe91eed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@75abbb61, org.springframework.security.web.session.SessionManagementFilter@63fef83c, org.springframework.security.web.access.ExceptionTranslationFilter@49620576, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e78213c]
+2023-07-26 17:36:25 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:36:25 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 17:36:25 [main] - Started PlatformApplication in 9.562 seconds (JVM running for 10.2)
+2023-07-26 17:36:25 [RMI TCP Connection(1)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 17:36:25 [RMI TCP Connection(1)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 17:36:25 [RMI TCP Connection(1)-192.168.2.116] - Completed initialization in 2 ms
+2023-07-26 17:41:40 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 17:41:40 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 17:41:46 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 55328 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 17:41:46 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 17:41:46 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 17:41:47 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 17:41:47 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 17:41:47 [main] - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2023-07-26 17:41:48 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:41:48 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@459b6c53' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:41:48 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:41:49 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 17:41:49 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:41:49 [main] - Starting service [Tomcat]
+2023-07-26 17:41:49 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 17:41:49 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 17:41:49 [main] - Root WebApplicationContext: initialization completed in 2852 ms
+2023-07-26 17:41:50 [main] - Init DruidDataSource
+2023-07-26 17:41:51 [main] - {dataSource-1} inited
+2023-07-26 17:41:53 [main] - Redisson 3.17.6
+2023-07-26 17:41:53 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:41:53 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:41:55 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 17:41:56 [main] - 根据注解获取需要忽略认证的耗时：12ms
+2023-07-26 17:41:57 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 17:41:57 [main] - 忽略认证的Post接口名称=["/user/proxylogin","/user/login","/user/getGoogleQRCode"]
+2023-07-26 17:41:57 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/allUsers"]
+2023-07-26 17:41:57 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 17:41:58 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 17:41:58 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74691a1f, org.springframework.security.web.context.SecurityContextPersistenceFilter@58178b69, org.springframework.security.web.header.HeaderWriterFilter@3725242e, org.springframework.web.filter.CorsFilter@3d26c82d, org.springframework.security.web.authentication.logout.LogoutFilter@549dfe1d, com.summer.security.JwtAuthenticationTokenFilter@4866e0a7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c64ee53, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a513627, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5af7a7, org.springframework.security.web.session.SessionManagementFilter@402d45c6, org.springframework.security.web.access.ExceptionTranslationFilter@3fae1ec9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22e7ec5f]
+2023-07-26 17:42:00 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:42:00 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 17:42:00 [main] - Started PlatformApplication in 13.639 seconds (JVM running for 14.29)
+2023-07-26 17:42:01 [RMI TCP Connection(6)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 17:42:01 [RMI TCP Connection(6)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 17:42:01 [RMI TCP Connection(6)-192.168.2.116] - Completed initialization in 2 ms
+2023-07-26 17:42:37 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 17:42:37 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 17:42:40 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 39748 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 17:42:40 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 17:42:40 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 17:42:41 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 17:42:41 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 17:42:41 [main] - Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2023-07-26 17:42:41 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:42:41 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@490c7a83' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:42:41 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:42:42 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 17:42:42 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:42:42 [main] - Starting service [Tomcat]
+2023-07-26 17:42:42 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 17:42:42 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 17:42:42 [main] - Root WebApplicationContext: initialization completed in 1618 ms
+2023-07-26 17:42:42 [main] - Init DruidDataSource
+2023-07-26 17:42:43 [main] - {dataSource-1} inited
+2023-07-26 17:42:45 [main] - Redisson 3.17.6
+2023-07-26 17:42:46 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:42:46 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:42:47 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 17:42:47 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 17:42:48 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 17:42:48 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/proxylogin","/user/login"]
+2023-07-26 17:42:48 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/allUsers"]
+2023-07-26 17:42:48 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 17:42:48 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 17:42:48 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@485902cd, org.springframework.security.web.context.SecurityContextPersistenceFilter@d9ff1cd, org.springframework.security.web.header.HeaderWriterFilter@225d93aa, org.springframework.web.filter.CorsFilter@75abbb61, org.springframework.security.web.authentication.logout.LogoutFilter@28c38eeb, com.summer.security.JwtAuthenticationTokenFilter@7c359808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c52df60, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6eaa8abf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@740610a2, org.springframework.security.web.session.SessionManagementFilter@313c3cb, org.springframework.security.web.access.ExceptionTranslationFilter@1641dfb3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79c48ad5]
+2023-07-26 17:42:49 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:42:49 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 17:42:49 [main] - Started PlatformApplication in 9.374 seconds (JVM running for 10.042)
+2023-07-26 17:42:50 [RMI TCP Connection(2)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 17:42:50 [RMI TCP Connection(2)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 17:42:50 [RMI TCP Connection(2)-192.168.2.116] - Completed initialization in 1 ms
+2023-07-26 17:43:36 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-26 17:43:36 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-07-26 17:43:42 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 44700 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-07-26 17:43:42 [main] - No active profile set, falling back to default profiles: default
+2023-07-26 17:43:42 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-07-26 17:43:43 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-07-26 17:43:43 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-07-26 17:43:43 [main] - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-07-26 17:43:43 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:43:43 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@490c7a83' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:43:43 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-26 17:43:43 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-07-26 17:43:43 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:43:43 [main] - Starting service [Tomcat]
+2023-07-26 17:43:43 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-07-26 17:43:43 [main] - Initializing Spring embedded WebApplicationContext
+2023-07-26 17:43:43 [main] - Root WebApplicationContext: initialization completed in 1644 ms
+2023-07-26 17:43:44 [main] - Init DruidDataSource
+2023-07-26 17:43:45 [main] - {dataSource-1} inited
+2023-07-26 17:43:47 [main] - Redisson 3.17.6
+2023-07-26 17:43:47 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:43:47 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-07-26 17:43:49 [main] - 初始化把字典信息加入缓存中...
+2023-07-26 17:43:49 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-07-26 17:43:49 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/virtual/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-07-26 17:43:49 [main] - 忽略认证的Post接口名称=["/user/proxylogin","/user/getGoogleQRCode","/user/login"]
+2023-07-26 17:43:49 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/myhome/allUsers"]
+2023-07-26 17:43:50 [main] - 资源映射加载 --- /virtual/** --> D:\data\ 
+2023-07-26 17:43:50 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-26 17:43:50 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@533d28aa, org.springframework.security.web.context.SecurityContextPersistenceFilter@d9ff1cd, org.springframework.security.web.header.HeaderWriterFilter@225d93aa, org.springframework.web.filter.CorsFilter@6bbd645, org.springframework.security.web.authentication.logout.LogoutFilter@28c38eeb, com.summer.security.JwtAuthenticationTokenFilter@7c359808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c52df60, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6eaa8abf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c97e3d5, org.springframework.security.web.session.SessionManagementFilter@313c3cb, org.springframework.security.web.access.ExceptionTranslationFilter@1641dfb3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c66be14]
+2023-07-26 17:43:51 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-07-26 17:43:51 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-07-26 17:43:51 [main] - Started PlatformApplication in 9.407 seconds (JVM running for 10.053)
+2023-07-26 17:43:51 [RMI TCP Connection(1)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-26 17:43:51 [RMI TCP Connection(1)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-07-26 17:43:51 [RMI TCP Connection(1)-192.168.2.116] - Completed initialization in 1 ms

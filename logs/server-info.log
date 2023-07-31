@@ -1,0 +1,4 @@
+2023-07-31 01:00:00 [scheduling-1] - -------------执行清理过期文件任务--------------
+2023-07-31 01:00:00 [scheduling-1] - -------------执行清理过期文件任务--------------
+2023-07-31 10:23:28 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-07-31 10:23:28 [SpringApplicationShutdownHook] - {dataSource-1} closed
