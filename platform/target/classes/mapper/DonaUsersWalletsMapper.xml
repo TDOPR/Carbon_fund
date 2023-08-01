@@ -5,178 +5,158 @@
     <update id="lockUpdateAddWallet">
         update
             wallets
-        set
-            walletAmount=walletAmount + #{amount}
-        where
-            userId = #{userId}
+        set walletAmount=walletAmount + #{amount}
+        where userId = #{userId}
     </update>
 
     <update id="lockUpdateAddIntegralWallet">
         update
             dona_users_wallets
-        set
-            integralWalletAmount=integralWalletAmount + #{amount}
-        where
-            userId = #{userId}
+        set userIntegralAmount=userIntegralAmount + #{amount}
+        where userId = #{userId}
     </update>
 
     <update id="lockUpdateReduceWallet">
         update
             wallets
-        set
-            walletAmount=walletAmount - #{amount}
-        where
-            userId = #{userId}
+        set walletAmount=walletAmount - #{amount}
+        where userId = #{userId}
     </update>
 
     <update id="frozenAmount">
         update
             wallets
-        set
-            usdWalletAmount=usdWalletAmount - #{amount},
+        set usdWalletAmount=usdWalletAmount - #{amount},
             frozenAmount=frozenAmount + #{amount}
-        where
-            userId = #{userId}
+        where userId = #{userId}
     </update>
 
     <update id="unFrozenAmount">
         update
             wallets
-        set
-            usdWalletAmount=usdWalletAmount + #{amount},
+        set usdWalletAmount=usdWalletAmount + #{amount},
             frozenAmount=frozenAmount - #{amount}
-        where
-            userId = #{userId}
+        where userId = #{userId}
     </update>
 
     <update id="reduceFrozenAmount">
         update
             wallets
-        set
-            frozenAmount=frozenAmount - #{amount}
-        where
-            userId = #{userId}
+        set frozenAmount=frozenAmount - #{amount}
+        where userId = #{userId}
     </update>
 
     <update id="lockUpdateAddUsdWallet">
         update
-            dona_users_wllets
-        set
-            walletAmount=walletAmount + #{amount}
-        where
-            userId = #{userId}
+            dona_users_wallets
+        set walletAmount=walletAmount + #{amount}
+        where userId = #{userId}
+    </update>
+
+    <update id="sendAlgebraRewardUpdateAddUsdWallet">
+        update
+            dona_users_wallets
+        set walletAmount=walletAmount + #{amount},
+        algebraReward = algebraReward + #{amount}
+        where userId = #{userId}
     </update>
 
     <update id="lockUpdateReduceUsdWallet">
         update
-            wallets
-        set
-            usdWalletAmount=usdWalletAmount - #{amount}
-        where
-            userId = #{userId}
+            dona_users_wallets
+        set walletAmount=walletAmount - #{amount}
+        where userId = #{userId}
     </update>
 
     <update id="buyTaskNumPackage">
         update
             wallets
-        set
-            usdWalletAmount=usdWalletAmount - #{amount},
+        set usdWalletAmount=usdWalletAmount - #{amount},
             totalTaskNum=totalTaskNum + #{num},
             hasTaskNum=hasTaskNum + #{num}
-        where
-            userId = #{userId}
+        where userId = #{userId}
     </update>
 
     <update id="reduceHasTaskNum">
         update
             wallets
-        set
-            hasTaskNum=hasTaskNum - #{num}
-        where
-            userId = #{userId}
+        set hasTaskNum=hasTaskNum - #{num}
+        where userId = #{userId}
     </update>
 
     <update id="tttConversionUsd">
         update
             wallets
-        set
-            usdWalletAmount=usdWalletAmount + #{usdAmount},
+        set usdWalletAmount=usdWalletAmount + #{usdAmount},
             walletAmount   = walletAmount - #{tttAmount}
-        where
-            userId = #{userId}
+        where userId = #{userId}
     </update>
 
     <select id="selectUserWalletsDTOListByUserLevelGtAndPrincipalAmountGe"
             resultType="com.summer.model.dto.UserWalletsDTO">
-        select
-            w.walletAmount, w.userId, u.level
-        from
-            wallets w
-        left join
-            app_users u
-            on w.userId = u.id
-        where
-            u.level >= #{level}
+        select w.walletAmount,
+               w.userId,
+               u.level
+        from wallets w
+                 left join
+             app_users u
+             on w.userId = u.id
+        where u.level >= #{level}
     </select>
 
     <select id="findHoldingCoinUserInfo" resultType="com.summer.model.dto.AppUsersAmountDTO">
-        select
-            w.walletAmount totalAmount,w.userId,u.level
-        from
-            wallets w
-        left join
-            app_users u
-            ON w.userId = u.id
-        where
-            u.valid = 1
-            and w.walletAmount > 0
+        select w.walletAmount totalAmount,
+               w.userId,
+               u.level
+        from wallets w
+                 left join
+             app_users u
+             ON w.userId = u.id
+        where u.valid = 1
+          and w.walletAmount > 0
     </select>
 
     <select id="sumUsdAmount" resultType="java.math.BigDecimal">
-        select
-            sum(usdWalletAmount)
-        from
-            wallets
+        select sum(usdWalletAmount)
+        from wallets
     </select>
 
-<!--    <select id="selectWalletRecord" resultType="java.math.BigDecimal">-->
-<!--        select-->
-<!--            sum(usdWalletAmount)-->
-<!--        from-->
-<!--            dona_users_wallets_logs-->
-<!--    </select>-->
+    <!--    <select id="selectWalletRecord" resultType="java.math.BigDecimal">-->
+    <!--        select-->
+    <!--            sum(usdWalletAmount)-->
+    <!--        from-->
+    <!--            dona_users_wallets_logs-->
+    <!--    </select>-->
 
     <select id="selectWallet" resultType="com.summer.model.dto.WalletInfoDTO">
-        select
-            a.rechargeUsdtAmount, a.algebraReward, a.userIntegralAmount, b.nickName
-        from
-            dona_users_wallets a
-        left join
-            app_dona_users b
-        on
-            a.userId = b.id
-        where
-            a.userId = #{userId}
+        select a.rechargeUsdtAmount,
+               a.algebraReward,
+               a.userIntegralAmount,
+               b.nickName
+        from dona_users_wallets a
+                 left join
+             app_dona_users b
+             on
+                 a.userId = b.id
+        where a.userId = #{userId}
     </select>
 
-<!--    <select id="selectWallet" resultType="com.summer.model.dto.WalletInfoDTO">-->
-<!--        select-->
-<!--            a.rechargeUsdtAmount, a.algebraReward, a.userIntegralAmount, b.nickName-->
-<!--        from-->
-<!--            dona_users_wallets a-->
-<!--                left join-->
-<!--            app_dona_users b-->
-<!--            on-->
-<!--                a.userId = b.id-->
-<!--        where-->
-<!--            a.userId = #{userId}-->
-<!--    </select>-->
+    <!--    <select id="selectWallet" resultType="com.summer.model.dto.WalletInfoDTO">-->
+    <!--        select-->
+    <!--            a.rechargeUsdtAmount, a.algebraReward, a.userIntegralAmount, b.nickName-->
+    <!--        from-->
+    <!--            dona_users_wallets a-->
+    <!--                left join-->
+    <!--            app_dona_users b-->
+    <!--            on-->
+    <!--                a.userId = b.id-->
+    <!--        where-->
+    <!--            a.userId = #{userId}-->
+    <!--    </select>-->
 
     <select id="sumTttAmount" resultType="java.math.BigDecimal">
-        select
-            sum(walletAmount)
-        from
-            wallets
+        select sum(walletAmount)
+        from wallets
     </select>
 
 </mapper>

@@ -27,7 +27,6 @@ import com.summer.model.dto.CarbonTaskDTO;
 import com.summer.service.AppDonaUsersDoTaskService;
 import com.summer.service.AppUserService;
 import com.summer.service.DonaUsersWalletsService;
-import com.summer.sms.util.SmsUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;

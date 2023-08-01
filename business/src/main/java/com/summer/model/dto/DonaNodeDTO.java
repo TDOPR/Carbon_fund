@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @Data
 public class DonaNodeDTO {
 
-    private Integer level;
+//    private Integer level;
 
 //    /**
 //     * 链ID

@@ -18,6 +18,7 @@ import com.summer.model.UpdatePwdLog;
 import com.summer.service.CertificateService;
 import com.summer.service.UpdatePwdLogService;
 import org.apache.commons.io.FileUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -37,13 +38,13 @@ public class CertificateServiceImpl extends ServiceImpl<CertificateMapper, Certi
 
     @Resource
     private AppParamProperties appParamProperties;
-    @Resource
-    private ThumbnailsService thumbnailsService;
-    @Resource
-    private MyIncrementGenerator myIncrementGenerator;
+    
+    @Autowired
+    private CertificateService certificateService;
     
     @Override
     public JsonResult generateCertificate(Integer userId, String name, String number, String level, LocalDateTime date){
+        
         try{
             Certificate certificate = new Certificate();
             certificate.setUserId(userId);
@@ -53,11 +54,13 @@ public class CertificateServiceImpl extends ServiceImpl<CertificateMapper, Certi
             File saveFile = new File(dataSavePathEnum.getFile(), saveFileName);
             FileInputStream fileInputStream = new FileInputStream(new File(appParamProperties.getSourceFile()));
 //            String number = myIncrementGenerator.usingMath(CarbonConfig.STRING_LENGTH);
-            InputStream result = ThumbnailsService.addWaterMark(fileInputStream, level, name, number, String.valueOf(date));
+            InputStream result = ThumbnailsUtil.addWaterMark(fileInputStream, VipLevelEnum.getByLevel(Integer.valueOf(level)).getDescription(), name, number, String.valueOf(date));
             FileUtils.copyInputStreamToFile(result, saveFile);
             String url = GlobalProperties.getVirtualPathURL() + StringUtil.replace(dataSavePathEnum.getPath(), GlobalProperties.getRootPath(), "") + saveFileName;
             certificate.setFolderPath(saveFile.getAbsolutePath());
             certificate.setUrl(url);
+//            certificateService.save(certificate);
+            this.baseMapper.insert(certificate);
             return JsonResult.successResult();
         } catch (Exception e){
             log.error("banner: saveAndUpload error:{}", e);

@@ -71,5 +71,5 @@ public interface SysUserService extends IService<SysUser> {
     /**
      * 代理商登录
      */
-    JsonResult proxylogin(LoginDTO loginDTO, String localIp);
+//    JsonResult proxylogin(LoginDTO loginDTO, String localIp);
 }

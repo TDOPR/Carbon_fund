@@ -1,23 +1,29 @@
-package com.summer.service.impl;
+package com.summer.common.util;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import net.coobird.thumbnailator.Thumbnails;
 import net.coobird.thumbnailator.geometry.Positions;
-import org.apache.commons.io.FileUtils;
+import org.springframework.stereotype.Service;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.RoundRectangle2D;
 import java.awt.image.BufferedImage;
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.math.BigDecimal;
 
-public class ThumbnailsService {
 
-    public static void main(String[] args) throws IOException {
-        FileInputStream fileInputStream = new FileInputStream(new File("C:\\Users\\Administrator\\Desktop\\exmple.png"));
-        InputStream result = addWaterMark(fileInputStream, "Zero Carbon Envoy/", "Musk", "7189-A947-4fc3-83d1-B58e", "JULY 17,2023");
-        FileUtils.copyInputStreamToFile(result, new File("C:\\Users\\Administrator\\Desktop\\save.png"));
-    }
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class ThumbnailsUtil {
+
+//    public static void main(String[] args) throws IOException {
+//        FileInputStream fileInputStream = new FileInputStream(new File("C:\\Users\\Administrator\\Desktop\\exmple.png"));
+//        InputStream result = addWaterMark(fileInputStream, "Zero Carbon Envoy/", "Musk", "7189-A947-4fc3-83d1-B58e", "JULY 17,2023");
+//        FileUtils.copyInputStreamToFile(result, new File("C:\\Users\\Administrator\\Desktop\\save.png"));
+//    }
 
     /**
      * @param srcImgFile 源图片输入流

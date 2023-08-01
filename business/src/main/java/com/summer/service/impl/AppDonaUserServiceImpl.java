@@ -21,7 +21,7 @@ import com.summer.common.model.dto.UpdatePasswordDTO;
 import com.summer.common.service.SysLoginLogService;
 import com.summer.common.util.IdUtil;
 import com.summer.common.util.JwtTokenUtil;
-import com.summer.common.util.MyIncrementGenerator;
+import com.summer.common.util.MyIncrementGeneratorUtil;
 import com.summer.common.util.encrypt.AESUtil;
 import com.summer.common.util.redis.RedisUtil;
 import com.summer.constant.CarbonConfig;
@@ -83,9 +83,6 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
     
     @Autowired
     private DonaUsersIntegralWalletsLogsService donaUsersIntegralWalletsLogsService;
-    
-    @Resource
-    private MyIncrementGenerator myIncrementGenerator;
     
     @Autowired
     private CertificateService certificateService;
@@ -278,7 +275,7 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
 //                inviteUserId = inviteUser.getId();
 //            }
             //注册
-            String zeroCertificate = myIncrementGenerator.usingMath(CarbonConfig.STRING_LENGTH);
+            String zeroCertificate = MyIncrementGeneratorUtil.usingMath(CarbonConfig.STRING_LENGTH);
             appDonaUsers = new AppDonaUsers();
             appDonaUsers.setEmail(appDonaUserRegisterDTO.getEmail());
             appDonaUsers.setLevel(VipLevelEnum.ZERO.getLevel());
@@ -294,13 +291,13 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
             this.save(appDonaUsers);
     
             certificateService.generateCertificate(appDonaUsers.getId(), appDonaUsers.getNickName(), appDonaUsers.getZeroCertificate(), VipLevelEnum.ZERO.getLevel().toString(), appDonaUsers.getCreateTime());
-            
+            certificate = certificateService.getOne(new LambdaQueryWrapper<Certificate>().eq(Certificate::getUserId, appDonaUsers.getId()).eq(Certificate::getLevel, VipLevelEnum.ZERO.getLevel()));
 
             //创建一条钱包记录
 //            BigDecimal exchangeRate = kLineDataService.getNowExchangeRate();
             DonaUsersWallets donaUsersWallets = new DonaUsersWallets();
             //注册即送100积分
-            donaUsersWallets.setUserIntegralAmount(new BigDecimal(CarbonConfig.REGISTER_REWARDS));
+            donaUsersWallets.setUserIntegralAmount(CarbonConfig.REGISTER_REWARDS);
             donaUsersWallets.setUserId(appDonaUsers.getId());
             donaUsersWalletsService.save(donaUsersWallets);
             DonaUsersIntegralLogs donaUsersIntegralLogs = new DonaUsersIntegralLogs();
@@ -343,6 +340,7 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
             json.put(SystemConstants.TOKEN_NAME, tokenKey);
 //            json.put("greenhorn", true);
             json.put("integralAmount", CarbonConfig.REGISTER_REWARDS);
+            json.put("zeroCertificateUrl", certificate.getUrl());
             return JsonResult.successResult(json);
         } else {
             return JsonResult.failureResult(ReturnMessageEnum.EMAIL_EXISTS);

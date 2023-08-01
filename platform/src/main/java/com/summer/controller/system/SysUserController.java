@@ -127,15 +127,15 @@ public class SysUserController {
     }
 
 
-    /**
-     * 代理商用户登录
-     */
-    @PrintLog
-    @PostMapping("/proxylogin")
-    @IgnoreWebSecurity
-    public JsonResult proxylogin(@Valid @RequestBody LoginDTO loginDTO, HttpServletRequest request) {
-        return sysUserService.proxylogin(loginDTO, IpAddrUtil.getLocalIp(request));
-    }
+//    /**
+//     * 代理商用户登录
+//     */
+//    @PrintLog
+//    @PostMapping("/proxylogin")
+//    @IgnoreWebSecurity
+//    public JsonResult proxylogin(@Valid @RequestBody LoginDTO loginDTO, HttpServletRequest request) {
+//        return sysUserService.proxylogin(loginDTO, IpAddrUtil.getLocalIp(request));
+//    }
 
     /**
      * 谷歌认证器二维码

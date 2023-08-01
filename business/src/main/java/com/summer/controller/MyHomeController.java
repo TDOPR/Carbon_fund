@@ -17,6 +17,7 @@ import com.summer.model.Medal;
 import com.summer.model.dto.*;
 import com.summer.service.AppDonaUserService;
 import com.summer.service.DonaUsersIntegralWalletsLogsService;
+import com.summer.service.DonaUsersWalletsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -50,6 +51,9 @@ public class MyHomeController {
     
     @Autowired
     private DonaUsersIntegralWalletsLogsService donaUsersIntegralWalletsLogsService;
+    
+    @Autowired
+    private DonaUsersWalletsService donaUsersWalletsService;
 
 //    /**
 //     * 获取用户和平台详细信息
@@ -240,6 +244,15 @@ public class MyHomeController {
     public JsonResult<PageVO<WalletRecordInfoDTO>> selectWalletsLogsRecord(@RequestBody PageDTO pageDTO) {
         Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
         return JsonResult.successResult(new PageVO<>(donaUsersWalletsLogsMapper.selectWalletsLogsRecord(CarbonConfig.WALLET_TYPE, userId, pageDTO.getPage())));
+    }
+    
+    /**
+     * 购买节点
+     */
+    @PostMapping("/donaNode")
+    public JsonResult donaNode(@RequestBody DonaNodeDTO donaNodeDTO) {
+        Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
+        return JsonResult.successResult(donaUsersWalletsService.donaNode(donaNodeDTO));
     }
     
     

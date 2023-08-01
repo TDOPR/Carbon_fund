@@ -151,5 +151,14 @@ public enum VipLevelEnum {
         }
         return null;
     }
+    
+    public static VipLevelEnum getByAmount(BigDecimal amount) {
+        for (VipLevelEnum vipLevelEnum : values()) {
+            if (vipLevelEnum.getAmount().equals(amount)) {
+                return vipLevelEnum;
+            }
+        }
+        return null;
+    }
 
 }

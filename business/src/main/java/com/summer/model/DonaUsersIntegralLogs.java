@@ -29,7 +29,7 @@ public class DonaUsersIntegralLogs extends BaseModelNoModifyTime {
     /**
      * 本次变动积分
      */
-    private Integer integralAmount;
+    private BigDecimal integralAmount;
 
     /**
      * 收支类型 1=收入 2=支出

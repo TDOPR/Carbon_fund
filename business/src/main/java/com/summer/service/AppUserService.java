@@ -41,7 +41,7 @@ public interface AppUserService extends IService<AppUsers> {
 //
 //    JsonResult bindMobile(MobileDTO mobileDTO);
 
-    JsonResult sendSms(String mobile, Integer type);
+//    JsonResult sendSms(String mobile, Integer type);
 
 
 //    JsonResult editTiktok(TikTokAccount tikTokAccount);

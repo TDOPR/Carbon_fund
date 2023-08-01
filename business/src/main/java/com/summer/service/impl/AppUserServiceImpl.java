@@ -27,7 +27,6 @@ import com.summer.model.AppUsers;
 import com.summer.model.dto.AppUserLoginDTO;
 import com.summer.model.dto.AppUserRegisterDTO;
 import com.summer.service.AppUserService;
-import com.summer.sms.util.SmsUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -568,27 +567,27 @@ public class AppUserServiceImpl extends ServiceImpl<AppUserMapper, AppUsers> imp
 //        return JsonResult.successResult();
 //    }
 
-    @Override
-    public JsonResult sendSms(String mobile, Integer type) {
-        String uuid = IdUtil.simpleUUID();
-        String verifyKey = CacheKeyPrefixConstants.CAPTCHA_CODE + uuid;
-        int start = NumberUtil.getTenNResult(loginConfig.getCaptcha().getNumberLength());
-        int end = start * 10 - 1;
-        int intCode = RandomUtil.randomInt(start, end);
-        String code = String.valueOf(intCode);
-        //boolean flag = true;
-        String countryTelephoneCode = mobile.substring(0, 2);
-        mobile = mobile.substring(2);
-        boolean flag = SmsUtils.send(countryTelephoneCode, mobile, code, loginConfig.getCaptcha().getExpirationTime().toString());
-        if (flag) {
-            //短信验证码有效期3分钟
-            RedisUtil.setCacheObject(verifyKey, code, Duration.ofMinutes(3));
-            JSONObject object = new JSONObject();
-            object.put("uuid", uuid);
-            return JsonResult.successResult(object);
-        }
-        return JsonResult.failureResult(ReturnMessageEnum.SEND_SMS_FAIL);
-    }
+//    @Override
+//    public JsonResult sendSms(String mobile, Integer type) {
+//        String uuid = IdUtil.simpleUUID();
+//        String verifyKey = CacheKeyPrefixConstants.CAPTCHA_CODE + uuid;
+//        int start = NumberUtil.getTenNResult(loginConfig.getCaptcha().getNumberLength());
+//        int end = start * 10 - 1;
+//        int intCode = RandomUtil.randomInt(start, end);
+//        String code = String.valueOf(intCode);
+//        //boolean flag = true;
+//        String countryTelephoneCode = mobile.substring(0, 2);
+//        mobile = mobile.substring(2);
+//        boolean flag = SmsUtils.send(countryTelephoneCode, mobile, code, loginConfig.getCaptcha().getExpirationTime().toString());
+//        if (flag) {
+//            //短信验证码有效期3分钟
+//            RedisUtil.setCacheObject(verifyKey, code, Duration.ofMinutes(3));
+//            JSONObject object = new JSONObject();
+//            object.put("uuid", uuid);
+//            return JsonResult.successResult(object);
+//        }
+//        return JsonResult.failureResult(ReturnMessageEnum.SEND_SMS_FAIL);
+//    }
 
 //    @Override
 //    public JsonResult portrait() {

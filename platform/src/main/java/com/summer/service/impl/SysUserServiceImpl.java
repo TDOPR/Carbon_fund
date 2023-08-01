@@ -246,7 +246,7 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
             if (appUsers.getPassword().equals(oldPwd)) {
                 UpdateWrapper<AppUsers> wrapper = Wrappers.update();
                 wrapper.lambda()
-                        .set(AppUsers::getMobile, updateUserInfoDTO.getMobile())
+//                        .set(AppUsers::getMobile, updateUserInfoDTO.getMobile())
                         .set(AppUsers::getNickName, updateUserInfoDTO.getNickName())
                         .set(AppUsers::getPassword, AESUtil.encrypt(updateUserInfoDTO.getPassword(), appUsers.getSalt()))
                         .eq(AppUsers::getId, userId);
@@ -363,35 +363,35 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
         ResponseUtil.downloadFileByLocal(response, new File(filePath), ContentTypeEnum.PNG);
     }
 
-    @Override
-    public JsonResult proxylogin(LoginDTO loginDTO, String localIp) {
-        AppUsers appUsers = appUserMapper.selectOne(new LambdaQueryWrapper<AppUsers>()
-                .eq(AppUsers::getEnabled, BooleanEnum.TRUE.intValue())
-                .eq(AppUsers::getEmail, loginDTO.getUsername())
-        );
-
-        if (appUsers == null) {
-            return JsonResult.failureResult(ReturnMessageEnum.EMAIL_NOT_EXISTS);
-        } else if (appUsers.getEnabled().equals(BooleanEnum.FALSE.intValue())) {
-            return JsonResult.failureResult(ReturnMessageEnum.ACCOUNT_DISABLED);
-        } else if (!appUsers.getPassword().equals(AESUtil.encrypt(loginDTO.getPassword(), appUsers.getSalt()))) {
-            return JsonResult.failureResult(ReturnMessageEnum.PASSWORD_ERROR);
-        }else if(appUsers.getProxyRole().equals(BooleanEnum.FALSE.intValue())){
-            return JsonResult.failureResult("该账号未开通代理商角色！");
-        }
-
-        String token = JwtTokenUtil.getProxyToken(appUsers.getId(),appUsers.getEmail());
-
-        //单点登录需要删除用户在其它地方登录的Token
-        if (SysSettingParam.isEnableSso()) {
-            RedisUtil.deleteObjects(CacheKeyPrefixConstants.APP_TOKEN + appUsers.getId() + ":*");
-        }
-
-        //把token存储到缓存中
-        String tokenKey = CacheKeyPrefixConstants.APP_TOKEN + appUsers.getId() + ":" + IdUtil.simpleUUID();
-        RedisUtil.setCacheObject(tokenKey, token, Duration.ofSeconds(GlobalProperties.getTokenExpire()));
-        sysLoginLogService.save(new SysLoginLog(appUsers.getEmail(), localIp, UserTypeEnum.CLIENT.getValue()));
-
-        return JsonResult.successResult(new TokenVO(tokenKey, appUsers));
-    }
+//    @Override
+//    public JsonResult proxylogin(LoginDTO loginDTO, String localIp) {
+//        AppUsers appUsers = appUserMapper.selectOne(new LambdaQueryWrapper<AppUsers>()
+//                .eq(AppUsers::getEnabled, BooleanEnum.TRUE.intValue())
+//                .eq(AppUsers::getEmail, loginDTO.getUsername())
+//        );
+//
+//        if (appUsers == null) {
+//            return JsonResult.failureResult(ReturnMessageEnum.EMAIL_NOT_EXISTS);
+//        } else if (appUsers.getEnabled().equals(BooleanEnum.FALSE.intValue())) {
+//            return JsonResult.failureResult(ReturnMessageEnum.ACCOUNT_DISABLED);
+//        } else if (!appUsers.getPassword().equals(AESUtil.encrypt(loginDTO.getPassword(), appUsers.getSalt()))) {
+//            return JsonResult.failureResult(ReturnMessageEnum.PASSWORD_ERROR);
+//        }else if(appUsers.getProxyRole().equals(BooleanEnum.FALSE.intValue())){
+//            return JsonResult.failureResult("该账号未开通代理商角色！");
+//        }
+//
+//        String token = JwtTokenUtil.getProxyToken(appUsers.getId(),appUsers.getEmail());
+//
+//        //单点登录需要删除用户在其它地方登录的Token
+//        if (SysSettingParam.isEnableSso()) {
+//            RedisUtil.deleteObjects(CacheKeyPrefixConstants.APP_TOKEN + appUsers.getId() + ":*");
+//        }
+//
+//        //把token存储到缓存中
+//        String tokenKey = CacheKeyPrefixConstants.APP_TOKEN + appUsers.getId() + ":" + IdUtil.simpleUUID();
+//        RedisUtil.setCacheObject(tokenKey, token, Duration.ofSeconds(GlobalProperties.getTokenExpire()));
+//        sysLoginLogService.save(new SysLoginLog(appUsers.getEmail(), localIp, UserTypeEnum.CLIENT.getValue()));
+//
+//        return JsonResult.successResult(new TokenVO(tokenKey, appUsers));
+//    }
 }

@@ -26,11 +26,12 @@ public class AppUsers extends BaseModelCID {
      */
     @NotEmpty
     private String password;
-
+    
     /**
-     * 手机号
+     * 用户地址
      */
-    private String mobile;
+    private String userAddress;
+
 
     /**
      * 加密用得盐
@@ -53,6 +54,8 @@ public class AppUsers extends BaseModelCID {
      * 用户状态 1=正常 0=禁用
      */
     private Integer enabled;
+    
+    
 
     /**
      * 登录次数
@@ -74,24 +77,24 @@ public class AppUsers extends BaseModelCID {
      */
     private Integer level;
 
-    /**
-     * 个人等级
-     */
-    private Integer vipLevel;
+//    /**
+//     * 个人等级
+//     */
+//    private Integer vipLevel;
 
     /**
      * 是否有效用户(消费过 未消费) 1=有效  0=无效
      */
     private Integer valid;
 
-    /**
-     * 新手教程 1=新手 0=非新手
-     */
-    private Integer greenhorn;
-
-    /**
-     * 是否为代理商角色 1=是 (可以登录后台)
-     */
-    private Integer proxyRole;
+//    /**
+//     * 新手教程 1=新手 0=非新手
+//     */
+//    private Integer greenhorn;
+//
+//    /**
+//     * 是否为代理商角色 1=是 (可以登录后台)
+//     */
+//    private Integer proxyRole;
 
 }

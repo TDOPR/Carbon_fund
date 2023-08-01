@@ -39,7 +39,7 @@ public class TokenVO {
         this.token = token;
         this.email = appUsers.getEmail();
         this.nickName = appUsers.getNickName();
-        this.mobile = appUsers.getMobile();
+//        this.mobile = appUsers.getMobile();
     }
 
 }

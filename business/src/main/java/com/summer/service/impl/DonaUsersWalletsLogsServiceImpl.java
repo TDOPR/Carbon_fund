@@ -7,8 +7,11 @@ import com.summer.enums.FlowingActionEnum;
 import com.summer.enums.IntegralEnum;
 import com.summer.enums.UsdLogTypeEnum;
 import com.summer.mapper.DonaUsersWalletsLogsMapper;
+import com.summer.model.DonaUsersIntegralLogs;
 import com.summer.model.DonaUsersWalletsLogs;
+import com.summer.service.DonaUsersIntegralWalletsLogsService;
 import com.summer.service.DonaUsesrsWalletsLogsService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -47,21 +50,24 @@ public class DonaUsersWalletsLogsServiceImpl extends ServiceImpl<DonaUsersWallet
 //                .build();
 //        this.baseMapper.insert(donaUsersWalletsLogs);
 //        return donaUsersWalletsLogs.getId();
-//    }
+////    }
+//    @Autowired
+//    private DonaUsersIntegralWalletsLogsService donaUsersIntegralWalletsLogsService;
 
-    @Override
-    @Transactional(rollbackFor = Exception.class)
-    public Long insertDonaUsersIntegralWalletsLogs(Integer userId, BigDecimal amount, FlowingActionEnum flowingActionEnum, IntegralEnum integralEnum) {
-        //添加钱包流水记录
-        DonaUsersWalletsLogs donaUsersWalletsLogs = DonaUsersWalletsLogs.builder()
-                .userId(userId)
-                .integralAmount(amount)
-                .action(flowingActionEnum.getValue())
-                .type(integralEnum.getType())
-                .build();
-        this.baseMapper.insert(donaUsersWalletsLogs);
-        return donaUsersWalletsLogs.getId();
-    }
+
+//    @Override
+//    @Transactional(rollbackFor = Exception.class)
+//    public Long insertDonaUsersIntegralWalletsLogs(Integer userId, BigDecimal amount, FlowingActionEnum flowingActionEnum, IntegralEnum integralEnum) {
+//        //添加积分钱包流水记录
+//        DonaUsersIntegralLogs donaUsersIntegralLogs = DonaUsersIntegralLogs.builder()
+//                .userId(userId)
+//                .integralAmount(amount)
+//                .action(flowingActionEnum.getValue())
+//                .type(integralEnum.getType())
+//                .build();
+//        this.baseMapper.insert(donaUsersIntegralLogs);
+//        return donaUsersIntegralLogs.getId();
+//    }
     
     @Override
     @Transactional(rollbackFor = Exception.class)

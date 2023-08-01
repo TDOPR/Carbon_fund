@@ -114,7 +114,7 @@ security:
     all:
       - /home/*
       - /test/*
-      - /myhome/allUsers
+#      - /myhome/*
     post:
 
 #########################  异步线程池配置 ##################################
@@ -188,7 +188,7 @@ app:
   #文件存储根路径
   rootPath: D:\data\
   #虚拟路径前缀
-  virtualPathPrefix: /virtual
+  virtualPathPrefix: /certificate
   #虚拟路径URL
   virtualPathURL: ${app.serverIp}${app.virtualPathPrefix}/
   #文件上传限制 MB
@@ -219,6 +219,10 @@ app:
   callBackUrl: http://${app.ip}:${app.callBackPort}
   #是否主动拉取订单状态
   enableQueryOrdersStatus: false
+  #源文件
+  sourceFile: C:\\Users\\Administrator\\Desktop\\exmple.png
+  #suffix
+  suffix: png
 
 #基础token
 token:

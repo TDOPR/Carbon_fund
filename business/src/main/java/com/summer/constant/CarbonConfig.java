@@ -23,7 +23,7 @@ public class CarbonConfig {
     /**
      * 注册奖励的积分数量
      */
-    public static final int REGISTER_REWARDS = 100;
+    public static final BigDecimal REGISTER_REWARDS = new BigDecimal(100);
     /**
      * suffix
      */

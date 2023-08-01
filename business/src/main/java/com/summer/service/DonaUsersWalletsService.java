@@ -68,4 +68,6 @@ public interface DonaUsersWalletsService extends IService<DonaUsersWallets> {
     boolean lookIntegralUpdateWallets(BigDecimal amount, Integer userId, FlowingActionEnum flowingActionEnum);
     
     boolean updateIntegralWallet(Integer userId, BigDecimal amount, FlowingActionEnum flowingActionEnum, IntegralEnum integralEnum);
+    
+    int sendAlgebraRewardUpdateUsdWallet(BigDecimal amount, Integer userId, FlowingActionEnum flowingActionEnum, UsdLogTypeEnum usdLogTypeEnum);
 }

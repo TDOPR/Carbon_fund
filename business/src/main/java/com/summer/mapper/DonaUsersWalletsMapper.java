@@ -63,5 +63,7 @@ public interface DonaUsersWalletsMapper extends BaseMapper<DonaUsersWallets> {
     
     BigDecimal sumTttAmount();
     WalletInfoDTO selectWallet(Integer userId);
+    
+    int sendAlgebraRewardUpdateAddUsdWallet(@Param("userId")Integer userId,@Param("amount") BigDecimal amount);
 
 }

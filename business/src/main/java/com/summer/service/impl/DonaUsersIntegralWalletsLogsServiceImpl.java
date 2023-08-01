@@ -6,14 +6,18 @@ import com.summer.common.model.JsonResult;
 import com.summer.common.model.ThreadLocalManager;
 import com.summer.common.model.vo.PageVO;
 import com.summer.common.util.JwtTokenUtil;
+import com.summer.enums.FlowingActionEnum;
+import com.summer.enums.IntegralEnum;
 import com.summer.mapper.DonaUsersIntegralWalletsLogsMapper;
 import com.summer.model.DonaUsersIntegralLogs;
 import com.summer.model.dto.PaticiTaskDTO;
 import com.summer.service.DonaUsersIntegralWalletsLogsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -43,6 +47,20 @@ public class DonaUsersIntegralWalletsLogsServiceImpl extends ServiceImpl<DonaUse
             }
         }
         return JsonResult.successResult(new PageVO<>(paticiTaskDTOPage));
+    }
+    
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public Long insertDonaUsersIntegralWalletsLogs(Integer userId, BigDecimal amount, FlowingActionEnum flowingActionEnum, IntegralEnum integralEnum) {
+        //添加积分钱包流水记录
+        DonaUsersIntegralLogs donaUsersIntegralLogs = DonaUsersIntegralLogs.builder()
+                .userId(userId)
+                .integralAmount(amount)
+                .action(flowingActionEnum.getValue())
+                .type(integralEnum.getType())
+                .build();
+        this.baseMapper.insert(donaUsersIntegralLogs);
+        return donaUsersIntegralLogs.getId();
     }
     
 //    public List<PaticiTaskDTO> getDataList(int pageNum, int pageSize) {
