@@ -114,8 +114,10 @@ security:
     all:
       - /home/*
       - /test/*
-#      - /myhome/*
+      - /zhome/link
+      - /zhome/bindInviteCode
     post:
+
 
 #########################  异步线程池配置 ##################################
 asyncExecutor:
@@ -238,13 +240,13 @@ token:
 #ChainIds
 chainids:
   #以太坊链id
-  ETH: 5
+  ETH: 1
   #BSC链id
   BSC: 97
   #TRON链id
-  TRON: 0
+  TRON: https://api.trongrid.io
 
-#Tron
+#########################  波场配置 ##################################
 tron:
   #事务合约地址
   eventContract: "THg43Ya8AapZBGx33r7hsBGuri1dJsj2D3"

@@ -5,23 +5,26 @@
 //import com.alibaba.fastjson.JSONObject;
 //import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 //import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-//import com.pp.config.ChainIdsConfig;
-//import com.pp.config.TokenConfig;
-//import com.pp.config.TronConfig;
-//import com.pp.enums.FlowingActionEnum;
-//import com.pp.enums.FlowingTypeEnum;
-//import com.pp.enums.LevelEnum;
-//import com.pp.enums.RechargeStatusEnum;
-//import com.pp.mapper.AppUserMapper;
-//import com.pp.mapper.CoinConfigDao;
-//import com.pp.mapper.EvmUserWalletMapper;
-//import com.pp.model.CoinConfig;
-//import com.pp.model.EvmEvent;
-//import com.pp.model.EvmUserWallet;
-//import com.pp.service.*;
-//import com.pp.utils.Help;
-//import com.pp.utils.TronUiltNew;
-//import com.pp.utils.TronUtils;
+//import com.summer.common.config.ChainIdsConfig;
+//import com.summer.common.config.TokenConfig;
+//import com.summer.common.config.TronConfig;
+//import com.summer.common.util.Help;
+//import com.summer.common.util.TronUiltNew;
+//import com.summer.common.util.TronUtils;
+//import com.summer.enums.FlowingActionEnum;
+//import com.summer.enums.FlowingTypeEnum;
+//import com.summer.enums.LevelEnum;
+//import com.summer.enums.RechargeStatusEnum;
+//import com.summer.mapper.AppUserMapper;
+//import com.summer.mapper.CoinConfigMapper;
+//import com.summer.mapper.EvmUserWalletMapper;
+//import com.summer.model.CoinConfig;
+//import com.summer.model.EvmEvent;
+//import com.summer.model.EvmUserWallet;
+//import com.summer.service.CoinConfigService;
+//import com.summer.service.EvmEventService;
+//import com.summer.service.EvmUserWalletService;
+//import com.summer.service.WalletsService;
 //import lombok.extern.slf4j.Slf4j;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.stereotype.Service;
@@ -46,8 +49,8 @@
 //    @Autowired
 //    private EvmEventService eventService;
 //
-//    @Autowired
-//    private Tron20Service tron20Service;
+////    @Autowired
+////    private Tron20Service tron20Service;
 //
 //    @Autowired
 //    private TokenConfig tokenConfig;
@@ -65,7 +68,7 @@
 //    private EvmUserWalletMapper evmUserWalletMapper;
 //
 //    @Resource
-//    private  AppUserMapper appUserMapper;
+//    private AppUserMapper appUserMapper;
 //
 //    @Autowired
 //    private EvmUserWalletService evmUserWalletService;
@@ -74,7 +77,7 @@
 //    private WalletsService walletsService;
 //
 //    @Resource
-//    private CoinConfigDao coinConfigDao;
+//    private CoinConfigMapper coinConfigMapper;
 //
 ////    private final static String EVENT_CONTRACT = "TPUBjsQNoAyVuxJmg1n8pKjA4YtejbGy3L";
 ////
@@ -85,7 +88,7 @@
 //    public void analyzeTRONEvent() throws Exception {
 //        //获取事务
 //        String contractAddress = tronConfig.getEventContract();
-//        CoinConfig scanDataConfig = coinConfigDao.getScanDataConfig(chainIdsConfig.getTron());
+//        CoinConfig scanDataConfig = coinConfigMapper.getScanDataConfig(chainIdsConfig.getTron());
 //        BigInteger blockNumber = scanDataConfig.getBlockNo();
 //        blockNumber = blockNumber.add(BigInteger.ONE);
 //        //获取当前最新区块
@@ -148,7 +151,7 @@
 //                }
 //            }
 //            //更新事务处理块no
-//            coinConfigDao.updateActionSeqById(scanDataConfig.getId(), blockNumber);
+//            coinConfigMapper.updateActionSeqById(scanDataConfig.getId(), blockNumber);
 //            log.info("当前扫描到的区块是" + blockNumber);
 //        }
 //    }

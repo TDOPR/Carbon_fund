@@ -4,16 +4,19 @@
 //import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 //import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 //import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-//import com.pp.config.ChainIdsConfig;
-//import com.pp.config.TokenConfig;
-//import com.pp.enums.*;
-//import com.pp.mapper.AppUserMapper;
-//import com.pp.mapper.CoinConfigDao;
-//import com.pp.mapper.EvmUserWalletMapper;
-//import com.pp.model.CoinConfig;
-//import com.pp.model.EvmEvent;
-//import com.pp.model.EvmUserWallet;
-//import com.pp.service.*;
+//import com.summer.common.config.ChainIdsConfig;
+//import com.summer.common.config.TokenConfig;
+//import com.summer.enums.FlowingActionEnum;
+//import com.summer.enums.FlowingTypeEnum;
+//import com.summer.enums.LevelEnum;
+//import com.summer.enums.RechargeStatusEnum;
+//import com.summer.mapper.AppUserMapper;
+//import com.summer.mapper.CoinConfigMapper;
+//import com.summer.mapper.EvmUserWalletMapper;
+//import com.summer.model.CoinConfig;
+//import com.summer.model.EvmEvent;
+//import com.summer.model.EvmUserWallet;
+//import com.summer.service.*;
 //import lombok.extern.slf4j.Slf4j;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.stereotype.Service;
@@ -32,7 +35,7 @@
 //@Service
 //public class EventManager {
 //    @Resource
-//    private CoinConfigDao coinConfigDao;
+//    private CoinConfigMapper coinConfigMapper;
 //
 //    @Resource
 //    private ERC20WalletHandleService erc20WalletHandleService;
@@ -67,7 +70,7 @@
 //    ChainIdsConfig chainIdsConfig;
 //
 //    public void analyzeETHEvent() throws Exception {
-//        CoinConfig scanDataConfig = coinConfigDao.getScanDataConfig(chainIdsConfig.getEth());
+//        CoinConfig scanDataConfig = coinConfigMapper.getScanDataConfig(chainIdsConfig.getEth());
 //        if (scanDataConfig == null) {
 //            return;
 //        }
@@ -79,11 +82,11 @@
 //        }
 //        log.info(log.getName() + ".scanDataJob currentBlock:{}, oldBlock:{}", currentBlock, oldBlock);
 //        executeETHOneBlock(oldBlock, currentBlock);
-//        coinConfigDao.updateActionSeqById(scanDataConfig.getId(), currentBlock);
+//        coinConfigMapper.updateActionSeqById(scanDataConfig.getId(), currentBlock);
 //    }
 //
 //    public void analyzeBSCEvent() throws Exception {
-//        CoinConfig scanDataConfig = coinConfigDao.getScanDataConfig(chainIdsConfig.getBsc());
+//        CoinConfig scanDataConfig = coinConfigMapper.getScanDataConfig(chainIdsConfig.getBsc());
 //        if (scanDataConfig == null) {
 //            return;
 //        }
@@ -95,7 +98,7 @@
 //        }
 //        log.info(log.getName() + ".scanDataJob currentBlock:{}, oldBlock:{}", currentBlock, oldBlock);
 //        executeBscOneBlock(oldBlock, currentBlock);
-//        coinConfigDao.updateActionSeqById(scanDataConfig.getId(), currentBlock);
+//        coinConfigMapper.updateActionSeqById(scanDataConfig.getId(), currentBlock);
 //    }
 //
 //    private void executeETHOneBlock(BigInteger oldBlock, BigInteger toBlock) throws Exception {

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.summer.mapper.CoinConfigMapper">
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.summer.model.CoinConfig" id="BaseResultMap">
+        <result property="id" column="id"/>
+        <result property="coin" column="coin"/>
+        <result property="chainId" column="chain_id"/>
+        <result property="coinType" column="coin_type"/>
+        <result property="contract" column="contract"/>
+        <result property="token" column="token"/>
+        <result property="round" column="round"/>
+        <result property="mainAddress" column="main_address"/>
+        <result property="password" column="password"/>
+        <result property="collectAddress" column="collect_address"/>
+        <result property="accountName" column="account_name"/>
+        <result property="blockNo" column="block_no"/>
+        <result property="valid" column="valid"/>
+        <result property="remark" column="remark"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+    </resultMap>
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, coin,chain_id,coin_type,contract, token, round,main_address,password,collect_address,account_name,block_no,valid,remark,create_time,update_time
+    </sql>
+    <select id="getScanDataConfig" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM evm_token_coin_config
+        WHERE coin_type = 'EVENT' and chain_id = #{chainId}
+    </select>
+    <select id="getBscScanDataConfig" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM evm_token_coin_config
+        WHERE coin_type = 'EVENT' and chain_id= #{chainId}
+    </select>
+    <select id="getDepositScanDataConfig" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM evm_token_coin_config
+        WHERE coin_type = 'DEPOSIT' and chain_id = #{chainId}
+    </select>
+    <select id="getBscDepositScanDataConfig" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM evm_token_coin_config
+        WHERE coin_type = 'DEPOSIT' and chain_id = #{chainId}
+    </select>
+    <update id="updateActionSeqById">
+        UPDATE evm_token_coin_config
+        SET block_no = #{blockNo},
+            update_time = NOW()
+        WHERE id=#{id}
+    </update>
+</mapper>

@@ -15,7 +15,9 @@ import com.summer.common.model.JsonResult;
 import com.summer.common.model.vo.CaptchaVO;
 import com.summer.common.util.*;
 import com.summer.common.util.redis.RedisUtil;
+import com.summer.model.dto.BindInviteCodeDTO;
 import com.summer.model.dto.EmailTemplateDTO;
+import com.summer.model.dto.SendCaptchaDTO;
 import com.summer.model.vo.UuidVO;
 import com.summer.server.EmailServer;
 import com.summer.service.AppUserService;
@@ -24,11 +26,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 import java.time.Duration;
 
 /**
@@ -50,24 +51,22 @@ public class CaptchaController {
     /**
      * 发送邮件验证码
      *
-     * @param email 邮箱号
-     * @param type  邮件类型 1=注册  2=支付验证  3=找回密码
      * @return 验证码id
      */
     @PrintLog
-    @GetMapping("/sendCaptchaToEmail/{email}/{type}")
+    @PostMapping("/sendCaptchaToEmail")
     @IgnoreWebSecurity("/sendCaptchaToEmail/**")
-    public JsonResult<UuidVO> sendCaptchaToEmail(@PathVariable String email, @PathVariable Integer type) {
+    public JsonResult<UuidVO> sendCaptchaToEmail(@Valid @RequestBody SendCaptchaDTO sendCaptchaDTO) {
         int start = NumberUtil.getTenNResult(loginConfig.getCaptcha().getNumberLength());
         int end = start * 10 - 1;
         int intCode = RandomUtil.randomInt(start, end);
         String code=String.valueOf(intCode);
         if (GlobalProperties.isProdEnv()) {
-            JsonResult jsonResult = appUserService.isRegisterCheck(email, type);
+            JsonResult jsonResult = appUserService.isRegisterCheck(sendCaptchaDTO.getEmail(), sendCaptchaDTO.getType());
             if (jsonResult.getCode() != HttpStatus.OK.value()) {
                 return jsonResult;
             }
-            boolean flag = EmailServer.send(emailTemplateDTO.getTitle(), emailTemplateDTO.getContent().replace("{{code}}", code).replace("{{time}}", loginConfig.getCaptcha().getExpirationTime().toString()), email);
+            boolean flag = EmailServer.send(emailTemplateDTO.getTitle(), emailTemplateDTO.getContent().replace("{{code}}", code).replace("{{time}}", loginConfig.getCaptcha().getExpirationTime().toString()), sendCaptchaDTO.getEmail());
             if (flag) {
                 String uuid = IdUtil.simpleUUID();
                 String verifyKey = CacheKeyPrefixConstants.CAPTCHA_CODE + uuid;

@@ -6,6 +6,7 @@ import com.summer.model.DonaUsersWalletsLogs;
 import com.summer.model.Medal;
 import com.summer.model.dto.MedalDTO;
 import com.summer.model.dto.WalletRecordInfoDTO;
+import com.summer.model.vo.RechargeRecordInfoVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.math.BigDecimal;
@@ -47,4 +48,5 @@ public interface DonaUsersWalletsLogsMapper extends BaseMapper<DonaUsersWalletsL
     
     List<MedalDTO> medalInfo();
     List<MedalDTO> donaUsersMedalDTO(@Param("userId") Integer userId);
+    List<RechargeRecordInfoVO> rechargeRecord(Integer userId);
 }

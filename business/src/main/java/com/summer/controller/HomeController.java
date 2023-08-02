@@ -26,34 +26,6 @@ public class HomeController {
     @Autowired
     private AppDonaUserService appDonaUserService;
 
-//    @Resource
-//    private AppVersionService appVersionService;
-//
-//    @Resource
-//    private AppParamProperties appParamProperties;
-//
-//    @Autowired
-//    private WalletsServiceImpl walletsService;
-
-//    /**
-//     * 主页信息
-//     */
-//    @PostMapping
-//    @IgnoreWebSecurity
-//    public JsonResult<HomeVO> home(@RequestBody PageDTO pageDTO) {
-//        return appUserService.home(pageDTO);
-//    }
-
-//    /**
-//     * 获取客服联系账号
-//     */
-//    @IgnoreWebSecurity
-//    @GetMapping("/getCustomer")
-//    public JsonResult getCustomer() {
-//        JSONObject object = new JSONObject();
-//        object.put("customer", walletsService.getCustomerMap().get(ThreadLocalManager.getLanguage()));
-//        return JsonResult.successResult(object);
-//    }
 
     /**
      * 注册 奖励

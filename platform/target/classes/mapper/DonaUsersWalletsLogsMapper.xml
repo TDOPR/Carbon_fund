@@ -117,9 +117,8 @@
     <select id="donaUsersLevel" resultType="com.summer.model.dto.MedalDTO">
         select a.donaLevel
         from dona_users_wallets_logs a
-        left join
-            medal b
-        a.donaLevel = b.id
+                 left join
+             medal b a.donaLevel = b.id
         where a.type = 2
           and a.userId = #{userId}
     </select>
@@ -130,12 +129,10 @@
                  left join
              medal b
              on
-
                  a.donaLevel = b.id
         where a.type = 2
           and a.userId = #{userId}
-        GROUP BY
-            b.id
+        GROUP BY b.id
     </select>
 
     <select id="selectWalletsLogsRecord" resultType="com.summer.model.dto.WalletRecordInfoDTO">
@@ -148,6 +145,20 @@
             #{type}
         </foreach>
         and a.userId = #{userId}
+    </select>
+
+    <select id="rechargeRecord" resultType="com.summer.model.vo.RechargeRecordInfoVO">
+        select z.typeZh,
+               z.amount,
+               z.createTime
+        from dona_users_wallets_logs z
+                 left join
+
+             (select y.id id
+              from (select a.id id, a.email email from app_users a where a.id = #{userId}) x
+                       LEFT JOIN
+                   app_dona_users y
+                   on x.email = y.email) o on z.userId = o.id
     </select>
 
     <select id="sumTttAmount" resultType="java.math.BigDecimal">

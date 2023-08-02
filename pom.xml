@@ -167,6 +167,12 @@
 
             <dependency>
                 <groupId>com.summer.carbon</groupId>
+                <artifactId>platform</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.summer.carbon</groupId>
                 <artifactId>business</artifactId>
                 <version>${version}</version>
             </dependency>

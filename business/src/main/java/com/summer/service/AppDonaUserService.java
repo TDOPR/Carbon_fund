@@ -26,5 +26,9 @@ public interface AppDonaUserService extends IService<AppDonaUsers> {
         JsonResult loginOut();
         
         JsonResult updatePassword(UpdatePasswordDTO updatePasswordDTO);
+        
+        void registerDonaUser(HomeBindMailDTO homeBindMailDTO);
+        
+        
 
 }

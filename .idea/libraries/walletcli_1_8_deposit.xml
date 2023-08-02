@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="walletcli-1.8-deposit">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/walletcli-1.8-deposit.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/walletcli-1.8-deposit.jar!/" />
+    </SOURCES>
+  </library>
+</component>

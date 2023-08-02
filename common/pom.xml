@@ -41,10 +41,10 @@
             <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.projectlombok</groupId>-->
+<!--            <artifactId>lombok</artifactId>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -168,6 +168,30 @@
         <dependency>
             <groupId>net.coobird</groupId>
             <artifactId>thumbnailator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.feign</groupId>
+            <artifactId>feign-core</artifactId>
+            <version>8.18.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.feign</groupId>
+            <artifactId>feign-jackson</artifactId>
+            <version>8.18.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
+            <version>3.0.5</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.web3j</groupId>
+            <artifactId>core</artifactId>
+            <version>5.0.0</version>
+            <scope>compile</scope>
         </dependency>
 
     </dependencies>

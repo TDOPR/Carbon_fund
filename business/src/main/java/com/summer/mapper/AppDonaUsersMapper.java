@@ -5,6 +5,10 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.summer.model.AppDonaUsers;
 import com.summer.model.dto.AllDonaUsersDTO;
 import com.summer.model.dto.AllIntegralUsersDTO;
+import com.summer.model.dto.HomeUserInfoDTO;
+import com.summer.model.vo.MyDirectPushVO;
+import com.summer.model.vo.MyMemberInfoVO;
+import com.summer.model.vo.MyTeamInfoVO;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -38,4 +42,8 @@ public interface AppDonaUsersMapper extends BaseMapper<AppDonaUsers> {
     Integer selectUserIdByEmail(String email);
     
     AllIntegralUsersDTO myIntegralRank(Integer userId);
+    
+    HomeUserInfoDTO getUserInfo(Integer userId, String email);
+    List<MyMemberInfoVO> getMyTeamInfo(Integer userId);
+    List<MyDirectPushVO> getMyDirectPushVO(Integer userId);
 }

@@ -35,7 +35,7 @@ public enum ReturnMessageEnum {
     RECHARGE_ERROR("recharge_error", "调用支付接口异常!"),
     UNAUTHORIZED("unauthorized", "登录已超时，请重新登录！"),
     ACCOUNT_EXISTS("account_esists", "账号已注册！"),
-    ACCOUNT_NOT_EXISTS("account_not_esists", "账号不存在！"),
+    ACCOUNT_NOT_EXISTS("account_not_esists", "账号不存在,请先注册！"),
     ACCOUNT_LOCK("account_lock", "账号已被锁定{0}分钟，请稍后重试！"),
     MENU_EXISTS_USE("menu_exists_use", "菜单已被角色使用，不能删除！"),
     ROLE_EXISTS_USE("role_exists_use", "角色已被用户使用，不能删除！"),

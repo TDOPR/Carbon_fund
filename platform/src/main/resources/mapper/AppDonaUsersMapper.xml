@@ -50,7 +50,7 @@
     </select>
 
     <select id="myIntegralRank" resultType="com.summer.model.dto.AllIntegralUsersDTO">
---         SET
+        --         SET
 --         <![CDATA[
 --         @rank = 0;
 --             ]]>
@@ -60,14 +60,13 @@
         SELECT @rank := @rank + 1 AS rank,]]>
          id, level, nickName, userIntegralAmount, donaUsdtAmount, rechargeUsdtAmount
         FROM
-
             (SELECT a.id, a.level, a.nickName, b.userIntegralAmount, b.donaUsdtAmount, b.rechargeUsdtAmount FROM
             app_dona_users a
             left join
             dona_users_wallets b
             on a.id = b.userId ORDER BY
             b.userIntegralAmount desc
-            ) ranked_students, (SELECT @rank:=0) r
+            ) ranked_students, (SELECT @rank := 0) r
         where id = #{userId};
 
     </select>
@@ -83,6 +82,22 @@
         order by b.userIntegralAmount
     </select>
 
+    <select id="getUserInfo" resultType="com.summer.model.dto.HomeUserInfoDTO">
+        select a.level,
+               b.userIntegralAmount,
+               b.walletAmount,
+               c.userAddress,
+               c.inviteCode
+        from app_dona_users a
+                 left join
+             dona_users_wallets b
+             on a.id = b.userId
+                 left join app_users c
+                           on a.email = c.email
+        WHERE a.id = #{userId}
+          and c.email = #{email}
+    </select>
+
     <select id="integralRankingSelect" resultType="com.summer.model.dto.AllIntegralUsersDTO">
         select a.nickName,
                b.userIntegralAmount
@@ -92,6 +107,66 @@
              on a.id = b.userId
         where 1 = 1
           AND a.nickName = #{nickName}
+    </select>
+
+    <select id="getMyTeamInfo" resultType="com.summer.model.vo.MyMemberInfoVO">
+        select x.level, count(*)
+        from (select a.user userid, b.email email
+              from (select a.id id,
+                           b.descendant user
+                    from app_users a
+                        left join
+                        tree_paths b
+                    on a.id = b.ancestor
+
+                    where b.level
+                        > 0
+                      and a.id = #{userId}) a
+                       LEFT JOIN
+                   app_users b
+                   on
+                       a.user = b.id) z
+                 left join
+             app_dona_users x
+             on
+                 z.email = x.email
+        where x.level is NOT null
+        GROUP BY x.level
+    </select>
+
+    <select id="rechargeRecord" resultType="com.summer.model.dto.AllIntegralUsersDTO">
+        select a.nickName,
+               b.userIntegralAmount
+        from app_dona_users a
+                 left join
+             dona_users_wallets b
+             on a.id = b.userId
+        where 1 = 1
+          AND a.nickName = #{nickName}
+    </select>
+
+    <select id="getMyDirectPushVO" resultType="com.summer.model.vo.MyDirectPushVO">
+        select z.address, x.level
+        from (select a.user u, b.email email, b.userAddress address
+              from (select a.id id,
+                           b.descendant user
+                    from app_users a
+                        left join
+                        tree_paths b
+                    on a.id = b.ancestor
+
+                    where b.level
+                        > 0
+                      and a.id = #{userId}) a
+                       LEFT JOIN
+                   app_users b
+                   on
+                       a.user = b.id) z
+                 left join
+             app_dona_users x
+             on
+                 z.email = x.email
+        where x.level is NOT null
     </select>
 
     <select id="findAllUsers" resultType="com.summer.model.AppDonaUsers">

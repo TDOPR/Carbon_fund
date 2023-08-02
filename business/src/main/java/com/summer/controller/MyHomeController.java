@@ -55,13 +55,6 @@ public class MyHomeController {
     @Autowired
     private DonaUsersWalletsService donaUsersWalletsService;
 
-//    /**
-//     * 获取用户和平台详细信息
-//     */
-//    @GetMapping
-//    public JsonResult<MyDetailVO> getMyDetail() {
-//        return appUserService.getMyDetail();
-//    }
 
     /**
      * 修改用户名
@@ -72,63 +65,6 @@ public class MyHomeController {
         return appDonaUserService.modifyUserName(appDonaUserDTO);
     }
 
-//    /**
-//     * 获取发送短信验证码需要填写的国家地区编码
-//     */
-//    @GetMapping("/getCountryCode")
-//    public JsonResult getCountryCode() {
-//        return JsonResult.successResult(CountryTelephoneCode.getCountryTelephoneCode());
-//    }
-//
-//    /**
-//     * 发送短信验证码
-//     */
-//    @GetMapping("/sendSms/{mobile}/{type}")
-//    public JsonResult sendSms(@PathVariable String mobile,@PathVariable Integer type) {
-//        return appUserService.sendSms(mobile,type);
-//    }
-//
-//    /**
-//     * 绑定手机号
-//     */
-//    @PostMapping("/bindMobile")
-//    public JsonResult bindMobile(@RequestBody MobileDTO mobileDTO) {
-//        return appUserService.bindMobile(mobileDTO);
-//    }
-//
-//    /**
-//     * 获取已关联的tiktok账号信息
-//     *
-//     * @return
-//     */
-//    @GetMapping("/getTiktokInfo")
-//    public JsonResult<TiktokInfoVO> tiktok() {
-//        return appUserService.getTiktokInfo();
-//    }
-//
-//    /**
-//     * 绑定Tiktok账号
-//     */
-//    @PostMapping("/bindTiktok")
-//    public JsonResult bindTiktok(@RequestBody TikTokAccount tikTokAccount) {
-//        return appUserService.bindTiktok(tikTokAccount);
-//    }
-//
-//    /**
-//     * 更换Tiktok账号
-//     */
-//    @PostMapping("/editTiktok")
-//    public JsonResult editTiktok(@RequestBody TikTokAccount tikTokAccount) {
-//        return appUserService.editTiktok(tikTokAccount);
-//    }
-
-//    /**
-//     * 上传头像
-//     */
-//    @PostMapping("/uploadHeadImage")
-//    public JsonResult uploadHeadImage(@RequestParam("file") MultipartFile file) throws Exception {
-//        return appDonaUserService.uploadHeadImage(file);
-//    }
 
     /**
      * 修改密码
@@ -257,22 +193,6 @@ public class MyHomeController {
     
     
 
-//    /**
-//     * 跳过新手教程
-//     */
-//    @GetMapping("/skip")
-//    public JsonResult skip(){
-//        return appUserService.skip();
-//    }
-//
-//    /**
-//     * 查看团队信息
-//     */
-//    @GetMapping("/itemInfo")
-//    public JsonResult<ItemInfoVO> itemInfo(){
-//        return  appUserService.getItemInfo();
-//    }
-//
     /**
      * 退出登录
      */
