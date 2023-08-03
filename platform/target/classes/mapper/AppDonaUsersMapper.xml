@@ -177,6 +177,13 @@
         where a.superNode = false;
     </select>
 
+    <select id="selectDonaUserIdByUserAddress" resultType="java.lang.Integer">
+        select y.id
+        from (select a.id, a.email from app_users a where a.userAddress = #{userAddress}) z
+                 left join app_dona_users y
+                           on z.email = y.email
+    </select>
+
     <select id="allUsersRechargeAmount" resultType="java.math.BigDecimal">
         select sum(a.amount)
         from app_dona_users a

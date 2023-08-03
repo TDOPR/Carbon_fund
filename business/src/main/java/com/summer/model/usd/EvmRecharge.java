@@ -33,19 +33,19 @@ public class EvmRecharge {
     /**
      * 币种Id
      */
-    @TableField(value = "coin_id")
-    private Integer coinId;
+    @TableField(value = "chainId")
+    private Integer chainId;
 
     /**
      * 币种名称
      */
-    @TableField(value = "coin_name")
+    @TableField(value = "coinName")
     private String coinName;
 
     /**
      * 币种类型 (充值网络类型)
      */
-    @TableField(value = "coin_type")
+    @TableField(value = "coinType")
     private String coinUnit;
 
     /**
@@ -72,13 +72,13 @@ public class EvmRecharge {
     /**
      * 实际充值金额
      */
-    @TableField(value = "mum")
-    private BigDecimal actualAmount;
+    @TableField(value = "rechargeAmount")
+    private BigDecimal rechargeAmount;
 
     /**
      * 区块链高度
      */
-    @TableField(value = "block_number")
+    @TableField(value = "blockNumber")
     private Integer blockNum;
 
     /**
@@ -90,7 +90,7 @@ public class EvmRecharge {
     /**
      * 修改时间
      */
-    @TableField(value = "last_update_time", fill = FieldFill.INSERT_UPDATE)
+    @TableField(value = "lastUpdateTime", fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime lastmodifiedTime;
 
     /**

@@ -357,6 +357,7 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
     }
     
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public JsonResult superReward() {
 //        List<AppDonaUsers> appDonaSuperUsers = new ArrayList<>();
         List<AppDonaUsers> allUsers = appDonaUsersMapper.findAllUsers();
@@ -388,4 +389,11 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
         }
         return JsonResult.successResult();
     }
+    
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public void clearTodayTask(){
+        this.baseMapper.deleteTodayTask();
+    }
+    
 }

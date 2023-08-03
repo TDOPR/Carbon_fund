@@ -122,3 +122,54 @@
 2023-08-03 08:27:59 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.ZHomeController.rechargeRecord","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"pageDTO":{"currentPage":1,"init":true,"page":{"current":1,"optimizeCountSql":true,"orders":[],"pages":0,"records":[],"searchCount":true,"size":10,"total":0},"pageSize":10}},"result":{"code":200,"data":{"content":[{"amount":9.900000000000000000,"createTime":"2023-07-06T14:55:00","typeZh":"捐赠"},{"amount":50.000000000000000000,"createTime":"2023-07-22T17:55:06","typeZh":"代数将"},{"amount":150.000000000000000000,"createTime":"2023-07-01T09:55:13","typeZh":"充值"},{"amount":600.000000000000000000,"createTime":"2023-07-22T10:55:18","typeZh":"特别奖"},{"amount":50.000000000000000000,"createTime":"2023-07-06T14:55:00","typeZh":"捐赠"},{"amount":50.000000000000000000,"createTime":"2023-07-06T14:55:00","typeZh":"捐赠"},{"amount":50.000000000000000000,"createTime":"2023-07-06T14:55:00","typeZh":"捐赠"},{"amount":50.000000000000000000,"createTime":"2023-07-06T14:55:00","typeZh":"捐赠"},{"amount":50.000000000000000000,"createTime":"2023-07-06T14:55:00","typeZh":"捐赠"},{"amount":50.000000000000000000,"createTime":"2023-07-06T14:55:00","typeZh":"捐赠"}],"totalElements":43,"totalPages":5},"msg":"return.ok"},"timeCost":115,"url":"http://localhost:8989/zhome/rechargeRecord"}
 2023-08-03 08:31:55 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
 2023-08-03 08:31:55 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-03 08:33:27 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-03 08:33:27 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 3612 (E:\request\newProject\Carbon\carbon\platform\target\classes started by Administrator in E:\request\newProject\Carbon\carbon)
+2023-08-03 08:33:27 [main] - No active profile set, falling back to default profiles: default
+2023-08-03 08:33:28 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-03 08:33:28 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-03 08:33:28 [main] - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2023-08-03 08:33:28 [main] - BeanFactory id=9161e681-3e27-3bcb-b5e9-58913ea79114
+2023-08-03 08:33:28 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-03 08:33:28 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@65bad087' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-03 08:33:28 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-03 08:33:29 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-03 08:33:29 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-03 08:33:29 [main] - Starting service [Tomcat]
+2023-08-03 08:33:29 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-03 08:33:29 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-03 08:33:29 [main] - Root WebApplicationContext: initialization completed in 1824 ms
+2023-08-03 08:33:29 [main] - Init DruidDataSource
+2023-08-03 08:33:30 [main] - {dataSource-1} inited
+2023-08-03 08:33:33 [main] - Redisson 3.17.6
+2023-08-03 08:33:34 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-03 08:33:34 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-03 08:33:35 [main] - 初始化把字典信息加入缓存中...
+2023-08-03 08:33:35 [main] - ---------设置超时时间--------120秒
+2023-08-03 08:33:35 [main] - ---------设置超时时间--------120秒
+2023-08-03 08:33:35 [main] - 根据注解获取需要忽略认证的耗时：8ms
+2023-08-03 08:33:36 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-03 08:33:36 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login"]
+2023-08-03 08:33:36 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-03 08:33:36 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-03 08:33:36 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-03 08:33:36 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c55c035, org.springframework.security.web.context.SecurityContextPersistenceFilter@7b4268e2, org.springframework.security.web.header.HeaderWriterFilter@3c2654e, org.springframework.web.filter.CorsFilter@22881b1c, org.springframework.security.web.authentication.logout.LogoutFilter@3fe8d57a, com.summer.security.JwtAuthenticationTokenFilter@7e532f2d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3cced001, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c19b0a8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2af6b556, org.springframework.security.web.session.SessionManagementFilter@623eebca, org.springframework.security.web.access.ExceptionTranslationFilter@251ed676, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@649573d0]
+2023-08-03 08:33:36 [main] - ---------设置超时时间--------120秒
+2023-08-03 08:33:37 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-03 08:33:37 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-03 08:33:38 [main] - Started PlatformApplication in 11.11 seconds (JVM running for 11.672)
+2023-08-03 08:33:38 [RMI TCP Connection(6)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-03 08:33:38 [RMI TCP Connection(6)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-03 08:33:38 [RMI TCP Connection(6)-192.168.2.116] - Completed initialization in 1 ms
+2023-08-03 08:34:28 [http-nio-8989-exec-3] - Request Info: {"classMethod":"com.summer.controller.ZHomeController.getMyDirectPushInfo","httpMethod":"POST","ip":"127.0.0.1","requestParams":{"pageDTO":{"currentPage":1,"init":true,"page":{"current":1,"optimizeCountSql":true,"orders":[],"pages":0,"records":[],"searchCount":true,"size":10,"total":0},"pageSize":10}},"result":{"code":200,"data":{"content":[{"userAddress":"0x18de1f2d88cde8f331088d409224009e99c086c5","userLevel":1},{"userAddress":"0xc0bb95524f9fce6a8a1ab558a9aece54cd7fff21","userLevel":1}],"totalElements":2,"totalPages":1},"msg":"return.ok"},"timeCost":90,"url":"http://localhost:8989/zhome/getMyDirectPushInfo"}
+2023-08-03 08:34:59 [http-nio-8989-exec-5] - Request Info: {"classMethod":"com.summer.controller.ZHomeController.getMyTeamInfo","httpMethod":"POST","ip":"127.0.0.1","requestParams":{},"result":{"code":200,"data":[{"myLevel":1,"sum":2}],"msg":"return.ok"},"timeCost":15,"url":"http://localhost:8989/zhome/getMyTeam"}
+2023-08-03 09:43:34 [http-nio-8989-exec-8] - Request Info: {"classMethod":"com.summer.controller.ZHomeController.link","httpMethod":"POST","ip":"192.168.2.118","requestParams":{"linkDTO":{"userAddress":"0xc404d38d9afee3b2c56a29ef40011eaecacc55d6"}},"result":{"code":200,"data":{"inviteCode":"hV7pJlSJ","token":"app_token:81:855ec9c5d6d04b0c87addda56f62383d"},"msg":"return.ok"},"timeCost":115,"url":"http://192.168.2.116:8989/zhome/link"}
+2023-08-03 09:43:43 [http-nio-8989-exec-9] - Request Info: {"classMethod":"com.summer.controller.ZHomeController.link","httpMethod":"POST","ip":"192.168.2.118","requestParams":{"linkDTO":{"userAddress":"TRiwDr4SL2C9TP1YiMh4S3Bg2iEiTDdEZS"}},"result":{"code":200,"data":{"inviteCode":"cc8wn40C","token":"app_token:71:96cd70f8d0cd44179ce9bea5b89d529c"},"msg":"return.ok"},"timeCost":10,"url":"http://192.168.2.116:8989/zhome/link"}
+2023-08-03 09:50:27 [http-nio-8989-exec-2] - 发送成功!
+2023-08-03 09:50:27 [http-nio-8989-exec-2] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"POST","ip":"192.168.2.118","requestParams":{"sendCaptchaDTO":{"email":"304045482@qq.com","type":1}},"result":{"code":200,"data":{"uuid":"151d352899354c259c160a8be3aa1b3c"},"msg":"ok"},"timeCost":981,"url":"http://192.168.2.116:8989/sendCaptchaToEmail"}
+2023-08-03 09:56:26 [http-nio-8989-exec-6] - Request Info: {"classMethod":"com.summer.controller.ZHomeController.link","httpMethod":"POST","ip":"192.168.2.118","requestParams":{"linkDTO":{"userAddress":"0xc404d38d9afee3b2c56a29ef40011eaecacc55d6"}},"result":{"code":200,"data":{"inviteCode":"hV7pJlSJ","token":"app_token:81:1485746c3a59456d9302d18e877aa1c9"},"msg":"return.ok"},"timeCost":13,"url":"http://192.168.2.116:8989/zhome/link"}
+2023-08-03 09:56:30 [http-nio-8989-exec-7] - Request Info: {"classMethod":"com.summer.controller.ZHomeController.bindMail","httpMethod":"POST","ip":"192.168.2.118","requestParams":{"homeBindMailDTO":{"code":"60509","email":"304045482@qq.com","uuid":""}},"result":{"code":200,"data":{"code":500,"msg":"return.code_expire"},"msg":"return.ok"},"timeCost":6,"url":"http://192.168.2.116:8989/zhome/bindMail"}
+2023-08-03 09:56:45 [http-nio-8989-exec-8] - 发送成功!
+2023-08-03 09:56:45 [http-nio-8989-exec-8] - Request Info: {"classMethod":"com.summer.controller.CaptchaController.sendCaptchaToEmail","httpMethod":"POST","ip":"192.168.2.118","requestParams":{"sendCaptchaDTO":{"email":"304045482@qq.com","type":1}},"result":{"code":200,"data":{"uuid":"15468aaa2982495aaf6c6a8af60820c2"},"msg":"ok"},"timeCost":596,"url":"http://192.168.2.116:8989/sendCaptchaToEmail"}
+2023-08-03 09:57:23 [http-nio-8989-exec-9] - Request Info: {"classMethod":"com.summer.controller.ZHomeController.bindMail","httpMethod":"POST","ip":"192.168.2.118","requestParams":{"homeBindMailDTO":{"code":"76542","email":"304045482@qq.com","uuid":""}},"result":{"code":200,"data":{"code":500,"msg":"return.code_expire"},"msg":"return.ok"},"timeCost":2,"url":"http://192.168.2.116:8989/zhome/bindMail"}
+2023-08-03 10:00:25 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-03 10:00:25 [SpringApplicationShutdownHook] - {dataSource-1} closed

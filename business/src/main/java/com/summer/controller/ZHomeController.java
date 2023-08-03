@@ -76,7 +76,7 @@ public class ZHomeController {
     @RepeatSubmit
     @PostMapping("/bindMail")
     public JsonResult bindMail(@RequestBody HomeBindMailDTO homeBindMailDTO) {
-        return JsonResult.successResult(appUserService.bindMail(homeBindMailDTO));
+        return appUserService.bindMail(homeBindMailDTO);
     }
     
     /**
