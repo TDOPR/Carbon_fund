@@ -83,19 +83,28 @@
     </select>
 
     <select id="getUserInfo" resultType="com.summer.model.dto.HomeUserInfoDTO">
-        select a.level,
-               b.userIntegralAmount,
-               b.walletAmount,
-               c.userAddress,
-               c.inviteCode
-        from app_dona_users a
-                 left join
-             dona_users_wallets b
-             on a.id = b.userId
-                 left join app_users c
-                           on a.email = c.email
-        WHERE a.id = #{userId}
-          and c.email = #{email}
+        SELECT z.level,
+               z.userIntegralAmount,
+               z.walletAmount,
+               z.inviteCode,
+               y.title,
+               y.imgUrl
+        from(
+                select a.level,
+                       b.userIntegralAmount,
+                       b.walletAmount,
+                       c.userAddress,
+                       c.inviteCode
+                from app_dona_users a
+                         left join
+                     dona_users_wallets b
+                     on a.id = b.userId
+                         left join app_users c
+                                   on a.email = c.email
+                WHERE a.id = #{userId}
+                  and c.email = #{email}) z
+                LEFT JOIN medal y
+                          on z.level = y.id
     </select>
 
     <select id="integralRankingSelect" resultType="com.summer.model.dto.AllIntegralUsersDTO">

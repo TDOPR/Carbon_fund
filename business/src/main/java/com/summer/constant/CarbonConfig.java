@@ -1,7 +1,10 @@
 package com.summer.constant;
 
 
+import com.summer.model.AppDonaUsers;
+
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -24,6 +27,10 @@ public class CarbonConfig {
      * 注册奖励的积分数量
      */
     public static final BigDecimal REGISTER_REWARDS = new BigDecimal(100);
+    /**
+     * 超级节点列表
+     */
+    public static final List<AppDonaUsers> appDonaSuperUsers = new ArrayList<>();
     /**
      * suffix
      */

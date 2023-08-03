@@ -159,4 +159,11 @@
         from wallets
     </select>
 
+
+    <delete id="deleteTodayTask">
+        delete from
+            patici_task_today
+        where
+        1=1
+    </delete>
 </mapper>

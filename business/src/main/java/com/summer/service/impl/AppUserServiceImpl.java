@@ -199,12 +199,13 @@ public class AppUserServiceImpl extends ServiceImpl<AppUserMapper, AppUsers> imp
         appDonaUsers = appDonaUserService.getOne(new LambdaQueryWrapper<AppDonaUsers>().eq(AppDonaUsers::getEmail, appUsers.getEmail()));
         if(appDonaUsers == null){
             JSONObject json = new JSONObject();
-            json.put("userLevel", null);
-            json.put("inviteCode", null);
-            json.put("userAddress", null);
+            json.put("level", null);
+            json.put("inviteCode", appUsers.getInviteCode());
             json.put("userIntegralAmount", null);
-            json.put("tzhWalletAmount", null);
+            json.put("walletAmount", null);
             json.put("isEmailRegister", false);
+            json.put("imgUrl", null);
+            json.put("title", null);
             return JsonResult.successResult(json);
         }else{
             appDonaUsers.getId();

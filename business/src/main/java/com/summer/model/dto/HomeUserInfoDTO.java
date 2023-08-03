@@ -23,9 +23,14 @@ public class HomeUserInfoDTO {
     private BigDecimal userIntegralAmount;
     
     /**
-     * 用户地址
+     * 图片地址
      */
-    private String userAddress;
+    private String imgUrl;
+    
+    /**
+     * 等级title
+     */
+    private String title;
     
     /**
      * 用户等级

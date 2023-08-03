@@ -69,12 +69,16 @@ public class PullEventScheduledJob {
     @Scheduled(cron = "0 0 2 * * ?")
     public void deleteTodayTask(){
         log.info("定时任务开始......");
-        donaUsersWalletsService.clearTodayTask();
+        if (appParamProperties.isEnableQueryOrdersStatus()) {
+            donaUsersWalletsService.clearTodayTask();
+        }
     }
     
     @Scheduled(cron = "0 0 23 L * ?")
     public void sendSuperNodeReward(){
         log.info("开始发放超级节点奖励......");
-        donaUsersWalletsService.superReward();
+        if (appParamProperties.isEnableQueryOrdersStatus()) {
+            donaUsersWalletsService.superReward();
+        }
     }
 }

@@ -68,7 +68,6 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
 
 //    BigDecimal totalAmount;
     
-    List<AppDonaUsers> appDonaSuperUsers = new ArrayList<>();
     
     /**
      * 根据用户ID查询指定列数据
@@ -359,7 +358,6 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
     @Override
     @Transactional(rollbackFor = Exception.class)
     public JsonResult superReward() {
-//        List<AppDonaUsers> appDonaSuperUsers = new ArrayList<>();
         List<AppDonaUsers> allUsers = appDonaUsersMapper.findAllUsers();
         for (AppDonaUsers user : allUsers) {
             BigDecimal myTeamRechargeAmount = treePathMapper.getTeamRechargeAmount(user.getId());
@@ -379,12 +377,12 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
                     .set(AppDonaUsers::getSuperNode, BooleanEnum.TRUE.intValue())
                     .eq(AppDonaUsers::getId, user.getId());
             appDonaUserService.update(null, updateWrapper);
-            appDonaSuperUsers.add(user);
+            CarbonConfig.appDonaSuperUsers.add(user);
         }
-        Integer divideNum = appDonaSuperUsers.size();
+        Integer divideNum = CarbonConfig.appDonaSuperUsers.size();
         BigDecimal allUsersRechargeAmount = appDonaUsersMapper.allUsersRechargeAmount();
         BigDecimal superReward = allUsersRechargeAmount.multiply(CarbonConfig.SPECIAL_AWARD_RATE).divide(new BigDecimal(divideNum));
-        for (AppDonaUsers appDonaUser : appDonaSuperUsers) {
+        for (AppDonaUsers appDonaUser : CarbonConfig.appDonaSuperUsers) {
             donaUsesrsWalletsLogsService.insertDonaUsersWalletsLogs(appDonaUser.getId(), superReward, FlowingActionEnum.INCOME, UsdLogTypeEnum.SUPER_REWARD);
         }
         return JsonResult.successResult();
