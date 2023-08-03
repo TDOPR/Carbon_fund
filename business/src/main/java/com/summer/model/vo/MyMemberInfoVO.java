@@ -16,14 +16,19 @@ import java.util.List;
 @AllArgsConstructor
 public class MyMemberInfoVO {
     /**
-     * 零碳志愿者数量
+     * 等级
      */
-    private Integer myLevel;
+    private Integer level;
     
     
     /**
      * 零碳使者数量
      */
-    private Integer sum;
+    private Integer value;
+    
+    /**
+     * title
+     */
+    private String title;
 
 }

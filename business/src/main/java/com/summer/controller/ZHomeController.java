@@ -116,7 +116,13 @@ public class ZHomeController {
     @PostMapping("/getMyTeam")
     public JsonResult<List<MyMemberInfoVO>> getMyTeamInfo() {
         Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
-        return JsonResult.successResult(appDonaUsersMapper.getMyTeamInfo(userId));
+        List<MyMemberInfoVO> memberInfoVOS = appDonaUsersMapper.getMyTeamInfo(userId);
+        for(MyMemberInfoVO myMemberInfoVO : memberInfoVOS){
+            if(myMemberInfoVO.getValue() == null){
+                myMemberInfoVO.setValue(0);
+            }
+        }
+        return JsonResult.successResult(memberInfoVOS);
     }
     
     /**

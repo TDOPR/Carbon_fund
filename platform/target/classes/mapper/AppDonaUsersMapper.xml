@@ -89,22 +89,21 @@
                z.inviteCode,
                y.title,
                y.imgUrl
-        from(
-                select a.level,
-                       b.userIntegralAmount,
-                       b.walletAmount,
-                       c.userAddress,
-                       c.inviteCode
-                from app_dona_users a
-                         left join
-                     dona_users_wallets b
-                     on a.id = b.userId
-                         left join app_users c
-                                   on a.email = c.email
-                WHERE a.id = #{userId}
-                  and c.email = #{email}) z
-                LEFT JOIN medal y
-                          on z.level = y.id
+        from (select a.level,
+                     b.userIntegralAmount,
+                     b.walletAmount,
+                     c.userAddress,
+                     c.inviteCode
+              from app_dona_users a
+                       left join
+                   dona_users_wallets b
+                   on a.id = b.userId
+                       left join app_users c
+                                 on a.email = c.email
+              WHERE a.id = #{userId}
+                and c.email = #{email}) z
+                 LEFT JOIN medal y
+                           on z.level = y.id
     </select>
 
     <select id="integralRankingSelect" resultType="com.summer.model.dto.AllIntegralUsersDTO">
@@ -119,28 +118,30 @@
     </select>
 
     <select id="getMyTeamInfo" resultType="com.summer.model.vo.MyMemberInfoVO">
-        select x.level, count(*)
-        from (select a.user userid, b.email email
-              from (select a.id id,
-                           b.descendant user
-                    from app_users a
-                        left join
-                        tree_paths b
-                    on a.id = b.ancestor
-
-                    where b.level
-                        > 0
-                      and a.id = #{userId}) a
-                       LEFT JOIN
-                   app_users b
-                   on
-                       a.user = b.id) z
-                 left join
-             app_dona_users x
-             on
-                 z.email = x.email
-        where x.level is NOT null
-        GROUP BY x.level
+        select a.id level, i.q value, a.title
+        from medal a left join (
+            select x.level, count(*) q
+            from (select a.user userid, b.email email
+            from (select a.id id,
+            b.descendant user
+            from app_users a
+            left join
+            tree_paths b
+            on a.id = b.ancestor
+            where b.level > 0
+            and a.id = #{userId}) a
+            LEFT JOIN
+            app_users b
+            on
+            a.user = b.id) z
+            left join
+            app_dona_users x
+            on
+            z.email = x.email
+            where x.level is NOT null
+            GROUP BY x.level
+            ) i
+        on a.id = i.level
     </select>
 
     <select id="rechargeRecord" resultType="com.summer.model.dto.AllIntegralUsersDTO">
