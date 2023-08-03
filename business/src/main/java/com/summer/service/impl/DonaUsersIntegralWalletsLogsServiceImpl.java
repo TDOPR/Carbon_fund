@@ -10,6 +10,7 @@ import com.summer.enums.FlowingActionEnum;
 import com.summer.enums.IntegralEnum;
 import com.summer.mapper.DonaUsersIntegralWalletsLogsMapper;
 import com.summer.model.DonaUsersIntegralLogs;
+import com.summer.model.dto.ParticiTaskDTO;
 import com.summer.model.dto.PaticiTaskDTO;
 import com.summer.service.DonaUsersIntegralWalletsLogsService;
 import lombok.extern.slf4j.Slf4j;
@@ -63,12 +64,12 @@ public class DonaUsersIntegralWalletsLogsServiceImpl extends ServiceImpl<DonaUse
         return donaUsersIntegralLogs.getId();
     }
     
-//    public List<PaticiTaskDTO> getDataList(int pageNum, int pageSize) {
-//        // 模拟从数据库中查询分页数据
-//        List<PaticiTaskDTO> list = new ArrayList<>();
-//        for (int i = 0; i < pageSize; i++) {
-//            list.add(new PaticiTaskDTO((pageNum - 1) * pageSize + i)); // 生成模拟数据
-//        }
-//        return list;
+//    @Override
+//    @Transactional
+//    public JsonResult doTask(Integer ){
+////        Integer taskId = particiTaskDTO.getTaskId();
+//
 //    }
+    
+    
 }

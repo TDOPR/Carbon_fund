@@ -8,6 +8,7 @@ import com.summer.model.WalletTttLogs;
 import com.summer.model.dto.DateSection;
 import com.summer.model.dto.PaticiTaskDTO;
 import com.summer.model.dto.TeamTaskDTO;
+import com.summer.model.vo.SelectDoTaskVO;
 import org.apache.ibatis.annotations.Param;
 
 import java.math.BigDecimal;
@@ -62,4 +63,6 @@ public interface DonaUsersIntegralWalletsLogsMapper extends BaseMapper<DonaUsers
     Page<PaticiTaskDTO> particiTask(Integer userId, Page page);
     
     Page<PaticiTaskDTO> task(Page page);
+    
+    SelectDoTaskVO selectDoTask(Integer userId, Integer taskId);
 }

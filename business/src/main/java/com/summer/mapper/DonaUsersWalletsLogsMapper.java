@@ -48,5 +48,5 @@ public interface DonaUsersWalletsLogsMapper extends BaseMapper<DonaUsersWalletsL
     
     List<MedalDTO> medalInfo();
     List<MedalDTO> donaUsersMedalDTO(@Param("userId") Integer userId);
-    List<RechargeRecordInfoVO> rechargeRecord(Integer userId);
+    Page<RechargeRecordInfoVO> rechargeRecord(Integer userId, Page page);
 }

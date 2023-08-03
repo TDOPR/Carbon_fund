@@ -3,25 +3,33 @@ package com.summer.controller;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.summer.common.annotation.PrintLog;
+import com.summer.common.enums.ReturnMessageEnum;
 import com.summer.common.model.JsonResult;
 import com.summer.common.model.ThreadLocalManager;
 import com.summer.common.model.dto.UpdatePasswordDTO;
 import com.summer.common.model.vo.PageVO;
 import com.summer.common.util.JwtTokenUtil;
 import com.summer.constant.CarbonConfig;
+import com.summer.enums.FlowingActionEnum;
+import com.summer.enums.IntegralEnum;
+import com.summer.enums.VipLevelEnum;
 import com.summer.mapper.AppDonaUsersMapper;
 import com.summer.mapper.DonaUsersIntegralWalletsLogsMapper;
 import com.summer.mapper.DonaUsersWalletsLogsMapper;
 import com.summer.mapper.DonaUsersWalletsMapper;
 import com.summer.model.Medal;
+import com.summer.model.PaticiTaskToday;
 import com.summer.model.dto.*;
+import com.summer.model.vo.SelectDoTaskVO;
 import com.summer.service.AppDonaUserService;
 import com.summer.service.DonaUsersIntegralWalletsLogsService;
 import com.summer.service.DonaUsersWalletsService;
+import com.summer.service.PaticiTaskTodayService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.math.BigDecimal;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -54,6 +62,9 @@ public class MyHomeController {
     
     @Autowired
     private DonaUsersWalletsService donaUsersWalletsService;
+    
+    @Autowired
+    private PaticiTaskTodayService paticiTaskTodayService;
 
 
     /**
@@ -189,6 +200,29 @@ public class MyHomeController {
     public JsonResult donaNode(@RequestBody DonaNodeDTO donaNodeDTO) {
         Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
         return JsonResult.successResult(donaUsersWalletsService.donaNode(donaNodeDTO));
+    }
+    
+    /**
+     * 参与活动
+     */
+    @PostMapping("/doTask")
+    public JsonResult doTask(@RequestBody ParticiTaskDTO particiTaskDTO) {
+        Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
+        SelectDoTaskVO selectDoTaskVO = donaUsersIntegralWalletsLogsMapper.selectDoTask(userId, particiTaskDTO.getTaskId());
+        if(selectDoTaskVO == null){
+            Boolean flag = donaUsersWalletsService.updateIntegralWallet(userId, new BigDecimal(IntegralEnum.getByType(particiTaskDTO.getTaskId()).getRewardIntegral()), FlowingActionEnum.INCOME, IntegralEnum.getByType(particiTaskDTO.getTaskId()));
+            if(flag == true){
+                PaticiTaskToday paticiTaskToday = new PaticiTaskToday();
+                paticiTaskToday.setTaskId(particiTaskDTO.getTaskId());
+                paticiTaskToday.setUserId(userId);
+                paticiTaskTodayService.save(paticiTaskToday);
+                return JsonResult.successResult(ReturnMessageEnum.OK);
+            }else{
+                return JsonResult.failureResult(ReturnMessageEnum.FAILED);
+            }
+        }else{
+            return JsonResult.failureResult(ReturnMessageEnum.TASK_NUM_BALANCE);
+        }
     }
     
     

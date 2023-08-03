@@ -4,6 +4,7 @@ import com.summer.common.annotation.PrintLog;
 import com.summer.common.annotation.RepeatSubmit;
 import com.summer.common.model.JsonResult;
 import com.summer.common.model.ThreadLocalManager;
+import com.summer.common.model.vo.PageVO;
 import com.summer.common.util.IpAddrUtil;
 import com.summer.common.util.JwtTokenUtil;
 import com.summer.mapper.AppDonaUsersMapper;
@@ -13,6 +14,7 @@ import com.summer.model.dto.*;
 import com.summer.model.vo.MyDirectPushVO;
 import com.summer.model.vo.MyMemberInfoVO;
 import com.summer.model.vo.MyTeamInfoVO;
+import com.summer.model.vo.RechargeRecordInfoVO;
 import com.summer.service.AppDonaUserService;
 import com.summer.service.AppUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -89,21 +91,43 @@ public class ZHomeController {
         return appUserService.getUserInfo(userId);
     }
     
+//    /**
+//     * 获取我的团队信息
+//     */
+//    @PrintLog
+//    @RepeatSubmit
+//    @PostMapping("/getMyTeamInfo")
+//    public JsonResult<MyTeamInfoVO> getMyTeamInfo() {
+//        Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
+//        List<MyMemberInfoVO> myTeamInfoVOList = appDonaUsersMapper.getMyTeamInfo(userId);
+//        List<MyDirectPushVO> myDirectPushVOS = appDonaUsersMapper.getMyDirectPushVO(userId);
+//
+//        return JsonResult.successResult(MyTeamInfoVO.builder()
+//                .myDirectPushVOS(myDirectPushVOS)
+//                .memberInfoVOS(myTeamInfoVOList)
+//                .build());
+//    }
+    
     /**
      * 获取我的团队信息
      */
     @PrintLog
     @RepeatSubmit
-    @PostMapping("/getMyTeamInfo")
-    public JsonResult<MyTeamInfoVO> getMyTeamInfo() {
+    @PostMapping("/getMyTeam")
+    public JsonResult<List<MyMemberInfoVO>> getMyTeamInfo() {
         Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
-        List<MyMemberInfoVO> myTeamInfoVOList = appDonaUsersMapper.getMyTeamInfo(userId);
-        List<MyDirectPushVO> myDirectPushVOS = appDonaUsersMapper.getMyDirectPushVO(userId);
-
-        return JsonResult.successResult(MyTeamInfoVO.builder()
-                .myDirectPushVOS(myDirectPushVOS)
-                .memberInfoVOS(myTeamInfoVOList)
-                .build());
+        return JsonResult.successResult(appDonaUsersMapper.getMyTeamInfo(userId));
+    }
+    
+    /**
+     * 获取我的直推信息
+     */
+    @PrintLog
+    @RepeatSubmit
+    @PostMapping("/getMyDirectPushInfo")
+    public JsonResult<PageVO<MyDirectPushVO>> getMyDirectPushInfo(@RequestBody PageDTO pageDTO) {
+        Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
+        return JsonResult.successResult(new PageVO<>(appDonaUsersMapper.getMyDirectPushVO(userId, pageDTO.getPage())));
     }
     
     /**
@@ -112,10 +136,10 @@ public class ZHomeController {
     @PrintLog
     @RepeatSubmit
     @PostMapping("/rechargeRecord")
-    public JsonResult rechargeRecord() {
+    public JsonResult<PageVO<RechargeRecordInfoVO>> rechargeRecord(@RequestBody PageDTO pageDTO) {
         Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
         
-        return JsonResult.successResult(donaUsersWalletsLogsMapper.rechargeRecord(userId));
+        return JsonResult.successResult(new PageVO<>(donaUsersWalletsLogsMapper.rechargeRecord(userId, pageDTO.getPage())));
     }
 
 

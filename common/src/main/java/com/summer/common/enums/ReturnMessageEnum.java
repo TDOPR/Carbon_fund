@@ -27,7 +27,7 @@ public enum ReturnMessageEnum {
     INVITE_CODE_ERROR("inviteCode_error", "邀请码错误，请确认无误后再输入！"),
     BLOCK_ADDRESS_EMPTY("block_address_empty", "没有可用的充值地址"),
     AMOUNT_EXCEEDS_BALANCE("amount_exceeds_balance", "余额不足！"),
-    TASK_NUM_BALANCE("task_num_exceeds", "任务数超出可用次数！"),
+    TASK_NUM_BALANCE("task_num_exceeds", "该任务今日已参与！"),
     MIN_AMOUNT("min_amount", "托管金额存入不能低于{0}$！"),
     WITHDRAW_MIN_AMOUNT("withdraw_min_amount", "USDT提现的金额未达到提现最低额度{0}$！"),
     UB_SUPPORT_NETWORD("un_support_netword", "不支持的网络类型"),

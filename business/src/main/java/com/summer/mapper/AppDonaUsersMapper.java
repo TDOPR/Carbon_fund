@@ -45,5 +45,5 @@ public interface AppDonaUsersMapper extends BaseMapper<AppDonaUsers> {
     
     HomeUserInfoDTO getUserInfo(Integer userId, String email);
     List<MyMemberInfoVO> getMyTeamInfo(Integer userId);
-    List<MyDirectPushVO> getMyDirectPushVO(Integer userId);
+    Page<MyDirectPushVO> getMyDirectPushVO(Integer userId, Page page);
 }

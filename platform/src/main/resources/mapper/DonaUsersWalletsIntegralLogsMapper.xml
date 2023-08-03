@@ -44,6 +44,16 @@
             userId = #{userId}
     </select>
 
+    <select id="selectDoTask" resultType="com.summer.model.vo.SelectDoTaskVO">
+        select
+            a.userId, a.taskId, a.createTime
+        from
+            patici_task_today a
+        where
+            a.userId = #{userId}
+        and a.taskId = #{taskId}
+    </select>
+
     <select id="particiTask" resultType="com.summer.model.dto.PaticiTaskDTO">
         select
             b.id, b.taskIntegral, b.taskName, b.imgUrl
@@ -258,16 +268,16 @@
             type
     </select>
 
-    <select id="sumByType" resultType="com.summer.model.WalletTttLogs">
-        select
-            type,sum(amount) amount
-        from
-            wallet_ttt_logs
-        where
-            userId = #{userId}
-        group by
-            type
-    </select>
+<!--    <select id="sumByType" resultType="com.summer.model.WalletTttLogs">-->
+<!--        select-->
+<!--            type,sum(amount) amount-->
+<!--        from-->
+<!--            wallet_ttt_logs-->
+<!--        where-->
+<!--            userId = #{userId}-->
+<!--        group by-->
+<!--            type-->
+<!--    </select>-->
 
     <select id="sumYesterdayByType" resultType="com.summer.model.WalletTttLogs">
         select
