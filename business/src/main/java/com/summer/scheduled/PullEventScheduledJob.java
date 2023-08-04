@@ -38,7 +38,7 @@ public class PullEventScheduledJob {
     /**
      * 区块链 每隔3秒拉取事务
      */
-    @Scheduled(fixedDelay = 6000)
+    @Scheduled(fixedDelay = 3000)
     @RedisLock
     public void analyzeETHEvent() throws Exception{
         if (appParamProperties.isEnableQueryOrdersStatus()) {
@@ -47,7 +47,7 @@ public class PullEventScheduledJob {
 
     }
 
-    @Scheduled(fixedDelay = 3000)
+//    @Scheduled(fixedDelay = 3000)
     @RedisLock
     public void analyzeBSCEvent() throws Exception{
         if (appParamProperties.isEnableQueryOrdersStatus()) {
@@ -56,7 +56,7 @@ public class PullEventScheduledJob {
 
     }
 
-    @Scheduled(fixedDelay = 1000)
+//    @Scheduled(fixedDelay = 1000)
     @RedisLock
     @Conditional(TRXEnableCondition.class)
     public void analyzeTRONEvent() throws Exception{
@@ -66,7 +66,7 @@ public class PullEventScheduledJob {
 
     }
     
-    @Scheduled(cron = "0 0 2 * * ?")
+//    @Scheduled(cron = "0 0 2 * * ?")
     public void deleteTodayTask(){
         log.info("定时任务开始......");
         if (appParamProperties.isEnableQueryOrdersStatus()) {
@@ -74,7 +74,7 @@ public class PullEventScheduledJob {
         }
     }
     
-    @Scheduled(cron = "0 0 23 L * ?")
+//    @Scheduled(cron = "0 0 23 L * ?")
     public void sendSuperNodeReward(){
         log.info("开始发放超级节点奖励......");
         if (appParamProperties.isEnableQueryOrdersStatus()) {

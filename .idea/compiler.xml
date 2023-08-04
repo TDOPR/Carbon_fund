@@ -8,6 +8,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+      </profile>
+      <profile name="Annotation profile for carbon" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.24/lombok-1.18.24.jar" />
+        </processorPath>
         <module name="sms" />
         <module name="business" />
         <module name="common" />
@@ -19,7 +27,6 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="business" options="-parameters" />
-      <module name="carbon" options="" />
       <module name="common" options="-parameters" />
       <module name="platform" options="-parameters" />
       <module name="sms" options="-parameters" />

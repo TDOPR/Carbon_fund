@@ -108,16 +108,16 @@ public class AppUserServiceImpl extends ServiceImpl<AppUserMapper, AppUsers> imp
                 //保存上下级关系
                 treePathService.insertTreePath(appUsers.getId(), appUsers.getInviteId());
             }
-            String token = JwtTokenUtil.getToken(user.getId());
+            String token = JwtTokenUtil.getToken(appUsers.getId());
             //把token存储到缓存中
-            String tokenKey = CacheKeyPrefixConstants.APP_TOKEN + user.getId() + ":" + IdUtil.simpleUUID();
+            String tokenKey = CacheKeyPrefixConstants.APP_TOKEN + appUsers.getId() + ":" + IdUtil.simpleUUID();
             RedisUtil.setCacheObject(tokenKey, token, Duration.ofSeconds(GlobalProperties.getTokenExpire()));
-            sysLoginLogService.save(new SysLoginLog(user.getUserAddress(), localIp, 2));
+            sysLoginLogService.save(new SysLoginLog(appUsers.getUserAddress(), localIp, 2));
     
             //返回token给客户端
             AppTokenVO appTokenVO = new AppTokenVO();
             appTokenVO.setToken(tokenKey);
-            appTokenVO.setInviteCode(user.getInviteCode());
+            appTokenVO.setInviteCode(appUsers.getInviteCode());
             return JsonResult.successResult(appTokenVO);
             
         }
@@ -201,8 +201,8 @@ public class AppUserServiceImpl extends ServiceImpl<AppUserMapper, AppUsers> imp
             JSONObject json = new JSONObject();
             json.put("level", null);
             json.put("inviteCode", appUsers.getInviteCode());
-            json.put("userIntegralAmount", null);
-            json.put("walletAmount", null);
+            json.put("userIntegralAmount", Integer.valueOf(0));
+            json.put("walletAmount", Integer.valueOf(0));
             json.put("isEmailRegister", false);
             json.put("imgUrl", null);
             json.put("title", null);

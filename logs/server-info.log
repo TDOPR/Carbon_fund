@@ -836,3 +836,1409 @@
 2023-08-03 15:03:48 [http-nio-8989-exec-1] - Request Info: {"classMethod":"com.summer.controller.ZHomeController.getMyTeamInfo","httpMethod":"POST","ip":"127.0.0.1","requestParams":{},"timeCost":88,"url":"http://localhost:8989/zhome/getMyTeam"}
 2023-08-03 15:05:16 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
 2023-08-03 15:05:16 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 08:13:38 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 08:13:38 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 28524 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 08:13:38 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 08:13:39 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 08:13:39 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 08:13:39 [main] - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2023-08-04 08:13:39 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 08:13:39 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:13:40 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5e99b9c' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:13:40 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:13:40 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 08:13:40 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:13:40 [main] - Starting service [Tomcat]
+2023-08-04 08:13:40 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 08:13:40 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 08:13:40 [main] - Root WebApplicationContext: initialization completed in 1886 ms
+2023-08-04 08:13:40 [main] - Init DruidDataSource
+2023-08-04 08:13:41 [main] - {dataSource-1} inited
+2023-08-04 08:13:44 [main] - Redisson 3.17.6
+2023-08-04 08:13:45 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:13:45 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:13:46 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 08:13:46 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:13:46 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:13:46 [main] - 根据注解获取需要忽略认证的耗时：8ms
+2023-08-04 08:13:47 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 08:13:47 [main] - 忽略认证的Post接口名称=["/user/login","/user/getGoogleQRCode"]
+2023-08-04 08:13:47 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 08:13:47 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 08:13:47 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 08:13:47 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@492a54b4, org.springframework.security.web.context.SecurityContextPersistenceFilter@73502c47, org.springframework.security.web.header.HeaderWriterFilter@6c18cf67, org.springframework.web.filter.CorsFilter@4a5f435b, org.springframework.security.web.authentication.logout.LogoutFilter@49d5b651, com.summer.security.JwtAuthenticationTokenFilter@2665a2e7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f5c2451, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a5c502b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b021959, org.springframework.security.web.session.SessionManagementFilter@7061a5e7, org.springframework.security.web.access.ExceptionTranslationFilter@3f040f9e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5cef76a2]
+2023-08-04 08:13:47 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:13:49 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:13:49 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-04 08:13:49 [main] - Started PlatformApplication in 11.422 seconds (JVM running for 12.578)
+2023-08-04 08:13:49 [RMI TCP Connection(4)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 08:13:49 [RMI TCP Connection(4)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 08:13:49 [RMI TCP Connection(4)-192.168.2.116] - Completed initialization in 1 ms
+2023-08-04 08:13:56 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 08:13:56 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 08:14:00 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 08:14:00 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 17288 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 08:14:00 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 08:14:01 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 08:14:01 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 08:14:01 [main] - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2023-08-04 08:14:01 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 08:14:01 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:14:01 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@217bf99e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:14:01 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:14:02 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 08:14:02 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:14:02 [main] - Starting service [Tomcat]
+2023-08-04 08:14:02 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 08:14:02 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 08:14:02 [main] - Root WebApplicationContext: initialization completed in 1846 ms
+2023-08-04 08:14:02 [main] - Init DruidDataSource
+2023-08-04 08:14:03 [main] - {dataSource-1} inited
+2023-08-04 08:14:06 [main] - Redisson 3.17.6
+2023-08-04 08:14:07 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:14:07 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:14:08 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 08:14:08 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:14:08 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:14:08 [main] - 根据注解获取需要忽略认证的耗时：8ms
+2023-08-04 08:14:09 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 08:14:09 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login"]
+2023-08-04 08:14:09 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 08:14:09 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 08:14:09 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 08:14:09 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a5f435b, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f2d0d25, org.springframework.security.web.header.HeaderWriterFilter@18c8a027, org.springframework.web.filter.CorsFilter@6b021959, org.springframework.security.web.authentication.logout.LogoutFilter@307ca947, com.summer.security.JwtAuthenticationTokenFilter@58041b11, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@189fe8af, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@759c8393, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@175957f9, org.springframework.security.web.session.SessionManagementFilter@7e02331, org.springframework.security.web.access.ExceptionTranslationFilter@66f62b8c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5d708ef6]
+2023-08-04 08:14:09 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:14:10 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:14:10 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-04 08:14:11 [main] - Started PlatformApplication in 11.185 seconds (JVM running for 11.762)
+2023-08-04 08:14:11 [RMI TCP Connection(2)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 08:14:11 [RMI TCP Connection(2)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 08:14:11 [RMI TCP Connection(2)-192.168.2.116] - Completed initialization in 1 ms
+2023-08-04 08:14:15 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 08:14:15 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 08:14:18 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 08:14:18 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 63416 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 08:14:18 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 08:14:19 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 08:14:19 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 08:14:19 [main] - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2023-08-04 08:14:19 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 08:14:19 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:14:19 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2fe74516' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:14:19 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:14:20 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 08:14:20 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:14:20 [main] - Starting service [Tomcat]
+2023-08-04 08:14:20 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 08:14:20 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 08:14:20 [main] - Root WebApplicationContext: initialization completed in 1814 ms
+2023-08-04 08:14:20 [main] - Init DruidDataSource
+2023-08-04 08:14:21 [main] - {dataSource-1} inited
+2023-08-04 08:14:25 [main] - Redisson 3.17.6
+2023-08-04 08:14:25 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:14:25 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:14:26 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 08:14:26 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:14:26 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:14:27 [main] - 根据注解获取需要忽略认证的耗时：8ms
+2023-08-04 08:14:27 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 08:14:27 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login"]
+2023-08-04 08:14:27 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 08:14:27 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 08:14:28 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 08:14:28 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5901caf8, org.springframework.security.web.context.SecurityContextPersistenceFilter@724d4e75, org.springframework.security.web.header.HeaderWriterFilter@74ed11d7, org.springframework.web.filter.CorsFilter@6e39b656, org.springframework.security.web.authentication.logout.LogoutFilter@34989ceb, com.summer.security.JwtAuthenticationTokenFilter@3897f9ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b5769b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@265d72fd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18b378a2, org.springframework.security.web.session.SessionManagementFilter@4a0934a8, org.springframework.security.web.access.ExceptionTranslationFilter@77cf9b08, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70eb0c59]
+2023-08-04 08:14:28 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:14:29 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:14:29 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-04 08:14:29 [main] - Started PlatformApplication in 11.213 seconds (JVM running for 11.765)
+2023-08-04 08:14:29 [RMI TCP Connection(2)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 08:14:29 [RMI TCP Connection(2)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 08:14:29 [RMI TCP Connection(2)-192.168.2.116] - Completed initialization in 1 ms
+2023-08-04 08:15:21 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 08:15:21 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 08:32:07 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 08:32:07 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 52828 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 08:32:07 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 08:32:08 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 08:32:08 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 08:32:08 [main] - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2023-08-04 08:32:08 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 08:32:08 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:32:09 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@d70f722' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:32:09 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:32:09 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 08:32:09 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:32:09 [main] - Starting service [Tomcat]
+2023-08-04 08:32:09 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 08:32:09 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 08:32:09 [main] - Root WebApplicationContext: initialization completed in 2003 ms
+2023-08-04 08:32:09 [main] - Init DruidDataSource
+2023-08-04 08:32:11 [main] - {dataSource-1} inited
+2023-08-04 08:32:15 [main] - Redisson 3.17.6
+2023-08-04 08:32:15 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:32:15 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:32:16 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 08:32:16 [main] - {dataSource-1} closing ...
+2023-08-04 08:32:16 [main] - {dataSource-1} closed
+2023-08-04 08:32:16 [main] - Stopping service [Tomcat]
+2023-08-04 08:32:16 [main] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-04 08:33:04 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 08:33:04 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 25208 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 08:33:04 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 08:33:05 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 08:33:05 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 08:33:05 [main] - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2023-08-04 08:33:05 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 08:33:05 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:33:05 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@11d045b4' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:33:05 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:33:06 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 08:33:06 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:33:06 [main] - Starting service [Tomcat]
+2023-08-04 08:33:06 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 08:33:06 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 08:33:06 [main] - Root WebApplicationContext: initialization completed in 1817 ms
+2023-08-04 08:33:06 [main] - Init DruidDataSource
+2023-08-04 08:33:07 [main] - {dataSource-1} inited
+2023-08-04 08:33:10 [main] - Redisson 3.17.6
+2023-08-04 08:33:11 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:33:11 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:33:12 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 08:33:12 [main] - {dataSource-1} closing ...
+2023-08-04 08:33:12 [main] - {dataSource-1} closed
+2023-08-04 08:33:12 [main] - Stopping service [Tomcat]
+2023-08-04 08:33:12 [main] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-08-04 08:35:49 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 08:35:49 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 6276 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 08:35:49 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 08:35:50 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 08:35:50 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 08:35:50 [main] - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2023-08-04 08:35:50 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 08:35:50 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:35:51 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1e1eeedd' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:35:51 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:35:51 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 08:35:51 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:35:51 [main] - Starting service [Tomcat]
+2023-08-04 08:35:51 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 08:35:51 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 08:35:51 [main] - Root WebApplicationContext: initialization completed in 1999 ms
+2023-08-04 08:35:51 [main] - Init DruidDataSource
+2023-08-04 08:35:52 [main] - {dataSource-1} inited
+2023-08-04 08:35:55 [main] - Redisson 3.17.6
+2023-08-04 08:35:56 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:35:56 [redisson-netty-2-18] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:35:57 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 08:35:57 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:35:57 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:35:58 [main] - 根据注解获取需要忽略认证的耗时：9ms
+2023-08-04 08:35:58 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 08:35:58 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login"]
+2023-08-04 08:35:58 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 08:35:58 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 08:35:59 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 08:35:59 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3815c525, org.springframework.security.web.context.SecurityContextPersistenceFilter@25ee6683, org.springframework.security.web.header.HeaderWriterFilter@5091456c, org.springframework.web.filter.CorsFilter@58a887fb, org.springframework.security.web.authentication.logout.LogoutFilter@65dac812, com.summer.security.JwtAuthenticationTokenFilter@4ddb9a8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72f112d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67afba96, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61ee1773, org.springframework.security.web.session.SessionManagementFilter@79a15001, org.springframework.security.web.access.ExceptionTranslationFilter@13d7d1a8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46a6c3be]
+2023-08-04 08:35:59 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:36:00 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:36:00 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-04 08:36:00 [main] - Started PlatformApplication in 11.59 seconds (JVM running for 12.218)
+2023-08-04 08:36:01 [RMI TCP Connection(2)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 08:36:01 [RMI TCP Connection(2)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 08:36:01 [RMI TCP Connection(2)-192.168.2.116] - Completed initialization in 2 ms
+2023-08-04 08:36:55 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 08:36:55 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 08:37:01 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 08:37:01 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 46264 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 08:37:01 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 08:37:02 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 08:37:02 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 08:37:02 [main] - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+2023-08-04 08:37:02 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 08:37:02 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:37:02 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4d9754a8' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:37:02 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:37:03 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 08:37:03 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:37:03 [main] - Starting service [Tomcat]
+2023-08-04 08:37:03 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 08:37:03 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 08:37:03 [main] - Root WebApplicationContext: initialization completed in 1939 ms
+2023-08-04 08:37:03 [main] - Init DruidDataSource
+2023-08-04 08:37:04 [main] - {dataSource-1} inited
+2023-08-04 08:37:08 [main] - Redisson 3.17.6
+2023-08-04 08:37:08 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:37:08 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:37:09 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 08:37:10 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:37:10 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:37:10 [main] - 根据注解获取需要忽略认证的耗时：9ms
+2023-08-04 08:37:10 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 08:37:10 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login"]
+2023-08-04 08:37:10 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 08:37:11 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 08:37:11 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 08:37:11 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73cf33bd, org.springframework.security.web.context.SecurityContextPersistenceFilter@4471f216, org.springframework.security.web.header.HeaderWriterFilter@40f49d72, org.springframework.web.filter.CorsFilter@2f4847d9, org.springframework.security.web.authentication.logout.LogoutFilter@25c6a9de, com.summer.security.JwtAuthenticationTokenFilter@5b634e24, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c5d934b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41f05f1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40a38a44, org.springframework.security.web.session.SessionManagementFilter@6b09fcda, org.springframework.security.web.access.ExceptionTranslationFilter@2a2f7a61, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@492a54b4]
+2023-08-04 08:37:11 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:37:13 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:37:13 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-04 08:37:13 [main] - Started PlatformApplication in 12.333 seconds (JVM running for 12.88)
+2023-08-04 08:37:13 [RMI TCP Connection(13)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 08:37:13 [RMI TCP Connection(13)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 08:37:13 [RMI TCP Connection(13)-192.168.2.116] - Completed initialization in 1 ms
+2023-08-04 08:37:23 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 08:37:23 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 08:37:27 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 20996 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 08:37:27 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 08:37:27 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 08:37:27 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 08:37:27 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 08:37:27 [main] - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-08-04 08:37:28 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 08:37:28 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:37:28 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@11d045b4' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:37:28 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:37:28 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 08:37:28 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:37:28 [main] - Starting service [Tomcat]
+2023-08-04 08:37:28 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 08:37:28 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 08:37:28 [main] - Root WebApplicationContext: initialization completed in 1825 ms
+2023-08-04 08:37:29 [main] - Init DruidDataSource
+2023-08-04 08:37:30 [main] - {dataSource-1} inited
+2023-08-04 08:37:33 [main] - Redisson 3.17.6
+2023-08-04 08:37:33 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:37:33 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:37:34 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 08:37:34 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:37:35 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:37:35 [main] - 根据注解获取需要忽略认证的耗时：9ms
+2023-08-04 08:37:35 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 08:37:35 [main] - 忽略认证的Post接口名称=["/user/login","/user/getGoogleQRCode"]
+2023-08-04 08:37:35 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 08:37:36 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 08:37:36 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 08:37:36 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@cd041f9, org.springframework.security.web.context.SecurityContextPersistenceFilter@43a8dd9b, org.springframework.security.web.header.HeaderWriterFilter@1b8d0c21, org.springframework.web.filter.CorsFilter@be694c0, org.springframework.security.web.authentication.logout.LogoutFilter@674f22ce, com.summer.security.JwtAuthenticationTokenFilter@42150951, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@320bfc61, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c5d934b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38280b42, org.springframework.security.web.session.SessionManagementFilter@2f0b7b6d, org.springframework.security.web.access.ExceptionTranslationFilter@49e3b86b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@637edfe0]
+2023-08-04 08:37:36 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:37:37 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:37:37 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-04 08:37:37 [main] - Started PlatformApplication in 11.103 seconds (JVM running for 11.672)
+2023-08-04 08:37:38 [RMI TCP Connection(3)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 08:37:38 [RMI TCP Connection(3)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 08:37:38 [RMI TCP Connection(3)-192.168.2.116] - Completed initialization in 1 ms
+2023-08-04 08:37:39 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9210000, oldBlock:9205001
+2023-08-04 08:37:42 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9210000, oldBlock:9205001
+2023-08-04 08:37:45 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9210000, oldBlock:9205001
+2023-08-04 08:37:49 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9210000, oldBlock:9205001
+2023-08-04 08:37:52 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9210000, oldBlock:9205001
+2023-08-04 08:37:55 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9210000, oldBlock:9205001
+2023-08-04 08:37:58 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9210000, oldBlock:9205001
+2023-08-04 08:38:02 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9210000, oldBlock:9205001
+2023-08-04 08:38:05 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9210000, oldBlock:9205001
+2023-08-04 08:38:08 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9210000, oldBlock:9205001
+2023-08-04 08:38:11 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9210000, oldBlock:9205001
+2023-08-04 08:38:15 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9210000, oldBlock:9205001
+2023-08-04 08:40:05 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 08:40:05 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 08:40:21 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 08:40:21 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 61704 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 08:40:21 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 08:40:22 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 08:40:22 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 08:40:22 [main] - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2023-08-04 08:40:22 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 08:40:22 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:40:22 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@163042ea' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:40:22 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:40:23 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 08:40:23 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:40:23 [main] - Starting service [Tomcat]
+2023-08-04 08:40:23 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 08:40:23 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 08:40:23 [main] - Root WebApplicationContext: initialization completed in 1929 ms
+2023-08-04 08:40:23 [main] - Init DruidDataSource
+2023-08-04 08:40:24 [main] - {dataSource-1} inited
+2023-08-04 08:40:27 [main] - Redisson 3.17.6
+2023-08-04 08:40:28 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:40:28 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:40:29 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 08:40:29 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:40:29 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:40:29 [main] - 根据注解获取需要忽略认证的耗时：8ms
+2023-08-04 08:40:29 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 08:40:29 [main] - 忽略认证的Post接口名称=["/user/login","/user/getGoogleQRCode"]
+2023-08-04 08:40:29 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 08:40:30 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 08:40:30 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 08:40:30 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4140f94c, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e9c59ed, org.springframework.security.web.header.HeaderWriterFilter@f573dcb, org.springframework.web.filter.CorsFilter@1d6daa8a, org.springframework.security.web.authentication.logout.LogoutFilter@511f21f9, com.summer.security.JwtAuthenticationTokenFilter@7272914b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f49c09d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@95f61c2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27154b20, org.springframework.security.web.session.SessionManagementFilter@22a5f12, org.springframework.security.web.access.ExceptionTranslationFilter@704c3ca2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c38f10b]
+2023-08-04 08:40:30 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:40:31 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:40:31 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-04 08:40:32 [main] - Started PlatformApplication in 11.51 seconds (JVM running for 12.463)
+2023-08-04 08:40:32 [RMI TCP Connection(1)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 08:40:32 [RMI TCP Connection(1)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 08:40:32 [RMI TCP Connection(1)-192.168.2.116] - Completed initialization in 1 ms
+2023-08-04 08:40:59 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 08:40:59 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 08:42:45 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 08:42:45 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 41512 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 08:42:45 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 08:42:46 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 08:42:46 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 08:42:46 [main] - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2023-08-04 08:42:46 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 08:42:46 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:42:46 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1943c1f2' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:42:46 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:42:47 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 08:42:47 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:42:47 [main] - Starting service [Tomcat]
+2023-08-04 08:42:47 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 08:42:47 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 08:42:47 [main] - Root WebApplicationContext: initialization completed in 2027 ms
+2023-08-04 08:42:47 [main] - Init DruidDataSource
+2023-08-04 08:42:48 [main] - {dataSource-1} inited
+2023-08-04 08:42:51 [main] - Redisson 3.17.6
+2023-08-04 08:42:52 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:42:52 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:42:53 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 08:42:53 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:42:53 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:42:54 [main] - 根据注解获取需要忽略认证的耗时：10ms
+2023-08-04 08:42:54 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 08:42:54 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login"]
+2023-08-04 08:42:54 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 08:42:54 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 08:42:55 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 08:42:55 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26838837, org.springframework.security.web.context.SecurityContextPersistenceFilter@79a15001, org.springframework.security.web.header.HeaderWriterFilter@10587ce5, org.springframework.web.filter.CorsFilter@2cdb1581, org.springframework.security.web.authentication.logout.LogoutFilter@5dcbdcb9, com.summer.security.JwtAuthenticationTokenFilter@7b24d5e4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43f670f3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44f433db, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4140f94c, org.springframework.security.web.session.SessionManagementFilter@2ff30a75, org.springframework.security.web.access.ExceptionTranslationFilter@307ca947, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@175957f9]
+2023-08-04 08:42:55 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:42:56 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:42:56 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-04 08:42:56 [main] - Started PlatformApplication in 11.856 seconds (JVM running for 12.494)
+2023-08-04 08:42:57 [RMI TCP Connection(5)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 08:42:57 [RMI TCP Connection(5)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 08:42:57 [RMI TCP Connection(5)-192.168.2.116] - Completed initialization in 2 ms
+2023-08-04 08:43:13 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 08:43:13 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 08:43:16 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 08:43:16 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 63336 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 08:43:16 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 08:43:17 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 08:43:17 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 08:43:17 [main] - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2023-08-04 08:43:17 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 08:43:17 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:43:17 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@d70f722' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:43:17 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:43:18 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 08:43:18 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:43:18 [main] - Starting service [Tomcat]
+2023-08-04 08:43:18 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 08:43:18 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 08:43:18 [main] - Root WebApplicationContext: initialization completed in 1964 ms
+2023-08-04 08:43:18 [main] - Init DruidDataSource
+2023-08-04 08:43:19 [main] - {dataSource-1} inited
+2023-08-04 08:43:22 [main] - Redisson 3.17.6
+2023-08-04 08:43:23 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:43:23 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:43:24 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 08:43:24 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:43:24 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:43:24 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-08-04 08:43:25 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 08:43:25 [main] - 忽略认证的Post接口名称=["/user/login","/user/getGoogleQRCode"]
+2023-08-04 08:43:25 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 08:43:25 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 08:43:25 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 08:43:25 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74055597, org.springframework.security.web.context.SecurityContextPersistenceFilter@ba76911, org.springframework.security.web.header.HeaderWriterFilter@179dc2, org.springframework.web.filter.CorsFilter@235babaf, org.springframework.security.web.authentication.logout.LogoutFilter@74c74c99, com.summer.security.JwtAuthenticationTokenFilter@7b24d5e4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@95f61c2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a58d05d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@88b9cf, org.springframework.security.web.session.SessionManagementFilter@31906cb2, org.springframework.security.web.access.ExceptionTranslationFilter@9c88323, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@414749f8]
+2023-08-04 08:43:25 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:43:27 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:43:27 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-04 08:43:27 [main] - Started PlatformApplication in 11.376 seconds (JVM running for 12.142)
+2023-08-04 08:43:27 [RMI TCP Connection(3)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 08:43:27 [RMI TCP Connection(3)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 08:43:27 [RMI TCP Connection(3)-192.168.2.116] - Completed initialization in 2 ms
+2023-08-04 08:44:33 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 08:44:33 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 08:44:36 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 08:44:36 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 26108 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 08:44:36 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 08:44:37 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 08:44:37 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 08:44:37 [main] - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+2023-08-04 08:44:37 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 08:44:37 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:44:37 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1e1eeedd' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:44:37 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:44:37 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 08:44:37 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:44:37 [main] - Starting service [Tomcat]
+2023-08-04 08:44:37 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 08:44:38 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 08:44:38 [main] - Root WebApplicationContext: initialization completed in 1856 ms
+2023-08-04 08:44:38 [main] - Init DruidDataSource
+2023-08-04 08:44:39 [main] - {dataSource-1} inited
+2023-08-04 08:44:42 [main] - Redisson 3.17.6
+2023-08-04 08:44:43 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:44:43 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:44:44 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 08:44:44 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:44:44 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:44:44 [main] - 根据注解获取需要忽略认证的耗时：8ms
+2023-08-04 08:44:44 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 08:44:44 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login"]
+2023-08-04 08:44:44 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 08:44:45 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 08:44:45 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 08:44:45 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4140f94c, org.springframework.security.web.context.SecurityContextPersistenceFilter@ba76911, org.springframework.security.web.header.HeaderWriterFilter@6f636de3, org.springframework.web.filter.CorsFilter@1d6daa8a, org.springframework.security.web.authentication.logout.LogoutFilter@74c74c99, com.summer.security.JwtAuthenticationTokenFilter@4c3c31a5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@95f61c2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a58d05d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@27154b20, org.springframework.security.web.session.SessionManagementFilter@31906cb2, org.springframework.security.web.access.ExceptionTranslationFilter@7d3a9061, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c38f10b]
+2023-08-04 08:44:45 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:44:46 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:44:46 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-04 08:44:46 [main] - Started PlatformApplication in 11.262 seconds (JVM running for 11.872)
+2023-08-04 08:44:47 [RMI TCP Connection(1)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 08:44:47 [RMI TCP Connection(1)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 08:44:47 [RMI TCP Connection(1)-192.168.2.116] - Completed initialization in 1 ms
+2023-08-04 08:44:48 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9210000, oldBlock:9205001
+2023-08-04 08:44:52 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9215000, oldBlock:9210001
+2023-08-04 08:44:57 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9220000, oldBlock:9215001
+2023-08-04 08:45:05 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9225000, oldBlock:9220001
+2023-08-04 08:45:10 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9230000, oldBlock:9225001
+2023-08-04 08:45:15 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9235000, oldBlock:9230001
+2023-08-04 08:45:22 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9240000, oldBlock:9235001
+2023-08-04 08:45:31 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9245000, oldBlock:9240001
+2023-08-04 08:45:36 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9250000, oldBlock:9245001
+2023-08-04 08:45:43 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9255000, oldBlock:9250001
+2023-08-04 08:45:46 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9260000, oldBlock:9255001
+2023-08-04 08:45:47 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 08:45:47 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 08:45:50 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 08:45:50 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 16060 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 08:45:50 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 08:45:51 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 08:45:51 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 08:45:51 [main] - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2023-08-04 08:45:51 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 08:45:51 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:45:52 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1e1eeedd' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:45:52 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 08:45:52 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 08:45:52 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:45:52 [main] - Starting service [Tomcat]
+2023-08-04 08:45:52 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 08:45:52 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 08:45:52 [main] - Root WebApplicationContext: initialization completed in 1812 ms
+2023-08-04 08:45:52 [main] - Init DruidDataSource
+2023-08-04 08:45:54 [main] - {dataSource-1} inited
+2023-08-04 08:45:57 [main] - Redisson 3.17.6
+2023-08-04 08:45:57 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:45:57 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 08:45:58 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 08:45:58 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:45:58 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:45:59 [main] - 根据注解获取需要忽略认证的耗时：7ms
+2023-08-04 08:45:59 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 08:45:59 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login"]
+2023-08-04 08:45:59 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 08:45:59 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 08:46:00 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 08:46:00 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f4847d9, org.springframework.security.web.context.SecurityContextPersistenceFilter@3e9c59ed, org.springframework.security.web.header.HeaderWriterFilter@f573dcb, org.springframework.web.filter.CorsFilter@40a38a44, org.springframework.security.web.authentication.logout.LogoutFilter@511f21f9, com.summer.security.JwtAuthenticationTokenFilter@5002be8e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f49c09d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@95f61c2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@26838837, org.springframework.security.web.session.SessionManagementFilter@22a5f12, org.springframework.security.web.access.ExceptionTranslationFilter@704c3ca2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a5f435b]
+2023-08-04 08:46:00 [main] - ---------设置超时时间--------120秒
+2023-08-04 08:46:01 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-04 08:46:01 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-04 08:46:01 [main] - Started PlatformApplication in 11.117 seconds (JVM running for 11.697)
+2023-08-04 08:46:02 [RMI TCP Connection(1)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 08:46:02 [RMI TCP Connection(1)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 08:46:02 [RMI TCP Connection(1)-192.168.2.116] - Completed initialization in 1 ms
+2023-08-04 08:46:02 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9265000, oldBlock:9260001
+2023-08-04 08:46:06 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9270000, oldBlock:9265001
+2023-08-04 08:46:10 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9275000, oldBlock:9270001
+2023-08-04 08:46:15 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9280000, oldBlock:9275001
+2023-08-04 08:46:20 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9285000, oldBlock:9280001
+2023-08-04 08:46:25 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9290000, oldBlock:9285001
+2023-08-04 08:46:29 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9295000, oldBlock:9290001
+2023-08-04 08:46:36 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9300000, oldBlock:9295001
+2023-08-04 08:46:40 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9305000, oldBlock:9300001
+2023-08-04 08:46:45 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9310000, oldBlock:9305001
+2023-08-04 08:46:48 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9315000, oldBlock:9310001
+2023-08-04 08:46:54 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9320000, oldBlock:9315001
+2023-08-04 08:47:01 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9325000, oldBlock:9320001
+2023-08-04 08:47:05 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9330000, oldBlock:9325001
+2023-08-04 08:47:09 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9335000, oldBlock:9330001
+2023-08-04 08:47:14 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9340000, oldBlock:9335001
+2023-08-04 08:47:20 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9345000, oldBlock:9340001
+2023-08-04 08:47:26 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9350000, oldBlock:9345001
+2023-08-04 08:47:33 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9355000, oldBlock:9350001
+2023-08-04 08:47:42 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9360000, oldBlock:9355001
+2023-08-04 08:47:48 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9365000, oldBlock:9360001
+2023-08-04 08:47:54 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9370000, oldBlock:9365001
+2023-08-04 08:47:59 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9375000, oldBlock:9370001
+2023-08-04 08:48:04 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9380000, oldBlock:9375001
+2023-08-04 08:48:09 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9385000, oldBlock:9380001
+2023-08-04 08:48:15 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9390000, oldBlock:9385001
+2023-08-04 08:48:23 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9395000, oldBlock:9390001
+2023-08-04 08:48:33 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9400000, oldBlock:9395001
+2023-08-04 08:48:42 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9405000, oldBlock:9400001
+2023-08-04 08:48:51 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9410000, oldBlock:9405001
+2023-08-04 08:48:58 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9415000, oldBlock:9410001
+2023-08-04 08:49:07 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9420000, oldBlock:9415001
+2023-08-04 08:49:17 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9425000, oldBlock:9420001
+2023-08-04 08:49:24 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9430000, oldBlock:9425001
+2023-08-04 08:49:34 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9435000, oldBlock:9430001
+2023-08-04 08:49:40 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9440000, oldBlock:9435001
+2023-08-04 08:49:45 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9445000, oldBlock:9440001
+2023-08-04 08:49:50 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9450000, oldBlock:9445001
+2023-08-04 08:49:55 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9455000, oldBlock:9450001
+2023-08-04 08:49:59 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458532, oldBlock:9455001
+2023-08-04 08:50:04 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458533, oldBlock:9458533
+2023-08-04 08:50:07 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458533, oldBlock:9458534
+2023-08-04 08:50:11 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458533, oldBlock:9458534
+2023-08-04 08:50:14 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458534, oldBlock:9458534
+2023-08-04 08:50:18 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458534, oldBlock:9458535
+2023-08-04 08:50:22 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458534, oldBlock:9458535
+2023-08-04 08:50:25 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458534, oldBlock:9458535
+2023-08-04 08:50:29 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458535, oldBlock:9458535
+2023-08-04 08:50:32 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458535, oldBlock:9458536
+2023-08-04 08:50:36 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458535, oldBlock:9458536
+2023-08-04 08:50:39 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458536, oldBlock:9458536
+2023-08-04 08:50:43 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458536, oldBlock:9458537
+2023-08-04 08:50:46 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458536, oldBlock:9458537
+2023-08-04 08:50:50 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458536, oldBlock:9458537
+2023-08-04 08:50:53 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458536, oldBlock:9458537
+2023-08-04 08:50:57 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458536, oldBlock:9458537
+2023-08-04 08:51:01 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458536, oldBlock:9458537
+2023-08-04 08:51:04 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458536, oldBlock:9458537
+2023-08-04 08:51:08 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458536, oldBlock:9458537
+2023-08-04 08:51:11 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458536, oldBlock:9458537
+2023-08-04 08:51:15 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458537, oldBlock:9458537
+2023-08-04 08:51:18 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458537, oldBlock:9458538
+2023-08-04 08:51:22 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458537, oldBlock:9458538
+2023-08-04 08:51:25 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458538, oldBlock:9458538
+2023-08-04 08:51:29 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458538, oldBlock:9458539
+2023-08-04 08:51:33 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458538, oldBlock:9458539
+2023-08-04 08:51:36 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458538, oldBlock:9458539
+2023-08-04 08:51:40 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458539, oldBlock:9458539
+2023-08-04 08:51:43 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458539, oldBlock:9458540
+2023-08-04 08:51:47 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458539, oldBlock:9458540
+2023-08-04 08:51:50 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458539, oldBlock:9458540
+2023-08-04 08:51:54 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458539, oldBlock:9458540
+2023-08-04 08:51:57 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458539, oldBlock:9458540
+2023-08-04 08:52:01 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458539, oldBlock:9458540
+2023-08-04 08:52:05 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458540, oldBlock:9458540
+2023-08-04 08:52:08 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458540, oldBlock:9458541
+2023-08-04 08:52:12 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458540, oldBlock:9458541
+2023-08-04 08:52:15 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458540, oldBlock:9458541
+2023-08-04 08:52:19 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458540, oldBlock:9458541
+2023-08-04 08:52:22 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458540, oldBlock:9458541
+2023-08-04 08:52:26 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458541, oldBlock:9458541
+2023-08-04 08:52:29 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458541, oldBlock:9458542
+2023-08-04 08:52:33 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458541, oldBlock:9458542
+2023-08-04 08:52:37 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458541, oldBlock:9458542
+2023-08-04 08:52:40 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458541, oldBlock:9458542
+2023-08-04 08:52:44 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458541, oldBlock:9458542
+2023-08-04 08:52:47 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458541, oldBlock:9458542
+2023-08-04 08:52:51 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458541, oldBlock:9458542
+2023-08-04 08:52:55 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458541, oldBlock:9458542
+2023-08-04 08:52:58 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458541, oldBlock:9458542
+2023-08-04 08:53:02 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458542, oldBlock:9458542
+2023-08-04 08:53:05 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458542, oldBlock:9458543
+2023-08-04 08:53:09 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458542, oldBlock:9458543
+2023-08-04 08:53:12 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458542, oldBlock:9458543
+2023-08-04 08:53:16 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458543, oldBlock:9458543
+2023-08-04 08:53:19 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458543, oldBlock:9458544
+2023-08-04 08:53:23 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458543, oldBlock:9458544
+2023-08-04 08:53:27 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458544, oldBlock:9458544
+2023-08-04 08:53:30 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458544, oldBlock:9458545
+2023-08-04 08:53:34 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458544, oldBlock:9458545
+2023-08-04 08:53:37 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458545, oldBlock:9458545
+2023-08-04 08:53:41 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458545, oldBlock:9458546
+2023-08-04 08:53:44 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458545, oldBlock:9458546
+2023-08-04 08:53:48 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458545, oldBlock:9458546
+2023-08-04 08:53:51 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458546, oldBlock:9458546
+2023-08-04 08:53:55 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458546, oldBlock:9458547
+2023-08-04 08:53:58 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458546, oldBlock:9458547
+2023-08-04 08:54:02 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458547, oldBlock:9458547
+2023-08-04 08:54:06 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458547, oldBlock:9458548
+2023-08-04 08:54:09 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458547, oldBlock:9458548
+2023-08-04 08:54:13 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458547, oldBlock:9458548
+2023-08-04 08:54:16 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458548, oldBlock:9458548
+2023-08-04 08:54:20 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458548, oldBlock:9458549
+2023-08-04 08:54:23 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458548, oldBlock:9458549
+2023-08-04 08:54:27 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458548, oldBlock:9458549
+2023-08-04 08:54:30 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458548, oldBlock:9458549
+2023-08-04 08:54:34 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458548, oldBlock:9458549
+2023-08-04 08:54:38 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458549, oldBlock:9458549
+2023-08-04 08:54:41 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458549, oldBlock:9458550
+2023-08-04 08:54:45 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458549, oldBlock:9458550
+2023-08-04 08:54:48 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458549, oldBlock:9458550
+2023-08-04 08:54:52 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458550, oldBlock:9458550
+2023-08-04 08:54:55 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458550, oldBlock:9458551
+2023-08-04 08:54:59 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458550, oldBlock:9458551
+2023-08-04 08:55:02 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458551, oldBlock:9458551
+2023-08-04 08:55:06 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458551, oldBlock:9458552
+2023-08-04 08:55:09 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458551, oldBlock:9458552
+2023-08-04 08:55:13 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458552, oldBlock:9458552
+2023-08-04 08:55:17 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458552, oldBlock:9458553
+2023-08-04 08:55:20 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458552, oldBlock:9458553
+2023-08-04 08:55:24 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458552, oldBlock:9458553
+2023-08-04 08:55:27 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458553, oldBlock:9458553
+2023-08-04 08:55:31 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458553, oldBlock:9458554
+2023-08-04 08:55:34 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458553, oldBlock:9458554
+2023-08-04 08:55:38 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458553, oldBlock:9458554
+2023-08-04 08:55:42 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458553, oldBlock:9458554
+2023-08-04 08:55:45 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458553, oldBlock:9458554
+2023-08-04 08:55:49 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458553, oldBlock:9458554
+2023-08-04 08:55:52 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458554, oldBlock:9458554
+2023-08-04 08:55:56 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458554, oldBlock:9458555
+2023-08-04 08:55:59 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458554, oldBlock:9458555
+2023-08-04 08:56:03 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458555, oldBlock:9458555
+2023-08-04 08:56:06 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458555, oldBlock:9458556
+2023-08-04 08:56:10 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458555, oldBlock:9458556
+2023-08-04 08:56:14 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458556, oldBlock:9458556
+2023-08-04 08:56:17 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458556, oldBlock:9458557
+2023-08-04 08:56:21 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458556, oldBlock:9458557
+2023-08-04 08:56:24 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458556, oldBlock:9458557
+2023-08-04 08:56:28 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458557, oldBlock:9458557
+2023-08-04 08:56:31 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458557, oldBlock:9458558
+2023-08-04 08:56:35 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458557, oldBlock:9458558
+2023-08-04 08:56:38 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458558, oldBlock:9458558
+2023-08-04 08:56:42 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458558, oldBlock:9458559
+2023-08-04 08:56:45 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458558, oldBlock:9458559
+2023-08-04 08:56:49 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458559, oldBlock:9458559
+2023-08-04 08:56:53 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458559, oldBlock:9458560
+2023-08-04 08:56:56 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458559, oldBlock:9458560
+2023-08-04 08:57:00 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458559, oldBlock:9458560
+2023-08-04 08:57:03 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458560, oldBlock:9458560
+2023-08-04 08:57:07 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458560, oldBlock:9458561
+2023-08-04 08:57:10 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458560, oldBlock:9458561
+2023-08-04 08:57:14 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458561, oldBlock:9458561
+2023-08-04 08:57:18 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458561, oldBlock:9458562
+2023-08-04 08:57:21 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458561, oldBlock:9458562
+2023-08-04 08:57:25 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458561, oldBlock:9458562
+2023-08-04 08:57:28 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458561, oldBlock:9458562
+2023-08-04 08:57:32 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458561, oldBlock:9458562
+2023-08-04 08:57:35 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458561, oldBlock:9458562
+2023-08-04 08:57:39 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458562, oldBlock:9458562
+2023-08-04 08:57:42 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458562, oldBlock:9458563
+2023-08-04 08:57:46 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458562, oldBlock:9458563
+2023-08-04 08:57:49 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458563, oldBlock:9458563
+2023-08-04 08:57:53 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458563, oldBlock:9458564
+2023-08-04 08:57:57 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458563, oldBlock:9458564
+2023-08-04 08:58:00 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458563, oldBlock:9458564
+2023-08-04 08:58:04 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458564, oldBlock:9458564
+2023-08-04 08:58:07 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458564, oldBlock:9458565
+2023-08-04 08:58:11 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458564, oldBlock:9458565
+2023-08-04 08:58:14 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458565, oldBlock:9458565
+2023-08-04 08:58:18 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458565, oldBlock:9458566
+2023-08-04 08:58:21 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458565, oldBlock:9458566
+2023-08-04 08:58:25 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458565, oldBlock:9458566
+2023-08-04 08:58:29 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458565, oldBlock:9458566
+2023-08-04 08:58:32 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458565, oldBlock:9458566
+2023-08-04 08:58:36 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458565, oldBlock:9458566
+2023-08-04 08:58:39 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458566, oldBlock:9458566
+2023-08-04 08:58:43 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458566, oldBlock:9458567
+2023-08-04 08:58:46 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458566, oldBlock:9458567
+2023-08-04 08:58:50 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458566, oldBlock:9458567
+2023-08-04 08:58:53 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458566, oldBlock:9458567
+2023-08-04 08:58:57 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458566, oldBlock:9458567
+2023-08-04 08:59:01 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458566, oldBlock:9458567
+2023-08-04 08:59:04 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458567, oldBlock:9458567
+2023-08-04 08:59:08 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458567, oldBlock:9458568
+2023-08-04 08:59:11 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458567, oldBlock:9458568
+2023-08-04 08:59:15 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458568, oldBlock:9458568
+2023-08-04 08:59:18 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458568, oldBlock:9458569
+2023-08-04 08:59:22 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458568, oldBlock:9458569
+2023-08-04 08:59:25 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458569, oldBlock:9458569
+2023-08-04 08:59:29 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458569, oldBlock:9458570
+2023-08-04 08:59:32 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458569, oldBlock:9458570
+2023-08-04 08:59:36 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458569, oldBlock:9458570
+2023-08-04 08:59:40 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458570, oldBlock:9458570
+2023-08-04 08:59:43 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458570, oldBlock:9458571
+2023-08-04 08:59:47 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458570, oldBlock:9458571
+2023-08-04 08:59:50 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458571, oldBlock:9458571
+2023-08-04 08:59:54 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458571, oldBlock:9458572
+2023-08-04 08:59:57 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458571, oldBlock:9458572
+2023-08-04 09:00:01 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458571, oldBlock:9458572
+2023-08-04 09:00:04 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458572, oldBlock:9458572
+2023-08-04 09:00:08 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458572, oldBlock:9458573
+2023-08-04 09:00:12 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458572, oldBlock:9458573
+2023-08-04 09:00:15 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458573, oldBlock:9458573
+2023-08-04 09:00:19 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458573, oldBlock:9458574
+2023-08-04 09:00:22 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458573, oldBlock:9458574
+2023-08-04 09:00:26 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458573, oldBlock:9458574
+2023-08-04 09:00:29 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458574, oldBlock:9458574
+2023-08-04 09:00:33 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458574, oldBlock:9458575
+2023-08-04 09:00:36 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458574, oldBlock:9458575
+2023-08-04 09:00:40 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458575, oldBlock:9458575
+2023-08-04 09:00:44 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458575, oldBlock:9458576
+2023-08-04 09:00:47 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458575, oldBlock:9458576
+2023-08-04 09:00:51 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458576, oldBlock:9458576
+2023-08-04 09:00:54 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458576, oldBlock:9458577
+2023-08-04 09:00:58 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458576, oldBlock:9458577
+2023-08-04 09:01:01 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458577, oldBlock:9458577
+2023-08-04 09:01:05 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458577, oldBlock:9458578
+2023-08-04 09:01:08 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458577, oldBlock:9458578
+2023-08-04 09:01:12 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458577, oldBlock:9458578
+2023-08-04 09:01:16 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458578, oldBlock:9458578
+2023-08-04 09:01:19 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458578, oldBlock:9458579
+2023-08-04 09:01:23 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458578, oldBlock:9458579
+2023-08-04 09:01:26 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458578, oldBlock:9458579
+2023-08-04 09:01:30 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458578, oldBlock:9458579
+2023-08-04 09:01:33 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458578, oldBlock:9458579
+2023-08-04 09:01:37 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458578, oldBlock:9458579
+2023-08-04 09:01:40 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458579, oldBlock:9458579
+2023-08-04 09:01:44 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458579, oldBlock:9458580
+2023-08-04 09:01:48 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458579, oldBlock:9458580
+2023-08-04 09:01:51 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458580, oldBlock:9458580
+2023-08-04 09:01:55 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458580, oldBlock:9458581
+2023-08-04 09:01:58 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458580, oldBlock:9458581
+2023-08-04 09:02:02 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458580, oldBlock:9458581
+2023-08-04 09:02:05 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458581, oldBlock:9458581
+2023-08-04 09:02:09 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458581, oldBlock:9458582
+2023-08-04 09:02:12 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458581, oldBlock:9458582
+2023-08-04 09:02:16 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458582, oldBlock:9458582
+2023-08-04 09:02:19 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458582, oldBlock:9458583
+2023-08-04 09:02:23 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458582, oldBlock:9458583
+2023-08-04 09:02:27 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458583, oldBlock:9458583
+2023-08-04 09:02:30 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458583, oldBlock:9458584
+2023-08-04 09:02:34 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458583, oldBlock:9458584
+2023-08-04 09:02:37 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458583, oldBlock:9458584
+2023-08-04 09:02:41 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458584, oldBlock:9458584
+2023-08-04 09:02:44 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458584, oldBlock:9458585
+2023-08-04 09:02:48 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458584, oldBlock:9458585
+2023-08-04 09:02:51 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458585, oldBlock:9458585
+2023-08-04 09:02:55 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458585, oldBlock:9458586
+2023-08-04 09:02:59 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458585, oldBlock:9458586
+2023-08-04 09:03:02 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458586, oldBlock:9458586
+2023-08-04 09:03:06 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458586, oldBlock:9458587
+2023-08-04 09:03:09 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458586, oldBlock:9458587
+2023-08-04 09:03:13 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458586, oldBlock:9458587
+2023-08-04 09:03:16 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458587, oldBlock:9458587
+2023-08-04 09:03:20 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458587, oldBlock:9458588
+2023-08-04 09:03:23 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458587, oldBlock:9458588
+2023-08-04 09:03:27 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458588, oldBlock:9458588
+2023-08-04 09:03:31 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458588, oldBlock:9458589
+2023-08-04 09:03:34 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458588, oldBlock:9458589
+2023-08-04 09:03:38 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458588, oldBlock:9458589
+2023-08-04 09:03:41 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458588, oldBlock:9458589
+2023-08-04 09:03:45 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458588, oldBlock:9458589
+2023-08-04 09:03:48 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458588, oldBlock:9458589
+2023-08-04 09:03:52 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458589, oldBlock:9458589
+2023-08-04 09:03:55 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458589, oldBlock:9458590
+2023-08-04 09:03:59 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458589, oldBlock:9458590
+2023-08-04 09:04:03 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458590, oldBlock:9458590
+2023-08-04 09:04:06 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458590, oldBlock:9458591
+2023-08-04 09:04:10 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458590, oldBlock:9458591
+2023-08-04 09:04:13 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458591, oldBlock:9458591
+2023-08-04 09:04:17 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458591, oldBlock:9458592
+2023-08-04 09:04:20 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458591, oldBlock:9458592
+2023-08-04 09:04:24 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458591, oldBlock:9458592
+2023-08-04 09:04:27 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458592, oldBlock:9458592
+2023-08-04 09:04:31 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458592, oldBlock:9458593
+2023-08-04 09:04:34 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458592, oldBlock:9458593
+2023-08-04 09:04:38 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458593, oldBlock:9458593
+2023-08-04 09:04:42 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458593, oldBlock:9458594
+2023-08-04 09:04:45 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458593, oldBlock:9458594
+2023-08-04 09:04:49 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458593, oldBlock:9458594
+2023-08-04 09:04:52 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458594, oldBlock:9458594
+2023-08-04 09:04:56 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458594, oldBlock:9458595
+2023-08-04 09:04:59 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458594, oldBlock:9458595
+2023-08-04 09:05:03 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458595, oldBlock:9458595
+2023-08-04 09:05:06 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458595, oldBlock:9458596
+2023-08-04 09:05:10 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458595, oldBlock:9458596
+2023-08-04 09:05:13 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458595, oldBlock:9458596
+2023-08-04 09:05:17 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458595, oldBlock:9458596
+2023-08-04 09:05:21 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458595, oldBlock:9458596
+2023-08-04 09:05:24 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458595, oldBlock:9458596
+2023-08-04 09:05:28 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458596, oldBlock:9458596
+2023-08-04 09:05:31 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458596, oldBlock:9458597
+2023-08-04 09:05:35 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458596, oldBlock:9458597
+2023-08-04 09:05:38 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458596, oldBlock:9458597
+2023-08-04 09:05:42 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458597, oldBlock:9458597
+2023-08-04 09:05:45 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458597, oldBlock:9458598
+2023-08-04 09:05:49 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458598, oldBlock:9458598
+2023-08-04 09:05:53 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458598, oldBlock:9458599
+2023-08-04 09:05:56 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458598, oldBlock:9458599
+2023-08-04 09:06:00 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458598, oldBlock:9458599
+2023-08-04 09:06:03 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458599, oldBlock:9458599
+2023-08-04 09:06:07 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458599, oldBlock:9458600
+2023-08-04 09:06:10 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458599, oldBlock:9458600
+2023-08-04 09:06:14 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458600, oldBlock:9458600
+2023-08-04 09:06:17 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458600, oldBlock:9458601
+2023-08-04 09:06:21 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458600, oldBlock:9458601
+2023-08-04 09:06:25 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458600, oldBlock:9458601
+2023-08-04 09:06:28 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458601, oldBlock:9458601
+2023-08-04 09:06:32 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458601, oldBlock:9458602
+2023-08-04 09:06:35 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458601, oldBlock:9458602
+2023-08-04 09:06:39 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458602, oldBlock:9458602
+2023-08-04 09:06:42 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458602, oldBlock:9458603
+2023-08-04 09:06:46 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458602, oldBlock:9458603
+2023-08-04 09:06:49 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458603, oldBlock:9458603
+2023-08-04 09:06:53 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458603, oldBlock:9458604
+2023-08-04 09:06:57 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458603, oldBlock:9458604
+2023-08-04 09:07:00 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458603, oldBlock:9458604
+2023-08-04 09:07:04 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458603, oldBlock:9458604
+2023-08-04 09:07:07 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458603, oldBlock:9458604
+2023-08-04 09:07:11 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458603, oldBlock:9458604
+2023-08-04 09:07:14 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458604, oldBlock:9458604
+2023-08-04 09:07:18 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458604, oldBlock:9458605
+2023-08-04 09:07:21 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458604, oldBlock:9458605
+2023-08-04 09:07:25 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458604, oldBlock:9458605
+2023-08-04 09:07:28 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458605, oldBlock:9458605
+2023-08-04 09:07:32 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458605, oldBlock:9458606
+2023-08-04 09:07:36 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458605, oldBlock:9458606
+2023-08-04 09:07:39 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458606, oldBlock:9458606
+2023-08-04 09:07:43 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458606, oldBlock:9458607
+2023-08-04 09:07:46 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458606, oldBlock:9458607
+2023-08-04 09:07:50 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458607, oldBlock:9458607
+2023-08-04 09:07:53 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458607, oldBlock:9458608
+2023-08-04 09:07:57 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458607, oldBlock:9458608
+2023-08-04 09:08:00 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458607, oldBlock:9458608
+2023-08-04 09:08:04 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458608, oldBlock:9458608
+2023-08-04 09:08:08 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458608, oldBlock:9458609
+2023-08-04 09:08:11 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458608, oldBlock:9458609
+2023-08-04 09:08:15 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458608, oldBlock:9458609
+2023-08-04 09:08:18 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458608, oldBlock:9458609
+2023-08-04 09:08:22 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458608, oldBlock:9458609
+2023-08-04 09:08:25 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458608, oldBlock:9458609
+2023-08-04 09:08:29 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458608, oldBlock:9458609
+2023-08-04 09:08:33 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458608, oldBlock:9458609
+2023-08-04 09:08:36 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458608, oldBlock:9458609
+2023-08-04 09:08:40 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458609, oldBlock:9458609
+2023-08-04 09:08:43 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458609, oldBlock:9458610
+2023-08-04 09:08:47 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458609, oldBlock:9458610
+2023-08-04 09:08:50 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458609, oldBlock:9458610
+2023-08-04 09:08:54 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458610, oldBlock:9458610
+2023-08-04 09:08:58 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458610, oldBlock:9458611
+2023-08-04 09:09:01 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458611, oldBlock:9458611
+2023-08-04 09:09:05 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458611, oldBlock:9458612
+2023-08-04 09:09:08 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458611, oldBlock:9458612
+2023-08-04 09:09:12 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458611, oldBlock:9458612
+2023-08-04 09:09:16 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458612, oldBlock:9458612
+2023-08-04 09:09:19 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458612, oldBlock:9458613
+2023-08-04 09:09:23 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458612, oldBlock:9458613
+2023-08-04 09:09:26 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458613, oldBlock:9458613
+2023-08-04 09:09:30 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458613, oldBlock:9458614
+2023-08-04 09:09:33 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458613, oldBlock:9458614
+2023-08-04 09:09:37 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458614, oldBlock:9458614
+2023-08-04 09:09:41 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458614, oldBlock:9458615
+2023-08-04 09:09:44 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458614, oldBlock:9458615
+2023-08-04 09:09:48 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458614, oldBlock:9458615
+2023-08-04 09:09:52 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458615, oldBlock:9458615
+2023-08-04 09:09:55 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458615, oldBlock:9458616
+2023-08-04 09:09:59 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458615, oldBlock:9458616
+2023-08-04 09:10:02 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458616, oldBlock:9458616
+2023-08-04 09:10:06 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458616, oldBlock:9458617
+2023-08-04 09:10:09 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458616, oldBlock:9458617
+2023-08-04 09:10:13 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458617, oldBlock:9458617
+2023-08-04 09:10:17 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458617, oldBlock:9458618
+2023-08-04 09:10:21 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458617, oldBlock:9458618
+2023-08-04 09:10:24 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458617, oldBlock:9458618
+2023-08-04 09:10:28 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458618, oldBlock:9458618
+2023-08-04 09:10:32 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458618, oldBlock:9458619
+2023-08-04 09:10:35 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458618, oldBlock:9458619
+2023-08-04 09:10:39 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458619, oldBlock:9458619
+2023-08-04 09:10:42 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458619, oldBlock:9458620
+2023-08-04 09:10:46 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458619, oldBlock:9458620
+2023-08-04 09:10:50 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458619, oldBlock:9458620
+2023-08-04 09:10:53 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458619, oldBlock:9458620
+2023-08-04 09:10:57 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458619, oldBlock:9458620
+2023-08-04 09:11:01 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458619, oldBlock:9458620
+2023-08-04 09:11:04 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458620, oldBlock:9458620
+2023-08-04 09:11:08 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458620, oldBlock:9458621
+2023-08-04 09:11:11 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458620, oldBlock:9458621
+2023-08-04 09:11:15 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458621, oldBlock:9458621
+2023-08-04 09:11:18 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458621, oldBlock:9458622
+2023-08-04 09:11:22 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458621, oldBlock:9458622
+2023-08-04 09:11:26 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458622, oldBlock:9458622
+2023-08-04 09:11:29 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458622, oldBlock:9458623
+2023-08-04 09:11:33 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458622, oldBlock:9458623
+2023-08-04 09:11:36 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458622, oldBlock:9458623
+2023-08-04 09:11:40 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458623, oldBlock:9458623
+2023-08-04 09:11:44 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458623, oldBlock:9458624
+2023-08-04 09:11:47 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458623, oldBlock:9458624
+2023-08-04 09:11:51 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458624, oldBlock:9458624
+2023-08-04 09:11:54 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458624, oldBlock:9458625
+2023-08-04 09:11:58 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458624, oldBlock:9458625
+2023-08-04 09:12:01 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458625, oldBlock:9458625
+2023-08-04 09:12:05 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458625, oldBlock:9458626
+2023-08-04 09:12:09 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458625, oldBlock:9458626
+2023-08-04 09:12:12 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458625, oldBlock:9458626
+2023-08-04 09:12:16 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458625, oldBlock:9458626
+2023-08-04 09:12:19 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458625, oldBlock:9458626
+2023-08-04 09:12:23 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458625, oldBlock:9458626
+2023-08-04 09:12:27 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458626, oldBlock:9458626
+2023-08-04 09:12:30 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458626, oldBlock:9458627
+2023-08-04 09:12:34 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458626, oldBlock:9458627
+2023-08-04 09:12:37 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458626, oldBlock:9458627
+2023-08-04 09:12:41 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458627, oldBlock:9458627
+2023-08-04 09:12:45 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458627, oldBlock:9458628
+2023-08-04 09:12:48 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458627, oldBlock:9458628
+2023-08-04 09:12:52 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458627, oldBlock:9458628
+2023-08-04 09:12:56 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458627, oldBlock:9458628
+2023-08-04 09:12:59 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458627, oldBlock:9458628
+2023-08-04 09:13:03 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458628, oldBlock:9458628
+2023-08-04 09:13:06 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458628, oldBlock:9458629
+2023-08-04 09:13:10 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458628, oldBlock:9458629
+2023-08-04 09:13:14 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458629, oldBlock:9458629
+2023-08-04 09:13:17 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458629, oldBlock:9458630
+2023-08-04 09:13:21 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458629, oldBlock:9458630
+2023-08-04 09:13:24 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458629, oldBlock:9458630
+2023-08-04 09:13:28 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458630, oldBlock:9458630
+2023-08-04 09:13:31 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458630, oldBlock:9458631
+2023-08-04 09:13:35 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458630, oldBlock:9458631
+2023-08-04 09:13:39 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458631, oldBlock:9458631
+2023-08-04 09:13:42 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458631, oldBlock:9458632
+2023-08-04 09:13:46 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458631, oldBlock:9458632
+2023-08-04 09:13:49 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458631, oldBlock:9458632
+2023-08-04 09:13:53 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458631, oldBlock:9458632
+2023-08-04 09:13:56 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458631, oldBlock:9458632
+2023-08-04 09:14:00 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458631, oldBlock:9458632
+2023-08-04 09:14:03 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458631, oldBlock:9458632
+2023-08-04 09:14:07 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458631, oldBlock:9458632
+2023-08-04 09:14:11 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458631, oldBlock:9458632
+2023-08-04 09:14:14 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458632, oldBlock:9458632
+2023-08-04 09:14:18 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458632, oldBlock:9458633
+2023-08-04 09:14:21 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458632, oldBlock:9458633
+2023-08-04 09:14:25 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458633, oldBlock:9458633
+2023-08-04 09:14:28 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458633, oldBlock:9458634
+2023-08-04 09:14:32 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458633, oldBlock:9458634
+2023-08-04 09:14:35 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458633, oldBlock:9458634
+2023-08-04 09:14:39 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458634, oldBlock:9458634
+2023-08-04 09:14:42 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458634, oldBlock:9458635
+2023-08-04 09:14:46 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458634, oldBlock:9458635
+2023-08-04 09:14:50 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458635, oldBlock:9458635
+2023-08-04 09:14:53 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458635, oldBlock:9458636
+2023-08-04 09:14:57 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458635, oldBlock:9458636
+2023-08-04 09:15:00 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458635, oldBlock:9458636
+2023-08-04 09:15:04 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458636, oldBlock:9458636
+2023-08-04 09:15:07 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458636, oldBlock:9458637
+2023-08-04 09:15:11 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458636, oldBlock:9458637
+2023-08-04 09:15:15 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458637, oldBlock:9458637
+2023-08-04 09:15:18 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458637, oldBlock:9458638
+2023-08-04 09:15:22 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458637, oldBlock:9458638
+2023-08-04 09:15:25 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458637, oldBlock:9458638
+2023-08-04 09:15:29 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458637, oldBlock:9458638
+2023-08-04 09:15:32 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458637, oldBlock:9458638
+2023-08-04 09:15:36 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458637, oldBlock:9458638
+2023-08-04 09:15:39 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458638, oldBlock:9458638
+2023-08-04 09:15:43 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458638, oldBlock:9458639
+2023-08-04 09:15:46 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458638, oldBlock:9458639
+2023-08-04 09:15:50 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458639, oldBlock:9458639
+2023-08-04 09:15:54 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458639, oldBlock:9458640
+2023-08-04 09:15:57 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458639, oldBlock:9458640
+2023-08-04 09:16:01 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458640, oldBlock:9458640
+2023-08-04 09:16:04 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458640, oldBlock:9458641
+2023-08-04 09:16:08 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458640, oldBlock:9458641
+2023-08-04 09:16:11 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458640, oldBlock:9458641
+2023-08-04 09:16:15 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458641, oldBlock:9458641
+2023-08-04 09:16:18 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458641, oldBlock:9458642
+2023-08-04 09:16:22 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458641, oldBlock:9458642
+2023-08-04 09:16:26 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458642, oldBlock:9458642
+2023-08-04 09:16:29 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458642, oldBlock:9458643
+2023-08-04 09:16:33 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458642, oldBlock:9458643
+2023-08-04 09:16:36 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458642, oldBlock:9458643
+2023-08-04 09:16:40 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458643, oldBlock:9458643
+2023-08-04 09:16:43 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458643, oldBlock:9458644
+2023-08-04 09:16:47 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458643, oldBlock:9458644
+2023-08-04 09:16:50 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458644, oldBlock:9458644
+2023-08-04 09:16:54 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458644, oldBlock:9458645
+2023-08-04 09:16:58 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458644, oldBlock:9458645
+2023-08-04 09:17:01 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458644, oldBlock:9458645
+2023-08-04 09:17:05 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458644, oldBlock:9458645
+2023-08-04 09:17:08 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458644, oldBlock:9458645
+2023-08-04 09:17:12 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458644, oldBlock:9458645
+2023-08-04 09:17:15 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458645, oldBlock:9458645
+2023-08-04 09:17:19 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458645, oldBlock:9458646
+2023-08-04 09:17:23 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458645, oldBlock:9458646
+2023-08-04 09:17:27 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458646, oldBlock:9458646
+2023-08-04 09:17:31 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458646, oldBlock:9458647
+2023-08-04 09:17:34 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458646, oldBlock:9458647
+2023-08-04 09:17:38 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458647, oldBlock:9458647
+2023-08-04 09:17:41 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458647, oldBlock:9458648
+2023-08-04 09:17:45 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458647, oldBlock:9458648
+2023-08-04 09:17:48 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458647, oldBlock:9458648
+2023-08-04 09:17:52 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458648, oldBlock:9458648
+2023-08-04 09:17:55 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458648, oldBlock:9458649
+2023-08-04 09:17:59 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458648, oldBlock:9458649
+2023-08-04 09:18:03 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458648, oldBlock:9458649
+2023-08-04 09:18:06 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458648, oldBlock:9458649
+2023-08-04 09:18:10 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458648, oldBlock:9458649
+2023-08-04 09:18:13 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458648, oldBlock:9458649
+2023-08-04 09:18:17 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458649, oldBlock:9458649
+2023-08-04 09:18:20 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458649, oldBlock:9458650
+2023-08-04 09:18:24 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458649, oldBlock:9458650
+2023-08-04 09:18:28 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458650, oldBlock:9458650
+2023-08-04 09:18:31 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458650, oldBlock:9458651
+2023-08-04 09:18:35 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458650, oldBlock:9458651
+2023-08-04 09:18:38 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458650, oldBlock:9458651
+2023-08-04 09:18:42 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458650, oldBlock:9458651
+2023-08-04 09:18:45 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458650, oldBlock:9458651
+2023-08-04 09:18:49 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458650, oldBlock:9458651
+2023-08-04 09:18:52 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458650, oldBlock:9458651
+2023-08-04 09:18:56 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458650, oldBlock:9458651
+2023-08-04 09:19:00 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458650, oldBlock:9458651
+2023-08-04 09:19:04 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458651, oldBlock:9458651
+2023-08-04 09:19:07 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458651, oldBlock:9458652
+2023-08-04 09:19:11 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458651, oldBlock:9458652
+2023-08-04 09:19:14 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458651, oldBlock:9458652
+2023-08-04 09:19:18 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458651, oldBlock:9458652
+2023-08-04 09:19:21 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458651, oldBlock:9458652
+2023-08-04 09:19:25 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458651, oldBlock:9458652
+2023-08-04 09:19:28 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458652, oldBlock:9458652
+2023-08-04 09:19:32 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458652, oldBlock:9458653
+2023-08-04 09:19:36 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458652, oldBlock:9458653
+2023-08-04 09:19:39 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458653, oldBlock:9458653
+2023-08-04 09:19:43 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458653, oldBlock:9458654
+2023-08-04 09:19:46 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458653, oldBlock:9458654
+2023-08-04 09:19:50 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458653, oldBlock:9458654
+2023-08-04 09:19:54 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458654, oldBlock:9458654
+2023-08-04 09:19:57 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458654, oldBlock:9458655
+2023-08-04 09:20:01 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458654, oldBlock:9458655
+2023-08-04 09:20:04 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458654, oldBlock:9458655
+2023-08-04 09:20:08 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458654, oldBlock:9458655
+2023-08-04 09:20:11 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458654, oldBlock:9458655
+2023-08-04 09:20:15 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458655, oldBlock:9458655
+2023-08-04 09:20:18 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458655, oldBlock:9458656
+2023-08-04 09:20:22 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458655, oldBlock:9458656
+2023-08-04 09:20:25 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458655, oldBlock:9458656
+2023-08-04 09:20:29 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458655, oldBlock:9458656
+2023-08-04 09:20:32 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458655, oldBlock:9458656
+2023-08-04 09:20:36 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458655, oldBlock:9458656
+2023-08-04 09:20:40 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458655, oldBlock:9458656
+2023-08-04 09:20:43 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458655, oldBlock:9458656
+2023-08-04 09:20:47 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458655, oldBlock:9458656
+2023-08-04 09:20:51 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458656, oldBlock:9458656
+2023-08-04 09:20:55 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458656, oldBlock:9458657
+2023-08-04 09:20:58 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458656, oldBlock:9458657
+2023-08-04 09:21:02 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458656, oldBlock:9458657
+2023-08-04 09:21:05 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458656, oldBlock:9458657
+2023-08-04 09:21:09 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458656, oldBlock:9458657
+2023-08-04 09:21:12 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458656, oldBlock:9458657
+2023-08-04 09:21:16 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458657, oldBlock:9458657
+2023-08-04 09:21:19 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458657, oldBlock:9458658
+2023-08-04 09:21:23 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458657, oldBlock:9458658
+2023-08-04 09:21:26 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458658, oldBlock:9458658
+2023-08-04 09:21:30 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458658, oldBlock:9458659
+2023-08-04 09:21:33 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458658, oldBlock:9458659
+2023-08-04 09:21:37 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458658, oldBlock:9458659
+2023-08-04 09:21:40 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458659, oldBlock:9458659
+2023-08-04 09:21:44 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458659, oldBlock:9458660
+2023-08-04 09:21:48 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458659, oldBlock:9458660
+2023-08-04 09:21:51 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458660, oldBlock:9458660
+2023-08-04 09:21:55 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458660, oldBlock:9458661
+2023-08-04 09:21:58 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458660, oldBlock:9458661
+2023-08-04 09:22:02 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458660, oldBlock:9458661
+2023-08-04 09:22:05 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458660, oldBlock:9458661
+2023-08-04 09:22:09 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458660, oldBlock:9458661
+2023-08-04 09:22:13 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458660, oldBlock:9458661
+2023-08-04 09:22:16 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458661, oldBlock:9458661
+2023-08-04 09:22:20 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458661, oldBlock:9458662
+2023-08-04 09:22:23 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458661, oldBlock:9458662
+2023-08-04 09:22:27 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458662, oldBlock:9458662
+2023-08-04 09:22:30 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458662, oldBlock:9458663
+2023-08-04 09:22:34 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458662, oldBlock:9458663
+2023-08-04 09:22:38 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458662, oldBlock:9458663
+2023-08-04 09:22:41 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458663, oldBlock:9458663
+2023-08-04 09:22:45 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458663, oldBlock:9458664
+2023-08-04 09:22:48 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458663, oldBlock:9458664
+2023-08-04 09:22:53 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458664, oldBlock:9458664
+2023-08-04 09:22:57 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458664, oldBlock:9458665
+2023-08-04 09:23:00 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458664, oldBlock:9458665
+2023-08-04 09:23:04 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458665, oldBlock:9458665
+2023-08-04 09:23:07 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458665, oldBlock:9458666
+2023-08-04 09:23:11 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458665, oldBlock:9458666
+2023-08-04 09:23:14 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458665, oldBlock:9458666
+2023-08-04 09:23:18 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458665, oldBlock:9458666
+2023-08-04 09:23:21 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458665, oldBlock:9458666
+2023-08-04 09:23:25 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458665, oldBlock:9458666
+2023-08-04 09:23:29 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458666, oldBlock:9458666
+2023-08-04 09:23:33 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458666, oldBlock:9458667
+2023-08-04 09:23:37 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458666, oldBlock:9458667
+2023-08-04 09:23:41 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458667, oldBlock:9458667
+2023-08-04 09:23:44 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458667, oldBlock:9458668
+2023-08-04 09:23:48 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458667, oldBlock:9458668
+2023-08-04 09:23:51 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458668, oldBlock:9458668
+2023-08-04 09:23:55 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458668, oldBlock:9458669
+2023-08-04 09:23:58 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458668, oldBlock:9458669
+2023-08-04 09:24:02 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458668, oldBlock:9458669
+2023-08-04 09:24:05 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458668, oldBlock:9458669
+2023-08-04 09:24:09 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458668, oldBlock:9458669
+2023-08-04 09:24:13 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458669, oldBlock:9458669
+2023-08-04 09:24:17 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458669, oldBlock:9458670
+2023-08-04 09:24:20 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458669, oldBlock:9458670
+2023-08-04 09:24:24 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458669, oldBlock:9458670
+2023-08-04 09:24:27 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458670, oldBlock:9458670
+2023-08-04 09:24:31 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458670, oldBlock:9458671
+2023-08-04 09:24:34 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458670, oldBlock:9458671
+2023-08-04 09:24:38 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458671, oldBlock:9458671
+2023-08-04 09:24:41 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458671, oldBlock:9458672
+2023-08-04 09:24:45 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458671, oldBlock:9458672
+2023-08-04 09:24:48 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458671, oldBlock:9458672
+2023-08-04 09:24:52 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458671, oldBlock:9458672
+2023-08-04 09:24:55 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458671, oldBlock:9458672
+2023-08-04 09:24:59 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458671, oldBlock:9458672
+2023-08-04 09:25:02 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458672, oldBlock:9458672
+2023-08-04 09:25:06 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458672, oldBlock:9458673
+2023-08-04 09:25:10 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458672, oldBlock:9458673
+2023-08-04 09:25:13 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458673, oldBlock:9458673
+2023-08-04 09:25:17 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458673, oldBlock:9458674
+2023-08-04 09:25:20 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458673, oldBlock:9458674
+2023-08-04 09:25:24 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458673, oldBlock:9458674
+2023-08-04 09:25:27 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458674, oldBlock:9458674
+2023-08-04 09:25:31 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458674, oldBlock:9458675
+2023-08-04 09:25:34 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458674, oldBlock:9458675
+2023-08-04 09:25:38 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458675, oldBlock:9458675
+2023-08-04 09:25:41 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458675, oldBlock:9458676
+2023-08-04 09:25:45 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458675, oldBlock:9458676
+2023-08-04 09:25:48 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458675, oldBlock:9458676
+2023-08-04 09:25:52 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458675, oldBlock:9458676
+2023-08-04 09:25:56 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458675, oldBlock:9458676
+2023-08-04 09:25:59 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458675, oldBlock:9458676
+2023-08-04 09:26:03 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458676, oldBlock:9458676
+2023-08-04 09:26:07 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458676, oldBlock:9458677
+2023-08-04 09:26:10 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458676, oldBlock:9458677
+2023-08-04 09:26:14 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458676, oldBlock:9458677
+2023-08-04 09:26:17 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458677, oldBlock:9458677
+2023-08-04 09:26:21 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458677, oldBlock:9458678
+2023-08-04 09:26:24 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458677, oldBlock:9458678
+2023-08-04 09:26:28 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458678, oldBlock:9458678
+2023-08-04 09:26:31 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458678, oldBlock:9458679
+2023-08-04 09:26:35 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458678, oldBlock:9458679
+2023-08-04 09:26:38 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458679, oldBlock:9458679
+2023-08-04 09:26:42 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458679, oldBlock:9458680
+2023-08-04 09:26:46 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458679, oldBlock:9458680
+2023-08-04 09:26:49 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458680, oldBlock:9458680
+2023-08-04 09:26:53 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458680, oldBlock:9458681
+2023-08-04 09:26:56 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458680, oldBlock:9458681
+2023-08-04 09:27:00 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458680, oldBlock:9458681
+2023-08-04 09:27:04 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458681, oldBlock:9458681
+2023-08-04 09:27:07 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458681, oldBlock:9458682
+2023-08-04 09:27:08 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 09:27:08 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 09:27:11 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 09:27:11 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 26068 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 09:27:11 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 09:27:12 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 09:27:12 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 09:27:12 [main] - Finished Spring Data repository scanning in 26 ms. Found 0 Redis repository interfaces.
+2023-08-04 09:27:12 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 09:27:12 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:27:12 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@49469ffa' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:27:12 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:27:13 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 09:27:13 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 09:27:13 [main] - Starting service [Tomcat]
+2023-08-04 09:27:13 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 09:27:13 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 09:27:13 [main] - Root WebApplicationContext: initialization completed in 1939 ms
+2023-08-04 09:27:13 [main] - Init DruidDataSource
+2023-08-04 09:27:14 [main] - {dataSource-1} inited
+2023-08-04 09:27:17 [main] - Redisson 3.17.6
+2023-08-04 09:27:18 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 09:27:18 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 09:27:19 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 09:27:19 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:27:19 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:27:20 [main] - 根据注解获取需要忽略认证的耗时：8ms
+2023-08-04 09:27:20 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 09:27:20 [main] - 忽略认证的Post接口名称=["/user/login","/user/getGoogleQRCode"]
+2023-08-04 09:27:20 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 09:27:20 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 09:27:21 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 09:27:21 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5dae85f7, org.springframework.security.web.context.SecurityContextPersistenceFilter@6a4d72bd, org.springframework.security.web.header.HeaderWriterFilter@26169be3, org.springframework.web.filter.CorsFilter@4a52c13c, org.springframework.security.web.authentication.logout.LogoutFilter@2cb3bc0e, com.summer.security.JwtAuthenticationTokenFilter@5cc152f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f96d39f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@610640e3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47651c28, org.springframework.security.web.session.SessionManagementFilter@45c57dbd, org.springframework.security.web.access.ExceptionTranslationFilter@d15f98a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e39b656]
+2023-08-04 09:27:21 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:27:22 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-04 09:27:22 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-04 09:27:22 [main] - Started PlatformApplication in 11.518 seconds (JVM running for 12.239)
+2023-08-04 09:27:22 [RMI TCP Connection(1)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 09:27:22 [RMI TCP Connection(1)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 09:27:22 [RMI TCP Connection(1)-192.168.2.116] - Completed initialization in 2 ms
+2023-08-04 09:27:24 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458682, oldBlock:9458682
+2023-08-04 09:27:27 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458683, oldBlock:9458683
+2023-08-04 09:27:31 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458683, oldBlock:9458684
+2023-08-04 09:27:31 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 09:27:31 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 09:41:56 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 09:41:56 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 20836 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 09:41:56 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 09:41:57 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 09:41:57 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 09:41:57 [main] - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2023-08-04 09:41:57 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 09:41:58 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:42:02 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@2954f6ab' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:42:02 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:42:02 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 09:42:02 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 09:42:02 [main] - Starting service [Tomcat]
+2023-08-04 09:42:02 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 09:42:02 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 09:42:02 [main] - Root WebApplicationContext: initialization completed in 6311 ms
+2023-08-04 09:42:02 [main] - Init DruidDataSource
+2023-08-04 09:42:03 [main] - {dataSource-1} inited
+2023-08-04 09:42:06 [main] - Redisson 3.17.6
+2023-08-04 09:42:07 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 09:42:07 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 09:42:08 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 09:42:08 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:42:08 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:42:09 [main] - 根据注解获取需要忽略认证的耗时：9ms
+2023-08-04 09:42:09 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 09:42:09 [main] - 忽略认证的Post接口名称=["/user/login","/user/getGoogleQRCode"]
+2023-08-04 09:42:09 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 09:42:10 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 09:42:11 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 09:42:11 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15da3ce9, org.springframework.security.web.context.SecurityContextPersistenceFilter@79a15001, org.springframework.security.web.header.HeaderWriterFilter@10587ce5, org.springframework.web.filter.CorsFilter@6513fd22, org.springframework.security.web.authentication.logout.LogoutFilter@5dcbdcb9, com.summer.security.JwtAuthenticationTokenFilter@131c5bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43f670f3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44f433db, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@68d2e6eb, org.springframework.security.web.session.SessionManagementFilter@2ff30a75, org.springframework.security.web.access.ExceptionTranslationFilter@307ca947, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4211a66]
+2023-08-04 09:42:11 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:42:12 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-04 09:42:12 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-04 09:42:12 [main] - Started PlatformApplication in 16.851 seconds (JVM running for 17.465)
+2023-08-04 09:42:12 [RMI TCP Connection(4)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 09:42:12 [RMI TCP Connection(4)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 09:42:12 [RMI TCP Connection(4)-192.168.2.116] - Completed initialization in 1 ms
+2023-08-04 09:46:06 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 09:46:06 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 09:46:10 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 09:46:10 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 47304 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 09:46:10 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 09:46:11 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 09:46:11 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 09:46:11 [main] - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2023-08-04 09:46:12 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 09:46:12 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:46:12 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@42c54bad' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:46:12 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:46:12 [main] - Tomcat initialized with port(s): 8988 (http)
+2023-08-04 09:46:12 [main] - Initializing ProtocolHandler ["http-nio-8988"]
+2023-08-04 09:46:12 [main] - Starting service [Tomcat]
+2023-08-04 09:46:12 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 09:46:12 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 09:46:12 [main] - Root WebApplicationContext: initialization completed in 2076 ms
+2023-08-04 09:46:13 [main] - Init DruidDataSource
+2023-08-04 09:46:14 [main] - {dataSource-1} inited
+2023-08-04 09:46:17 [main] - Redisson 3.17.6
+2023-08-04 09:46:18 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 09:46:18 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 09:46:19 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 09:46:19 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:46:19 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:46:20 [main] - 根据注解获取需要忽略认证的耗时：9ms
+2023-08-04 09:46:20 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 09:46:20 [main] - 忽略认证的Post接口名称=["/user/login","/user/getGoogleQRCode"]
+2023-08-04 09:46:20 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 09:46:20 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 09:46:21 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 09:46:21 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41991619, org.springframework.security.web.context.SecurityContextPersistenceFilter@76312df9, org.springframework.security.web.header.HeaderWriterFilter@3d020409, org.springframework.web.filter.CorsFilter@a0464ce, org.springframework.security.web.authentication.logout.LogoutFilter@23b085ab, com.summer.security.JwtAuthenticationTokenFilter@34947355, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@457d81d8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61e4cf9b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e2f409f, org.springframework.security.web.session.SessionManagementFilter@2fc2305a, org.springframework.security.web.access.ExceptionTranslationFilter@174bbe8e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2f152472]
+2023-08-04 09:46:21 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:46:23 [main] - Starting ProtocolHandler ["http-nio-8988"]
+2023-08-04 09:46:23 [main] - Tomcat started on port(s): 8988 (http) with context path ''
+2023-08-04 09:46:23 [main] - Started PlatformApplication in 13.352 seconds (JVM running for 14.47)
+2023-08-04 09:46:31 [RMI TCP Connection(9)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 09:46:31 [RMI TCP Connection(9)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 09:46:31 [RMI TCP Connection(9)-192.168.2.116] - Completed initialization in 2 ms
+2023-08-04 09:46:52 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458600, oldBlock:9453601
+2023-08-04 09:47:48 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 09:47:48 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 09:47:52 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 09:47:52 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 58980 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 09:47:52 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 09:47:53 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 09:47:53 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 09:47:53 [main] - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
+2023-08-04 09:47:53 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 09:47:53 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:47:53 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@d70f722' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:47:53 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:47:54 [main] - Tomcat initialized with port(s): 8988 (http)
+2023-08-04 09:47:54 [main] - Initializing ProtocolHandler ["http-nio-8988"]
+2023-08-04 09:47:54 [main] - Starting service [Tomcat]
+2023-08-04 09:47:54 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 09:47:54 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 09:47:54 [main] - Root WebApplicationContext: initialization completed in 1928 ms
+2023-08-04 09:47:54 [main] - Init DruidDataSource
+2023-08-04 09:47:55 [main] - {dataSource-1} inited
+2023-08-04 09:47:58 [main] - Redisson 3.17.6
+2023-08-04 09:47:59 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 09:47:59 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 09:48:00 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 09:48:00 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:48:01 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:48:01 [main] - 根据注解获取需要忽略认证的耗时：10ms
+2023-08-04 09:48:01 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 09:48:01 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login"]
+2023-08-04 09:48:01 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 09:48:01 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 09:48:02 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 09:48:02 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2cdb1581, org.springframework.security.web.context.SecurityContextPersistenceFilter@ba76911, org.springframework.security.web.header.HeaderWriterFilter@179dc2, org.springframework.web.filter.CorsFilter@4140f94c, org.springframework.security.web.authentication.logout.LogoutFilter@74c74c99, com.summer.security.JwtAuthenticationTokenFilter@7b24d5e4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@95f61c2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a58d05d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d6daa8a, org.springframework.security.web.session.SessionManagementFilter@31906cb2, org.springframework.security.web.access.ExceptionTranslationFilter@9c88323, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ccd3e52]
+2023-08-04 09:48:02 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:48:03 [main] - Starting ProtocolHandler ["http-nio-8988"]
+2023-08-04 09:48:03 [main] - Tomcat started on port(s): 8988 (http) with context path ''
+2023-08-04 09:48:03 [main] - Started PlatformApplication in 11.899 seconds (JVM running for 12.556)
+2023-08-04 09:48:04 [RMI TCP Connection(3)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 09:48:04 [RMI TCP Connection(3)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 09:48:04 [RMI TCP Connection(3)-192.168.2.116] - Completed initialization in 1 ms
+2023-08-04 09:48:05 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458600, oldBlock:9453601
+2023-08-04 09:48:10 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458749, oldBlock:9458601
+2023-08-04 09:48:14 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458749, oldBlock:9458750
+2023-08-04 09:48:17 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458749, oldBlock:9458750
+2023-08-04 09:48:21 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458749, oldBlock:9458750
+2023-08-04 09:48:24 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458749, oldBlock:9458750
+2023-08-04 09:48:28 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458750, oldBlock:9458750
+2023-08-04 09:48:32 [pool-10-thread-2] - com.summer.manager.EventManager.scanDataJob currentBlock:9458750, oldBlock:9458751
+2023-08-04 09:48:36 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458750, oldBlock:9458751
+2023-08-04 09:48:39 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458750, oldBlock:9458751
+2023-08-04 09:48:43 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458750, oldBlock:9458751
+2023-08-04 09:48:46 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458750, oldBlock:9458751
+2023-08-04 09:48:50 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458751, oldBlock:9458751
+2023-08-04 09:48:53 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458751, oldBlock:9458752
+2023-08-04 09:48:57 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458751, oldBlock:9458752
+2023-08-04 09:49:01 [pool-10-thread-1] - com.summer.manager.EventManager.scanDataJob currentBlock:9458751, oldBlock:9458752
+2023-08-04 09:49:05 [pool-10-thread-3] - com.summer.manager.EventManager.scanDataJob currentBlock:9458752, oldBlock:9458752
+2023-08-04 09:49:05 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 09:49:05 [SpringApplicationShutdownHook] - {dataSource-1} closed
+2023-08-04 09:49:08 [background-preinit] - HV000001: Hibernate Validator 6.2.0.Final
+2023-08-04 09:49:08 [main] - Starting PlatformApplication using Java 1.8.0_181 on WIN-0LIEQ3UH00U with PID 21492 (E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund\platform\target\classes started by Administrator in E:\request\newProject\Carbon_Fund_New_New_New_New\Carbon_fund)
+2023-08-04 09:49:08 [main] - No active profile set, falling back to default profiles: default
+2023-08-04 09:49:09 [main] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2023-08-04 09:49:09 [main] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-08-04 09:49:09 [main] - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+2023-08-04 09:49:09 [main] - BeanFactory id=1fd1d81f-e3b9-38fa-b02f-b679bd8a3ecb
+2023-08-04 09:49:09 [main] - Bean 'asyncExecutorConfig' of type [com.summer.config.AsyncExecutorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:49:09 [main] - Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@11d045b4' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:49:09 [main] - Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-08-04 09:49:10 [main] - Tomcat initialized with port(s): 8989 (http)
+2023-08-04 09:49:10 [main] - Initializing ProtocolHandler ["http-nio-8989"]
+2023-08-04 09:49:10 [main] - Starting service [Tomcat]
+2023-08-04 09:49:10 [main] - Starting Servlet engine: [Apache Tomcat/9.0.54]
+2023-08-04 09:49:10 [main] - Initializing Spring embedded WebApplicationContext
+2023-08-04 09:49:10 [main] - Root WebApplicationContext: initialization completed in 1948 ms
+2023-08-04 09:49:10 [main] - Init DruidDataSource
+2023-08-04 09:49:11 [main] - {dataSource-1} inited
+2023-08-04 09:49:14 [main] - Redisson 3.17.6
+2023-08-04 09:49:15 [redisson-netty-2-5] - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 09:49:15 [redisson-netty-2-19] - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2023-08-04 09:49:16 [main] - 初始化把字典信息加入缓存中...
+2023-08-04 09:49:16 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:49:16 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:49:17 [main] - 根据注解获取需要忽略认证的耗时：10ms
+2023-08-04 09:49:17 [main] - 忽略认证的Get接口名称=["/apidoc/**","/druid/**","/certificate/**","/sendCaptchaToEmail/**","/captchaImage","/cache/getValue/{cacheKey}","/admin/reloadSetting"]
+2023-08-04 09:49:17 [main] - 忽略认证的Post接口名称=["/user/getGoogleQRCode","/user/login"]
+2023-08-04 09:49:17 [main] - 忽略认证不限制请求类型的接口名称=["/home/*","/test/*","/zhome/link","/zhome/bindInviteCode"]
+2023-08-04 09:49:17 [main] - 资源映射加载 --- /certificate/** --> D:\data\ 
+2023-08-04 09:49:18 [main] - Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-08-04 09:49:18 [main] - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27154b20, org.springframework.security.web.context.SecurityContextPersistenceFilter@5cf4c93, org.springframework.security.web.header.HeaderWriterFilter@40f40221, org.springframework.web.filter.CorsFilter@5316255e, org.springframework.security.web.authentication.logout.LogoutFilter@541c32de, com.summer.security.JwtAuthenticationTokenFilter@7272914b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62cad0e8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1927c2c6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15da3ce9, org.springframework.security.web.session.SessionManagementFilter@179dc2, org.springframework.security.web.access.ExceptionTranslationFilter@3fe8d57a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1ab08e83]
+2023-08-04 09:49:18 [main] - ---------设置超时时间--------120秒
+2023-08-04 09:49:19 [main] - Starting ProtocolHandler ["http-nio-8989"]
+2023-08-04 09:49:19 [main] - Tomcat started on port(s): 8989 (http) with context path ''
+2023-08-04 09:49:19 [main] - Started PlatformApplication in 11.455 seconds (JVM running for 12.017)
+2023-08-04 09:49:19 [RMI TCP Connection(3)-192.168.2.116] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-04 09:49:19 [RMI TCP Connection(3)-192.168.2.116] - Initializing Servlet 'dispatcherServlet'
+2023-08-04 09:49:19 [RMI TCP Connection(3)-192.168.2.116] - Completed initialization in 1 ms
+2023-08-04 09:53:24 [http-nio-8989-exec-5] - Request Info: {"classMethod":"com.summer.controller.ZHomeController.link","httpMethod":"POST","ip":"192.168.2.118","requestParams":{"linkDTO":{"userAddress":"0x30e561498a63f57535d6c0cee51dd111b9ae8a70"}},"result":{"code":200,"data":{"inviteCode":"NJxBx8iL","token":"app_token:92:89a3e91913a84951a9786e935bff4d76"},"msg":"return.ok"},"timeCost":51,"url":"http://192.168.2.116:8989/zhome/link"}
+2023-08-04 09:53:27 [http-nio-8989-exec-7] - Request Info: {"classMethod":"com.summer.controller.ZHomeController.userInfo","httpMethod":"POST","ip":"192.168.2.118","requestParams":{},"result":{"code":200,"data":{"isEmailRegister":false,"inviteCode":"NJxBx8iL"},"msg":"return.ok"},"timeCost":12,"url":"http://192.168.2.116:8989/zhome/userInfo"}
+2023-08-04 09:56:49 [SpringApplicationShutdownHook] - {dataSource-1} closing ...
+2023-08-04 09:56:49 [SpringApplicationShutdownHook] - {dataSource-1} closed

@@ -240,7 +240,7 @@ token:
 #ChainIds
 chainids:
   #以太坊链id
-  ETH: 1
+  ETH: 5
   #BSC链id
   BSC: 97
   #TRON链id
