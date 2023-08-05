@@ -16,6 +16,13 @@
         where userId = #{userId}
     </update>
 
+    <update id="lockUpdateReduceIntegralWallet">
+        update
+            dona_users_wallets
+        set userIntegralAmount=userIntegralAmount - #{amount}
+        where userId = #{userId}
+    </update>
+
     <update id="lockUpdateReduceWallet">
         update
             wallets

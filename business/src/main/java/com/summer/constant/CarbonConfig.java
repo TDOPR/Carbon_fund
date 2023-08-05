@@ -52,6 +52,10 @@ public class CarbonConfig {
      */
     public static final Integer SPECIAL_AWARD_TEAM_MEM_AMOUNT = 300;
     /**
+     * 积分兑换比例
+     */
+    public static final Integer RATE = 1000;
+    /**
      * 字符长度
      */
     public static final Integer STRING_LENGTH = 20;

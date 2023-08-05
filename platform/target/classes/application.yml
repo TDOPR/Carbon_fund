@@ -246,19 +246,19 @@ chainids:
   #BSC链id
   BSC: 97
   #TRON链id
-  TRON: https://api.trongrid.io
+  TRON: 0
 
 #########################  波场配置 ##################################
 tron:
   #事务合约地址
-  eventContract: "THg43Ya8AapZBGx33r7hsBGuri1dJsj2D3"
+  eventContract: THvPdeLVhrTB5Gn4NiArRb7d2QwMrhAe9v
   #区块间隔
   blockDiff: 15
   #最新区块url
-  urlLastBlock: https://nile.trongrid.io/wallet/getnowblock
+  urlLastBlock: https://api.shasta.trongrid.io/wallet/getnowblock
   #firstUrl
-  firstUrl: "https://nile.trongrid.io/v1/contracts/"
+  firstUrl: https://api.shasta.trongrid.io/v1/contracts/
   #lastUrl
-  lastUrl: "/events?block_number="
+  lastUrl: /events?block_number=
   #url
   url: https://api.trongrid.io

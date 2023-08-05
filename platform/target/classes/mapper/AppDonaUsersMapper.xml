@@ -31,20 +31,23 @@
     </select>
 
     <select id="selectUsers" resultType="com.summer.model.dto.AllDonaUsersDTO">
-        select a.nickName,
-               a.level,
-               b.donaUsdtAmount
-        from app_dona_users a
-                 left join
-             dona_users_wallets b
-             on a.id = b.user_id
-        where a.level > 0
-          AND a.nickName = #{nickName}
+        select z.level, z.nickName, z.donaUsdtAmount, y.title
+        from (select a.nickName,
+                     a.level,
+                     b.donaUsdtAmount
+              from app_dona_users a
+                       left join
+                   dona_users_wallets b
+                   on a.id = b.userId
+              where a.level > 0
+                AND a.nickName = #{nickName}) z
+                 left join medal y on z.level = y.id
     </select>
 
     <select id="integralUsersRanking" resultType="com.summer.model.dto.AllIntegralUsersDTO">
         select a.nickName,
-               b.userIntegralAmount
+               b.userIntegralAmount,
+               a.level
         from app_dona_users a
                  left join
              dona_users_wallets b

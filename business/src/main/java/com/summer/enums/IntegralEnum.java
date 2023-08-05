@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 
 /**
  * 积分类型
+ * @author Administrator
  */
 @Getter
 @AllArgsConstructor
@@ -22,7 +23,8 @@ public enum IntegralEnum {
     SEVENTH(7, new Integer("20"), "减少汽油车交通"),
     EIGHTH(8, new Integer("10"), "保护森林资源"),
     NINETH(9, new Integer("30"), "推广可再生能源"),
-    TENTH(10, new Integer("30"), "购买节点获得积分");
+    TENTH(10, new Integer("30"), "购买节点获得积分"),
+    ELEVENTH(11, new Integer("30"), "购买节点抵扣积分");
     
 
     /**

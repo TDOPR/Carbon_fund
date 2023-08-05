@@ -33,6 +33,7 @@ public interface DonaUsersWalletsMapper extends BaseMapper<DonaUsersWallets> {
      * @param amount 充值的金额
      */
     int lockUpdateAddIntegralWallet(@Param("userId")Integer userId,@Param("amount") BigDecimal amount);
+    int lockUpdateReduceIntegralWallet(@Param("userId")Integer userId,@Param("amount") BigDecimal amount);
     
     /**
      * 往钱包中取出金额

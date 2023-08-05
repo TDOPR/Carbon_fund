@@ -74,11 +74,11 @@
                 <version>${fastjson.version}</version>
             </dependency>
 
-<!--            <dependency>-->
-<!--                <groupId>dom4j</groupId>-->
-<!--                <artifactId>dom4j</artifactId>-->
-<!--                <version>${dom4j.version}</version>-->
-<!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>dom4j</groupId>-->
+            <!--                <artifactId>dom4j</artifactId>-->
+            <!--                <version>${dom4j.version}</version>-->
+            <!--            </dependency>-->
 
             <dependency>
                 <groupId>commons-io</groupId>
@@ -278,6 +278,9 @@
                             <version>1.18.24</version>
                         </path>
                     </annotationProcessorPaths>
+                    <compilerArguments>
+                        <extdirs>src\main\webapp\WEB-INF\lib</extdirs>
+                    </compilerArguments>
                 </configuration>
             </plugin>
 

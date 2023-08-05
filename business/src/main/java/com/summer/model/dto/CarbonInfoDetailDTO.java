@@ -8,11 +8,11 @@ import lombok.Data;
  * @CreateTime 2022/11/18 10:16
  **/
 @Data
-public class SelectMyIntegralDTO {
+public class CarbonInfoDetailDTO {
 
     /**
-     * 用户昵称
+     * id
      */
-    private String nickName;
+    private Integer id;
 
 }

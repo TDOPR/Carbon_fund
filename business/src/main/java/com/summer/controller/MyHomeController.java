@@ -14,15 +14,15 @@ import com.summer.constant.CarbonConfig;
 import com.summer.enums.FlowingActionEnum;
 import com.summer.enums.IntegralEnum;
 import com.summer.enums.VipLevelEnum;
-import com.summer.mapper.AppDonaUsersMapper;
-import com.summer.mapper.DonaUsersIntegralWalletsLogsMapper;
-import com.summer.mapper.DonaUsersWalletsLogsMapper;
-import com.summer.mapper.DonaUsersWalletsMapper;
+import com.summer.manager.TradeManager;
+import com.summer.mapper.*;
 import com.summer.model.CarbonTask;
 import com.summer.model.Medal;
 import com.summer.model.PaticiTaskToday;
+import com.summer.model.UserTaskLogs;
 import com.summer.model.dto.*;
 import com.summer.model.vo.CarbonFootprintRemarkVO;
+import com.summer.model.vo.CarbonInfoVO;
 import com.summer.model.vo.MyOathVO;
 import com.summer.model.vo.SelectDoTaskVO;
 import com.summer.service.*;
@@ -36,13 +36,14 @@ import java.util.List;
 
 /**
  * 我的主页
+ *
  * @author Dominick Li
  * @CreateTime 2022/11/18 11:04
  **/
 @RestController
 @RequestMapping("/myhome")
 public class MyHomeController {
-
+    
     @Autowired
     private AppDonaUserService appDonaUserService;
     
@@ -69,8 +70,17 @@ public class MyHomeController {
     
     @Autowired
     private CarbonTaskService carbonTaskService;
-
-
+    
+    @Resource
+    private ArticleMapper articleMapper;
+    
+    @Autowired
+    private UserTaskLogsService userTaskLogsService;
+    
+    @Autowired
+    private TradeManager tradeManager;
+    
+    
     /**
      * 修改用户名
      */
@@ -79,8 +89,8 @@ public class MyHomeController {
     public JsonResult modifyUserDetail(@RequestBody AppDonaUserDTO appDonaUserDTO) {
         return appDonaUserService.modifyUserName(appDonaUserDTO);
     }
-
-
+    
+    
     /**
      * 修改密码
      */
@@ -113,7 +123,7 @@ public class MyHomeController {
         Page<AllIntegralUsersDTO> ranking = appDonaUsersMapper.integralUsersRanking(pageDTO.getPage());
         return JsonResult.successResult(new PageVO<>(ranking));
     }
-    
+
 //    /**
 //     * 我的积分
 //     */
@@ -128,7 +138,7 @@ public class MyHomeController {
      */
     @PostMapping("/integralRankingSelect")
     public JsonResult<List<AllIntegralUsersDTO>> integralRankingSelect(@RequestBody SelectMyIntegralDTO selectMyIntegralDTO) {
-        return JsonResult.successResult(appDonaUsersMapper.integralRankingSelect(selectMyIntegralDTO.getEmail()));
+        return JsonResult.successResult(appDonaUsersMapper.integralRankingSelect(selectMyIntegralDTO.getNickName()));
     }
     
     /**
@@ -145,14 +155,14 @@ public class MyHomeController {
     @PostMapping("/carbonFootprintRemark")
     public JsonResult carbonFootprintRemark(@RequestBody ParticiTaskDTO particiTaskDTO) {
         CarbonFootprintRemarkVO carbonFootprintRemarkVO = donaUsersIntegralWalletsLogsMapper.carbonFootprintRemark(particiTaskDTO.getTaskId());
-        CarbonTask carbonTask = carbonTaskService.getOne(new LambdaQueryWrapper<CarbonTask>().select(CarbonTask::getJoinedCount).eq(CarbonTask::getTaskId, particiTaskDTO.getTaskId()));
-        if(carbonTask.getJoinedCount() == null){
+        CarbonTask carbonTask = carbonTaskService.getOne(new LambdaQueryWrapper<CarbonTask>().select(CarbonTask::getId, CarbonTask::getJoinedCount).eq(CarbonTask::getId, particiTaskDTO.getTaskId()));
+        if (carbonFootprintRemarkVO.getJoinedCount() == null) {
             Integer joinedCount = donaUsersIntegralWalletsLogsMapper.joinedCount(particiTaskDTO.getTaskId());
             carbonFootprintRemarkVO.setJoinedCount(joinedCount);
-        }else{
+        } else {
             carbonFootprintRemarkVO.setJoinedCount(carbonTask.getJoinedCount());
         }
-        return JsonResult.successResult(carbonTask);
+        return JsonResult.successResult(carbonFootprintRemarkVO);
     }
     
     /**
@@ -176,10 +186,10 @@ public class MyHomeController {
 //        donaUsersWalletsLogsMapper.buyLevel(userId)
         List<MedalDTO> medalDTOS = donaUsersWalletsLogsMapper.medalInfo();
         List<MedalDTO> donaLevel = donaUsersWalletsLogsMapper.donaUsersMedalDTO(userId);
-        for(MedalDTO medalDTO: medalDTOS){
-            if(donaLevel.contains(medalDTO)){
+        for (MedalDTO medalDTO : medalDTOS) {
+            if (donaLevel.contains(medalDTO)) {
                 medalDTO.setStatus(1);
-            }else{
+            } else {
                 medalDTO.setStatus(0);
             }
         }
@@ -202,7 +212,7 @@ public class MyHomeController {
     public JsonResult<PageVO<MyOathVO>> myOath(@RequestBody PageDTO pageDTO) {
         Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
         Page<MyOathVO> myOathVOS = donaUsersIntegralWalletsLogsMapper.myOath(userId, pageDTO.getPage());
-        for(MyOathVO myOathVO : myOathVOS.getRecords()){
+        for (MyOathVO myOathVO : myOathVOS.getRecords()) {
             myOathVO.setStatus(Integer.valueOf(1));
         }
         return JsonResult.successResult(new PageVO<>(myOathVOS));
@@ -242,24 +252,32 @@ public class MyHomeController {
     public JsonResult doTask(@RequestBody ParticiTaskDTO particiTaskDTO) {
         Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
         SelectDoTaskVO selectDoTaskVO = donaUsersIntegralWalletsLogsMapper.selectDoTask(userId, particiTaskDTO.getTaskId());
-        if(selectDoTaskVO == null){
+        if (selectDoTaskVO == null) {
             Boolean flag = donaUsersWalletsService.updateIntegralWallet(userId, new BigDecimal(IntegralEnum.getByType(particiTaskDTO.getTaskId()).getRewardIntegral()), FlowingActionEnum.INCOME, IntegralEnum.getByType(particiTaskDTO.getTaskId()));
-            if(flag == true){
+            if (flag == true) {
                 PaticiTaskToday paticiTaskToday = new PaticiTaskToday();
                 paticiTaskToday.setTaskId(particiTaskDTO.getTaskId());
                 paticiTaskToday.setUserId(userId);
                 paticiTaskTodayService.save(paticiTaskToday);
+                
+                UserTaskLogs userTaskLogs = userTaskLogsService.getOne(
+                        new LambdaQueryWrapper<UserTaskLogs>()
+                                .eq(UserTaskLogs::getUserId, userId).eq(UserTaskLogs::getTaskId, particiTaskDTO.getTaskId())
+                );
+                if (userTaskLogs == null) {
+                    tradeManager.updateUserTaskLogs(userId, particiTaskDTO.getTaskId());
+                }
+                
                 return JsonResult.successResult(ReturnMessageEnum.OK);
-            }else{
+            } else {
                 return JsonResult.failureResult(ReturnMessageEnum.FAILED);
             }
-        }else{
+        } else {
             return JsonResult.failureResult(ReturnMessageEnum.TASK_NUM_BALANCE);
         }
     }
     
     
-
     /**
      * 退出登录
      */
@@ -267,6 +285,21 @@ public class MyHomeController {
     public JsonResult loginOut() {
         return appDonaUserService.loginOut();
     }
-
-
+    
+    /**
+     * 碳索咨询
+     */
+    @PostMapping("/carbonInfo")
+    public JsonResult<PageVO<CarbonInfoVO>> carbonInfo(@RequestBody PageDTO pageDTO) {
+        return JsonResult.successResult(new PageVO<>(articleMapper.carbonInfo(pageDTO.getPage())));
+    }
+    
+    /**
+     * 探索咨询详情
+     */
+    @PostMapping("/carbonInfoDetail")
+    public JsonResult<CarbonInfoVO> carbonInfoDetail(@RequestBody CarbonInfoDetailDTO carbonInfoDetailDTO) {
+        return JsonResult.successResult(articleMapper.carbonInfoDetail(carbonInfoDetailDTO.getId()));
+    }
+    
 }

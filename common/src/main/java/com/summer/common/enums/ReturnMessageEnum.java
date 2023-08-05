@@ -50,6 +50,7 @@ public enum ReturnMessageEnum {
     INPUT_USER_ID_ERROR("input_user_id_error","输入的用户ID有误！" ),
     MIN_USD_ERROR("min_usd_error","换算后的USD必须大于 0.01$！"),
     UPDATE_PWD_TIME_LIMIT("update_pwd_time_limit","修改密码后间隔24小时才可进行提款操作！"),
+    INTEGRAL_DEDUCE_PURCHASE_SUCCESS("integral_deduce_purchase_success","积分抵扣购买成功！"),
     WITHDRAW_COUNT_LIMIT("withdraw_count_limit","同一账号同个钱包地址24小时内提币次数上限为3次！")
     ;
 

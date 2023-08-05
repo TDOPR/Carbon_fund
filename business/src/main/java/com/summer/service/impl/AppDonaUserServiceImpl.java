@@ -25,10 +25,7 @@ import com.summer.common.util.MyIncrementGeneratorUtil;
 import com.summer.common.util.encrypt.AESUtil;
 import com.summer.common.util.redis.RedisUtil;
 import com.summer.constant.CarbonConfig;
-import com.summer.enums.CarbonLogTypeEnum;
-import com.summer.enums.FlowingActionEnum;
-import com.summer.enums.IntegralEnum;
-import com.summer.enums.VipLevelEnum;
+import com.summer.enums.*;
 import com.summer.mapper.AppDonaUsersMapper;
 import com.summer.model.*;
 import com.summer.model.dto.*;
@@ -87,6 +84,9 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
     @Autowired
     private CertificateService certificateService;
     
+    @Autowired
+    private UserDonaLogsService userDonaLogsService;
+    
     
     @Override
     public JsonResult login(AppDonaUserLoginDTO appDonaUserLoginDTO, String localIp) {
@@ -123,7 +123,6 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
         //返回token给客户端
         JSONObject json = new JSONObject();
         json.put(SystemConstants.TOKEN_NAME, tokenKey);
-//        json.put("greenhorn", appUsers.getGreenhorn() == 1);
         return JsonResult.successResult(json);
     }
     
@@ -142,6 +141,7 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
         }
         Certificate certificate;
         AppDonaUsers appDonaUsers;
+        UserDonaLogs userDonaLogs;
         appDonaUsers = this.getOne(new LambdaQueryWrapper<AppDonaUsers>().eq(AppDonaUsers::getEmail, appDonaUserRegisterDTO.getEmail()));
         if (appDonaUsers == null) {
             //注册
@@ -149,7 +149,6 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
             appDonaUsers = new AppDonaUsers();
             appDonaUsers.setEmail(appDonaUserRegisterDTO.getEmail());
             appDonaUsers.setLevel(VipLevelEnum.ZERO.getLevel());
-            appDonaUsers.setZeroCertificate(zeroCertificate);
             appDonaUsers.setNickName(appDonaUsers.getEmail());
             //设置密码加密用的盐
             appDonaUsers.setSalt(IdUtil.simpleUUID());
@@ -157,7 +156,12 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
             this.save(appDonaUsers);
             
             certificateService.generateCertificate(appDonaUsers.getId(), appDonaUsers.getNickName(), appDonaUsers.getZeroCertificate(), VipLevelEnum.ZERO.getLevel().toString(), appDonaUsers.getCreateTime());
-            certificate = certificateService.getOne(new LambdaQueryWrapper<Certificate>().eq(Certificate::getUserId, appDonaUsers.getId()).eq(Certificate::getLevel, VipLevelEnum.ZERO.getLevel()));
+            userDonaLogs = new UserDonaLogs();
+            userDonaLogs.setUserId(appDonaUsers.getId());
+            userDonaLogs.setCertificate(zeroCertificate);
+            userDonaLogs.setLevel(VipLevelEnum.ZERO.getLevel());
+            userDonaLogs.setTitle(MedalEnum.ZERO.getTitle());
+            userDonaLogsService.save(userDonaLogs);
             
             //创建一条钱包记录
             DonaUsersWallets donaUsersWallets = new DonaUsersWallets();

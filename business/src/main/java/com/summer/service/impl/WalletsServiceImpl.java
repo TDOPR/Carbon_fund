@@ -1,27 +1,15 @@
 package com.summer.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.summer.enums.AlgebraEnum;
-import com.summer.enums.FlowingActionEnum;
-import com.summer.enums.FlowingTypeEnum;
 import com.summer.mapper.AppUserMapper;
 import com.summer.mapper.EvmUserWalletMapper;
 import com.summer.mapper.WalletsMapper;
-import com.summer.model.EvmUserWallet;
-import com.summer.model.TreePath;
 import com.summer.model.Wallets;
-import com.summer.service.EvmUserWalletService;
-import com.summer.service.TreePathService;
-import com.summer.service.WalletLogsService;
-import com.summer.service.WalletsService;
+import com.summer.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.math.BigDecimal;
-import java.util.List;
 
 @Service
 public class WalletsServiceImpl extends ServiceImpl<WalletsMapper, Wallets> implements WalletsService {
