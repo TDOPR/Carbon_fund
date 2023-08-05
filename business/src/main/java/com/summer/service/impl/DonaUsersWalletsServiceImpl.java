@@ -27,6 +27,7 @@ import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author Dominick Li
@@ -87,7 +88,7 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
         boolean flag = this.lookIntegralUpdateWallets(amount, userId, flowingActionEnum);
         if (flag) {
             //插入流水记录
-            donaUsersIntegralWalletsLogsService.insertDonaUsersIntegralWalletsLogs(userId, amount, flowingActionEnum, integralEnum);
+            donaUsersIntegralWalletsLogsService.insertDonaUsersIntegralWalletsLogs(userId, amount, VipLevelEnum.getByIntegralAmount(amount).getLevel(), flowingActionEnum, integralEnum);
         }
         return flag;
     }
@@ -115,6 +116,16 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
     }
     
     @Override
+    public boolean transferUpdateUsdWallet(BigDecimal amount, Integer userId, FlowingActionEnum flowingActionEnum, UsdLogTypeEnum usdLogTypeEnum) {
+        boolean flag = this.transferUsdUpdateWallets(userId, amount, flowingActionEnum);
+        if (flag) {
+            //插入流水记录
+            donaUsesrsWalletsLogsService.insertDonaUsersWalletsLogs(userId, amount, flowingActionEnum, usdLogTypeEnum);
+        }
+        return flag;
+    }
+    
+    @Override
     public int sendAlgebraRewardUpdateUsdWallet(BigDecimal amount, Integer userId, FlowingActionEnum flowingActionEnum, UsdLogTypeEnum usdLogTypeEnum) {
         int flag = donaUsersWalletsMapper.sendAlgebraRewardUpdateAddUsdWallet(userId, amount);
         if (flag == 1) {
@@ -130,6 +141,19 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
         int ret;
         if (flowingActionEnum.equals(FlowingActionEnum.INCOME)) {
             ret = this.baseMapper.lockUpdateAddUsdWallet(userId, amount);
+        } else {
+            //减
+            ret = this.baseMapper.lockUpdateReduceUsdWallet(userId, amount);
+        }
+        return ret == 1;
+    }
+    
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public boolean transferUsdUpdateWallets(Integer userId, BigDecimal amount, FlowingActionEnum flowingActionEnum) {
+        int ret;
+        if (flowingActionEnum.equals(FlowingActionEnum.INCOME)) {
+            ret = this.baseMapper.transferUsdtToWallet(userId, amount);
         } else {
             //减
             ret = this.baseMapper.lockUpdateReduceUsdWallet(userId, amount);
@@ -281,15 +305,15 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
             return JsonResult.failureResult();
         }
         //判断钱包里的Usd余额是否可以购买vip
-        DonaUsersWallets donaUsersWallets = this.selectColumnsByUserId(userId, DonaUsersWallets::getRechargeUsdtAmount);
-        if (donaUsersWallets.getRechargeUsdtAmount().compareTo(donaNodeDTO.getAmount()) < 0) {
+        DonaUsersWallets donaUsersWallets = this.selectColumnsByUserId(userId, DonaUsersWallets::getWalletAmount);
+        if (donaUsersWallets.getWalletAmount().compareTo(donaNodeDTO.getAmount()) < 0) {
             return JsonResult.failureResult(ReturnMessageEnum.AMOUNT_EXCEEDS_BALANCE);
         }
         
         //扣usd费用 增加积分余额
         if (donaNodeDTO.getAmount().intValue() > 0) {
             this.updateUsdWallet(donaNodeDTO.getAmount(), userId, FlowingActionEnum.EXPENDITURE, UsdLogTypeEnum.DONA_NODE);
-            this.updateIntegralWallet(userId, VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getIntegralAmount(), FlowingActionEnum.INCOME, IntegralEnum.TENTH);
+            this.updateIntegralWallet(userId, Objects.requireNonNull(VipLevelEnum.getByAmount(donaNodeDTO.getAmount())).getIntegralAmount(), FlowingActionEnum.INCOME, IntegralEnum.TENTH);
         }
 
 //        totalAmount = totalAmounselectColumnsByUserIdt.add(donaNodeDTO.getAmount());
@@ -303,7 +327,7 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
                         UpdateWrapper<AppDonaUsers> updateWrapper = Wrappers.update();
                         updateWrapper.lambda().
                                 set(AppDonaUsers::getOneCertificate, certiString)
-
+//                                .set(AppDonaUsers::getLevel, VipLevelEnum.ONE.getLevel())
 //                .set(AppDonaUsers::getValid, BooleanEnum.TRUE.intValue())
                                 .eq(AppDonaUsers::getId, userId);
                         appDonaUserService.update(updateWrapper);
@@ -316,7 +340,7 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
                         UpdateWrapper<AppDonaUsers> updateWrapper = Wrappers.update();
                         updateWrapper.lambda().
                                 set(AppDonaUsers::getTwoCertificate, certiString)
-
+//                                .set(AppDonaUsers::getLevel, VipLevelEnum.TWO.getLevel())
 //                .set(AppDonaUsers::getValid, BooleanEnum.TRUE.intValue())
                                 .eq(AppDonaUsers::getId, userId);
                         appDonaUserService.update(updateWrapper);
@@ -330,7 +354,7 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
                         UpdateWrapper<AppDonaUsers> updateWrapper = Wrappers.update();
                         updateWrapper.lambda().
                                 set(AppDonaUsers::getThreeCertificate, certiString)
-
+//                                .set(AppDonaUsers::getLevel, VipLevelEnum.THREE.getLevel())
 //                .set(AppDonaUsers::getValid, BooleanEnum.TRUE.intValue())
                                 .eq(AppDonaUsers::getId, userId);
                         appDonaUserService.update(updateWrapper);
@@ -340,6 +364,7 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
                 default:
                     break;
             }
+//            if(VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel().compareTo())
             UpdateWrapper<AppDonaUsers> updateWrapper = Wrappers.update();
             updateWrapper.lambda().
                     set(AppDonaUsers::getLevel, VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel())
@@ -347,6 +372,51 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
 //                .set(AppDonaUsers::getValid, BooleanEnum.TRUE.intValue())
                     .eq(AppDonaUsers::getId, userId);
             appDonaUserService.update(updateWrapper);
+        }else{
+            switch (VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel()) {
+                case 1:
+                    if (appDonaUsers.getOneCertificate() == null) {
+                        certiString = MyIncrementGeneratorUtil.usingMath(CarbonConfig.STRING_LENGTH);
+                        UpdateWrapper<AppDonaUsers> updateWrapper = Wrappers.update();
+                        updateWrapper.lambda().
+                                set(AppDonaUsers::getOneCertificate, certiString)
+//                                .set(AppDonaUsers::getLevel, VipLevelEnum.ONE.getLevel())
+//                .set(AppDonaUsers::getValid, BooleanEnum.TRUE.intValue())
+                                .eq(AppDonaUsers::getId, userId);
+                        appDonaUserService.update(updateWrapper);
+                        certificateService.generateCertificate(userId, appDonaUsers.getNickName(), certiString, VipLevelEnum.ONE.getLevel().toString(), appDonaUsers.getCreateTime());
+                    }
+                    break;
+                case 2:
+                    if (appDonaUsers.getTwoCertificate() == null) {
+                        certiString = MyIncrementGeneratorUtil.usingMath(CarbonConfig.STRING_LENGTH);
+                        UpdateWrapper<AppDonaUsers> updateWrapper = Wrappers.update();
+                        updateWrapper.lambda().
+                                set(AppDonaUsers::getTwoCertificate, certiString)
+//                                .set(AppDonaUsers::getLevel, VipLevelEnum.TWO.getLevel())
+//                .set(AppDonaUsers::getValid, BooleanEnum.TRUE.intValue())
+                                .eq(AppDonaUsers::getId, userId);
+                        appDonaUserService.update(updateWrapper);
+                        certificateService.generateCertificate(userId, appDonaUsers.getNickName(), certiString, VipLevelEnum.TWO.getLevel().toString(), appDonaUsers.getCreateTime());
+                    }
+            
+                    break;
+                case 3:
+                    if (appDonaUsers.getThreeCertificate() == null) {
+                        certiString = MyIncrementGeneratorUtil.usingMath(CarbonConfig.STRING_LENGTH);
+                        UpdateWrapper<AppDonaUsers> updateWrapper = Wrappers.update();
+                        updateWrapper.lambda().
+                                set(AppDonaUsers::getThreeCertificate, certiString)
+//                                .set(AppDonaUsers::getLevel, VipLevelEnum.THREE.getLevel())
+//                .set(AppDonaUsers::getValid, BooleanEnum.TRUE.intValue())
+                                .eq(AppDonaUsers::getId, userId);
+                        appDonaUserService.update(updateWrapper);
+                        certificateService.generateCertificate(userId, appDonaUsers.getNickName(), certiString, VipLevelEnum.THREE.getLevel().toString(), appDonaUsers.getCreateTime());
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
         
         

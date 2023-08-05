@@ -125,13 +125,12 @@
 
     <select id="donaUsersMedalDTO" resultType="com.summer.model.dto.MedalDTO">
         select b.id, b.title, b.description, b.imgUrl, b.certificate, b.amount, b.status
-        from dona_users_wallets_logs a
+        from medal b
                  left join
-             medal b
+             dona_users_integral_wallets_logs a
              on
-                 a.donaLevel = b.id
-        where a.type = 2
-          and a.userId = #{userId}
+                 a.buyLevel = b.id
+        where a.userId = #{userId}
         GROUP BY b.id
     </select>
 

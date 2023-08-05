@@ -116,7 +116,9 @@ security:
       - /test/*
       - /zhome/link
       - /zhome/bindInviteCode
+      - /myhome/allUsers
     post:
+      - /sendCaptchaToEmail/**
 
 
 #########################  异步线程池配置 ##################################
@@ -244,7 +246,7 @@ chainids:
   #BSC链id
   BSC: 97
   #TRON链id
-  TRON: https://api.trongrid.io
+  TRON: 0
 
 #########################  波场配置 ##################################
 tron:

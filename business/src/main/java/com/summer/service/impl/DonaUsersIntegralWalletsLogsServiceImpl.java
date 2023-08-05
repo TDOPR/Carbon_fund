@@ -52,16 +52,17 @@ public class DonaUsersIntegralWalletsLogsServiceImpl extends ServiceImpl<DonaUse
     
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public Long insertDonaUsersIntegralWalletsLogs(Integer userId, BigDecimal amount, FlowingActionEnum flowingActionEnum, IntegralEnum integralEnum) {
+    public Long insertDonaUsersIntegralWalletsLogs(Integer userId, BigDecimal amount, Integer level, FlowingActionEnum flowingActionEnum, IntegralEnum integralEnum) {
         //添加积分钱包流水记录
         DonaUsersIntegralLogs donaUsersIntegralLogs = DonaUsersIntegralLogs.builder()
                 .userId(userId)
                 .integralAmount(amount)
                 .action(flowingActionEnum.getValue())
+                .buyLevel(level)
                 .type(integralEnum.getType())
                 .build();
         this.baseMapper.insert(donaUsersIntegralLogs);
-        return donaUsersIntegralLogs.getId();
+        return Long.valueOf(donaUsersIntegralLogs.getId());
     }
     
 //    @Override

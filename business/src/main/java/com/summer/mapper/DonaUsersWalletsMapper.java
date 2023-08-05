@@ -49,6 +49,8 @@ public interface DonaUsersWalletsMapper extends BaseMapper<DonaUsersWallets> {
     
     int lockUpdateAddUsdWallet(@Param("userId")Integer userId,@Param("amount") BigDecimal amount);
     
+    int transferUsdtToWallet(@Param("userId")Integer userId,@Param("amount") BigDecimal amount);
+    
     int lockUpdateReduceUsdWallet(@Param("userId")Integer userId,@Param("amount") BigDecimal amount);
     
     void buyTaskNumPackage(@Param("userId")Integer userId,@Param("amount") Integer amount, @Param("num")Integer num);

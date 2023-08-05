@@ -116,7 +116,9 @@ security:
       - /test/*
       - /zhome/link
       - /zhome/bindInviteCode
+      - /myhome/allUsers
     post:
+      - /sendCaptchaToEmail/**
 
 
 #########################  异步线程池配置 ##################################

@@ -115,11 +115,11 @@ public class EventManager {
         );
 
         String eventContract = eventConfig.getContract();
-
-        String buyNodeCreated = erc20WalletHandleService.createBuyNodeEvent();
+    
+        String transferUsdtCreated = erc20WalletHandleService.createTransferUsdtEvent();
 
         EthFilter ethFilter = erc20WalletHandleService.createFilter(oldBlock, toBlock, eventContract);
-        ethFilter.addOptionalTopics(buyNodeCreated);
+        ethFilter.addOptionalTopics(transferUsdtCreated);
         List<Log> logsList = erc20WalletHandleService.getLogByFilter(ethFilter);
         if (CollectionUtil.isEmpty(logsList)) {
             return;
@@ -133,25 +133,11 @@ public class EventManager {
             ArrayList topics = (ArrayList) logsLog.getTopics();
             String eventName = topics.get(0).toString();
 
-            if (eventName.equalsIgnoreCase(buyNodeCreated)) {
+            if (eventName.equalsIgnoreCase(transferUsdtCreated)) {
                 String userAddress = "0x" + topics.get(1).toString().substring(2).replace("000000000000000000000000", "");
                 BigDecimal rechargeAmount = new BigDecimal(new BigInteger(topics.get(2).toString().substring(2), 16));
-//                Integer userLevel = new Integer(new BigInteger(topics.get(3).toString().substring(2), 16).toString());
                 tradeManager.evmRecharge(userAddress, rechargeAmount, Integer.valueOf(chainIdsConfig.getEth()));
-//                //                测试数据GOERLI
-//                if (userLevel.compareTo(evmUserWalletMapper.getUserLevel(appUserMapper.findUserIdByUserAddress(userAddress))) <= 0 || LevelEnum.getRechargeAmountByLevel(userLevel).compareTo(evmUserWalletMapper.getRechargeAmount(appUserMapper.findUserIdByUserAddress(userAddress)).add(rechargeAmount)) > 0) {
-//                    continue;
-//                }
-//                UpdateWrapper<EvmUserWallet> updateWrapper = Wrappers.update();
-//                updateWrapper.lambda()
-//                        .set(EvmUserWallet::getUserAddress, userAddress)
-//                        .set(EvmUserWallet::getUserLevel, userLevel)
-//                        .eq(EvmUserWallet::getUserId, appUserMapper.findUserIdByUserAddress(userAddress)).eq(EvmUserWallet::getChainId, chainIdsConfig.getEth());
-//                evmUserWalletService.update(updateWrapper);
-//                tradeManager.evmUserWallet(userAddress, rechargeAmount, userLevel, ChainTypeEnum.GOERLI.getChainId());
-//                evmUserWalletMapper.setLevelByRecord(userAddress, userLevel, ChainTypeEnum.ETH.getChainId());
-//                测试数据GOERLI
-                donaUsersWalletsService.updateUsdWallet(rechargeAmount, appDonaUsersMapper.selectDonaUserIdByUserAddress(userAddress), FlowingActionEnum.INCOME, UsdLogTypeEnum.RECHARGE);
+                donaUsersWalletsService.transferUpdateUsdWallet(rechargeAmount, appDonaUsersMapper.selectDonaUserIdByUserAddress(userAddress), FlowingActionEnum.INCOME, UsdLogTypeEnum.RECHARGE);
 
                 String blockHash = logsLog.getBlockHash();
                 EthBlock.Block ethBlock = erc20WalletHandleService.getBlockByHash(blockHash);
@@ -161,7 +147,7 @@ public class EventManager {
                         .txHash(txHash)
                         .blockNum(new BigInteger(logsLog.getBlockNumber().toString(10)))
                         .createTime(date)
-                        .chainId(tokenConfig.getChainIds().get(0))
+                        .chainId(Integer.valueOf(chainIdsConfig.getEth()))
                         .build();
                 evmEventEntityArrayList.add(ethScanDataEntity);
             }
@@ -181,11 +167,11 @@ public class EventManager {
         );
 
         String eventContract = eventConfig.getContract();
-
-        String buyNodeCreated = erc20BSCWalletHandleService.createBuyNodeEvent();
+    
+        String transferUsdtCreated = erc20WalletHandleService.createTransferUsdtEvent();
 
         EthFilter ethFilter = erc20BSCWalletHandleService.createFilter(oldBlock, toBlock, eventContract);
-        ethFilter.addOptionalTopics(buyNodeCreated);
+        ethFilter.addOptionalTopics(transferUsdtCreated);
         List<Log> logsList = erc20BSCWalletHandleService.getLogByFilter(ethFilter);
         if (CollectionUtil.isEmpty(logsList)) {
             return;
@@ -198,27 +184,12 @@ public class EventManager {
             }
             ArrayList topics = (ArrayList) logsLog.getTopics();
             String eventName = topics.get(0).toString();
-            String data = logsLog.getData();
 
-            if (eventName.equalsIgnoreCase(buyNodeCreated)) {
+            if (eventName.equalsIgnoreCase(transferUsdtCreated)) {
                 String userAddress = "0x" + topics.get(1).toString().substring(2).replace("000000000000000000000000", "");
                 BigDecimal rechargeAmount = new BigDecimal(new BigInteger(topics.get(2).toString().substring(2), 16));
-//                Integer userLevel = new Integer(new BigInteger(topics.get(3).toString().substring(2), 16).toString());
-                /*测试数据*/
                 tradeManager.evmRecharge(userAddress, rechargeAmount, Integer.valueOf(chainIdsConfig.getBsc()));
-                //                测试数据BSCTESTNET
-                //                测试数据GOERLI
-//                if (userLevel.compareTo(evmUserWalletMapper.getUserLevel(appUserMapper.findUserIdByUserAddress(userAddress))) <= 0 || LevelEnum.getRechargeAmountByLevel(userLevel).compareTo(evmUserWalletMapper.getRechargeAmount(appUserMapper.findUserIdByUserAddress(userAddress)).add(rechargeAmount)) > 0) {
-//                    continue;
-//                }
-//                UpdateWrapper<EvmUserWallet> updateWrapper = Wrappers.update();
-//                updateWrapper.lambda()
-//                        .set(EvmUserWallet::getUserAddress, userAddress)
-//                        .set(EvmUserWallet::getUserLevel, userLevel)
-//                        .set(EvmUserWallet::getRechargeAmount, rechargeAmount)
-//                        .eq(EvmUserWallet::getUserId, appUserMapper.findUserIdByUserAddress(userAddress)).eq(EvmUserWallet::getChainId, tokenConfig.getChainIds().get(1));
-//                evmUserWalletService.update(updateWrapper);
-                donaUsersWalletsService.updateUsdWallet(rechargeAmount, appDonaUsersMapper.selectDonaUserIdByUserAddress(userAddress), FlowingActionEnum.INCOME, UsdLogTypeEnum.RECHARGE);
+                donaUsersWalletsService.transferUpdateUsdWallet(rechargeAmount, appDonaUsersMapper.selectDonaUserIdByUserAddress(userAddress), FlowingActionEnum.INCOME, UsdLogTypeEnum.RECHARGE);
                 String blockHash = logsLog.getBlockHash();
                 EthBlock.Block ethBlock = erc20BSCWalletHandleService.getBlockByHash(blockHash);
                 Date date = new Date(ethBlock.getTimestamp().intValue() * 1000L);
@@ -227,7 +198,7 @@ public class EventManager {
                         .txHash(txHash)
                         .blockNum(new BigInteger(logsLog.getBlockNumber().toString(10)))
                         .createTime(date)
-                        .chainId(tokenConfig.getChainIds().get(1))
+                        .chainId(Integer.valueOf(chainIdsConfig.getBsc()))
                         .build();
                 evmEventEntityArrayList.add(ethScanDataEntity);
             }

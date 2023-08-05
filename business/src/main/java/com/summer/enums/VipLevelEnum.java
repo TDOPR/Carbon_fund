@@ -160,5 +160,14 @@ public enum VipLevelEnum {
         }
         return null;
     }
+    
+    public static VipLevelEnum getByIntegralAmount(BigDecimal integralAmount) {
+        for (VipLevelEnum vipLevelEnum : values()) {
+            if (vipLevelEnum.getIntegralAmount().equals(integralAmount)) {
+                return vipLevelEnum;
+            }
+        }
+        return null;
+    }
 
 }

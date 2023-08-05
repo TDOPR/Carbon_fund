@@ -214,10 +214,4 @@ public class AppUserServiceImpl extends ServiceImpl<AppUserMapper, AppUsers> imp
             return JsonResult.successResult(homeUserInfoDTO);
         }
     }
-    
-    
-    
-    
-    
-    
 }

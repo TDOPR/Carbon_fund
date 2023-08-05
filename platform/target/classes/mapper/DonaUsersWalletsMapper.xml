@@ -53,11 +53,19 @@
         where userId = #{userId}
     </update>
 
+    <update id="transferUsdtToWallet">
+        update
+            dona_users_wallets
+        set walletAmount=walletAmount + #{amount},
+            rechargeUsdtAmount=rechargeUsdtAmount + #{amount}
+        where userId = #{userId}
+    </update>
+
     <update id="sendAlgebraRewardUpdateAddUsdWallet">
         update
             dona_users_wallets
         set walletAmount=walletAmount + #{amount},
-        algebraReward = algebraReward + #{amount}
+            algebraReward = algebraReward + #{amount}
         where userId = #{userId}
     </update>
 
@@ -161,9 +169,8 @@
 
 
     <delete id="deleteTodayTask">
-        delete from
-            patici_task_today
-        where
-        1=1
+        delete
+        from patici_task_today
+        where 1 = 1
     </delete>
 </mapper>

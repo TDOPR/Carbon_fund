@@ -1,6 +1,7 @@
 package com.summer.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.summer.common.annotation.PrintLog;
 import com.summer.common.enums.ReturnMessageEnum;
@@ -17,14 +18,14 @@ import com.summer.mapper.AppDonaUsersMapper;
 import com.summer.mapper.DonaUsersIntegralWalletsLogsMapper;
 import com.summer.mapper.DonaUsersWalletsLogsMapper;
 import com.summer.mapper.DonaUsersWalletsMapper;
+import com.summer.model.CarbonTask;
 import com.summer.model.Medal;
 import com.summer.model.PaticiTaskToday;
 import com.summer.model.dto.*;
+import com.summer.model.vo.CarbonFootprintRemarkVO;
+import com.summer.model.vo.MyOathVO;
 import com.summer.model.vo.SelectDoTaskVO;
-import com.summer.service.AppDonaUserService;
-import com.summer.service.DonaUsersIntegralWalletsLogsService;
-import com.summer.service.DonaUsersWalletsService;
-import com.summer.service.PaticiTaskTodayService;
+import com.summer.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -65,6 +66,9 @@ public class MyHomeController {
     
     @Autowired
     private PaticiTaskTodayService paticiTaskTodayService;
+    
+    @Autowired
+    private CarbonTaskService carbonTaskService;
 
 
     /**
@@ -136,6 +140,22 @@ public class MyHomeController {
     }
     
     /**
+     * 减碳足迹
+     */
+    @PostMapping("/carbonFootprintRemark")
+    public JsonResult carbonFootprintRemark(@RequestBody ParticiTaskDTO particiTaskDTO) {
+        CarbonFootprintRemarkVO carbonFootprintRemarkVO = donaUsersIntegralWalletsLogsMapper.carbonFootprintRemark(particiTaskDTO.getTaskId());
+        CarbonTask carbonTask = carbonTaskService.getOne(new LambdaQueryWrapper<CarbonTask>().select(CarbonTask::getJoinedCount).eq(CarbonTask::getTaskId, particiTaskDTO.getTaskId()));
+        if(carbonTask.getJoinedCount() == null){
+            Integer joinedCount = donaUsersIntegralWalletsLogsMapper.joinedCount(particiTaskDTO.getTaskId());
+            carbonFootprintRemarkVO.setJoinedCount(joinedCount);
+        }else{
+            carbonFootprintRemarkVO.setJoinedCount(carbonTask.getJoinedCount());
+        }
+        return JsonResult.successResult(carbonTask);
+    }
+    
+    /**
      * 捐赠等级
      */
     @PostMapping("/donaAllLevel")
@@ -176,6 +196,19 @@ public class MyHomeController {
     }
     
     /**
+     * 我的誓言
+     */
+    @PostMapping("/myOath")
+    public JsonResult<PageVO<MyOathVO>> myOath(@RequestBody PageDTO pageDTO) {
+        Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
+        Page<MyOathVO> myOathVOS = donaUsersIntegralWalletsLogsMapper.myOath(userId, pageDTO.getPage());
+        for(MyOathVO myOathVO : myOathVOS.getRecords()){
+            myOathVO.setStatus(Integer.valueOf(1));
+        }
+        return JsonResult.successResult(new PageVO<>(myOathVOS));
+    }
+    
+    /**
      * 已参与任务
      */
     @PostMapping("/paticiTask")
@@ -199,7 +232,7 @@ public class MyHomeController {
     @PostMapping("/donaNode")
     public JsonResult donaNode(@RequestBody DonaNodeDTO donaNodeDTO) {
         Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
-        return JsonResult.successResult(donaUsersWalletsService.donaNode(donaNodeDTO));
+        return donaUsersWalletsService.donaNode(donaNodeDTO);
     }
     
     /**

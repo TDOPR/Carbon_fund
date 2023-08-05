@@ -53,13 +53,11 @@ public class CertificateServiceImpl extends ServiceImpl<CertificateMapper, Certi
             String saveFileName = IdUtil.simpleUUID() + "." + appParamProperties.getSuffix();
             File saveFile = new File(dataSavePathEnum.getFile(), saveFileName);
             FileInputStream fileInputStream = new FileInputStream(new File(appParamProperties.getSourceFile()));
-//            String number = myIncrementGenerator.usingMath(CarbonConfig.STRING_LENGTH);
             InputStream result = ThumbnailsUtil.addWaterMark(fileInputStream, VipLevelEnum.getByLevel(Integer.valueOf(level)).getDescription(), name, number, String.valueOf(date));
             FileUtils.copyInputStreamToFile(result, saveFile);
             String url = GlobalProperties.getVirtualPathURL() + StringUtil.replace(dataSavePathEnum.getPath(), GlobalProperties.getRootPath(), "") + saveFileName;
             certificate.setFolderPath(saveFile.getAbsolutePath());
             certificate.setUrl(url);
-//            certificateService.save(certificate);
             this.baseMapper.insert(certificate);
             return JsonResult.successResult();
         } catch (Exception e){

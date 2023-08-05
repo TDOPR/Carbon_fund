@@ -168,6 +168,7 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
             DonaUsersIntegralLogs donaUsersIntegralLogs = new DonaUsersIntegralLogs();
             donaUsersIntegralLogs.setUserId(appDonaUsers.getId());
             donaUsersIntegralLogs.setIntegralAmount(CarbonConfig.REGISTER_REWARDS);
+            donaUsersIntegralLogs.setBuyLevel(VipLevelEnum.ZERO.getLevel());
             donaUsersIntegralLogs.setAction(FlowingActionEnum.INCOME.getValue());
             donaUsersIntegralLogs.setType(IntegralEnum.ZERO.getType());
             donaUsersIntegralWalletsLogsService.save(donaUsersIntegralLogs);
@@ -180,8 +181,6 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
             //返回token给客户端
             JSONObject json = new JSONObject();
             json.put(SystemConstants.TOKEN_NAME, tokenKey);
-            json.put("integralAmount", CarbonConfig.REGISTER_REWARDS);
-            json.put("zeroCertificateUrl", certificate.getUrl());
             return JsonResult.successResult(json);
         } else {
             return JsonResult.failureResult(ReturnMessageEnum.EMAIL_EXISTS);

@@ -1,6 +1,8 @@
 package com.summer.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.summer.common.base.BaseModel;
+import com.summer.common.base.BaseModelCID;
 import com.summer.common.base.BaseModelNoModifyTime;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,7 +21,7 @@ import java.math.BigDecimal;
 @TableName("dona_users_wallets_logs")
 @NoArgsConstructor
 @AllArgsConstructor
-public class DonaUsersWalletsLogs extends BaseModelNoModifyTime {
+public class DonaUsersWalletsLogs extends BaseModel {
 
     /**
      * 用户Id

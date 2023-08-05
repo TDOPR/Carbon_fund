@@ -21,7 +21,7 @@ public class CarbonTask extends BaseModel {
     /**
      * 任务Id
      */
-    private Long id;
+    private Long taskId;
 
     /**
      * 任务积分
@@ -37,6 +37,26 @@ public class CarbonTask extends BaseModel {
      * 类型
      */
     private Integer type;
+    
+    /**
+     * 状态
+     */
+    private Integer checkStatus;
+    
+    /**
+     * 活动图像
+     */
+    private String imgUrl;
+    
+    /**
+     * 状态
+     */
+    private Integer joinedCount;
+    
+    /**
+     * 活动图像
+     */
+    private String remark;
     
 
 }

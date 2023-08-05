@@ -17,14 +17,17 @@
     </select>
 
     <select id="allDonaUsers" resultType="com.summer.model.dto.AllDonaUsersDTO">
-        select a.nickName,
-               a.level,
-               b.donaUsdtAmount
-        from app_dona_users a
-                 left join
-             dona_users_wallets b
-             on a.id = b.userId
-        where a.level > 0
+        select z.nickName, z.rechargeUsdtAmount, z.level, y.title
+        from (select a.nickName,
+                     a.level,
+                     b.rechargeUsdtAmount
+              from app_dona_users a
+                       left join
+                   dona_users_wallets b
+                   on a.id = b.userId
+              where a.level > 0) z
+                 left join medal y
+                           on z.level = y.id
     </select>
 
     <select id="selectUsers" resultType="com.summer.model.dto.AllDonaUsersDTO">
@@ -41,7 +44,8 @@
 
     <select id="integralUsersRanking" resultType="com.summer.model.dto.AllIntegralUsersDTO">
         select a.nickName,
-               b.userIntegralAmount
+               b.userIntegralAmount,
+               a.level
         from app_dona_users a
                  left join
              dona_users_wallets b
@@ -120,7 +124,7 @@
     <select id="getMyTeamInfo" resultType="com.summer.model.vo.MyMemberInfoVO">
         select a.id level, i.q value, a.title
         from medal a left join (
-            select x.level, count(*) q
+            select x.level, count (*) q
             from (select a.user userid, b.email email
             from (select a.id id,
             b.descendant user

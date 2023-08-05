@@ -1,6 +1,8 @@
 package com.summer.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.summer.common.base.BaseModel;
+import com.summer.common.base.BaseModelCID;
 import com.summer.common.base.BaseModelNoModifyTime;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,7 +21,7 @@ import java.math.BigDecimal;
 @TableName("dona_users_integral_wallets_logs")
 @NoArgsConstructor
 @AllArgsConstructor
-public class DonaUsersIntegralLogs extends BaseModelNoModifyTime {
+public class DonaUsersIntegralLogs extends BaseModel {
 
     /**
      * 用户Id
@@ -30,6 +32,11 @@ public class DonaUsersIntegralLogs extends BaseModelNoModifyTime {
      * 本次变动积分
      */
     private BigDecimal integralAmount;
+    
+    /**
+     * 购买的等级
+     */
+    private Integer buyLevel;
 
     /**
      * 收支类型 1=收入 2=支出

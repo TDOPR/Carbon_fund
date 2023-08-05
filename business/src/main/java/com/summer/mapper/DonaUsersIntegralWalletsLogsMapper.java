@@ -8,8 +8,11 @@ import com.summer.model.WalletTttLogs;
 import com.summer.model.dto.DateSection;
 import com.summer.model.dto.PaticiTaskDTO;
 import com.summer.model.dto.TeamTaskDTO;
+import com.summer.model.vo.CarbonFootprintRemarkVO;
+import com.summer.model.vo.MyOathVO;
 import com.summer.model.vo.SelectDoTaskVO;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.security.core.parameters.P;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -65,4 +68,10 @@ public interface DonaUsersIntegralWalletsLogsMapper extends BaseMapper<DonaUsers
     Page<PaticiTaskDTO> task(Page page);
     
     SelectDoTaskVO selectDoTask(Integer userId, Integer taskId);
+    
+    Page<MyOathVO> myOath(Integer userId, Page page);
+    
+    CarbonFootprintRemarkVO carbonFootprintRemark(Integer userId);
+    
+    Integer joinedCount(Integer taskId);
 }

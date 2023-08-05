@@ -2,6 +2,7 @@ package com.summer.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.summer.common.base.BaseModel;
+import com.summer.common.base.BaseModelCID;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -13,7 +14,7 @@ import java.math.BigDecimal;
  **/
 @Data
 @TableName("certificate")
-public class Certificate extends BaseModel {
+public class Certificate extends BaseModelCID {
     
     
     

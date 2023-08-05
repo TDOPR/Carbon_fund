@@ -18,17 +18,17 @@ public class AllDonaUsersDTO {
     /**
      * 用户等级
      */
-    private String userLevel;
+    private String level;
     
     /**
      * 用户等级描述
      */
-    private String userLevelDescription;
+    private String title;
     
     /**
      *
      */
-    private String donaUsdtAmount;
+    private String rechargeUsdtAmount;
     
     
 

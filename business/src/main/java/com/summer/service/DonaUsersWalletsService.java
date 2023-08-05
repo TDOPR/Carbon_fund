@@ -72,4 +72,8 @@ public interface DonaUsersWalletsService extends IService<DonaUsersWallets> {
     int sendAlgebraRewardUpdateUsdWallet(BigDecimal amount, Integer userId, FlowingActionEnum flowingActionEnum, UsdLogTypeEnum usdLogTypeEnum);
     
     void clearTodayTask();
+    
+    boolean transferUpdateUsdWallet(BigDecimal amount, Integer userId, FlowingActionEnum flowingActionEnum, UsdLogTypeEnum usdLogTypeEnum);
+    
+    boolean transferUsdUpdateWallets(Integer userId, BigDecimal amount, FlowingActionEnum flowingActionEnum);
 }

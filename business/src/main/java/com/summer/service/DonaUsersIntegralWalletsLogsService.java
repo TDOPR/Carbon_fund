@@ -17,6 +17,6 @@ import java.util.List;
 public interface DonaUsersIntegralWalletsLogsService extends IService<DonaUsersIntegralLogs> {
     
     JsonResult<PageVO<PaticiTaskDTO>> carbonFootprint(Page page);
-    Long insertDonaUsersIntegralWalletsLogs(Integer userId, BigDecimal amount, FlowingActionEnum flowingActionEnum, IntegralEnum integralEnum);
+    Long insertDonaUsersIntegralWalletsLogs(Integer userId, BigDecimal amount, Integer level, FlowingActionEnum flowingActionEnum, IntegralEnum integralEnum);
 //    JsonResult doTask(ParticiTaskDTO particiTaskDTO);
 }

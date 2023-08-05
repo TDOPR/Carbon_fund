@@ -80,7 +80,7 @@ public class DonaUsersWalletsLogsServiceImpl extends ServiceImpl<DonaUsersWallet
                 .type(usdLogTypeEnum.getValue())
                 .build();
         this.baseMapper.insert(donaUsersWalletsLogs);
-        return donaUsersWalletsLogs.getId();
+        return Long.valueOf(donaUsersWalletsLogs.getId());
     }
 
 //    @Override

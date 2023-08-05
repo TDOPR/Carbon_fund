@@ -8,6 +8,6 @@
         FROM
             evm_event a
         WHERE
-            a.tx_hash = #{txHash};
+            a.txHash = #{txHash};
     </select>
 </mapper>
