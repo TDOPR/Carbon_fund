@@ -55,7 +55,8 @@
         select b.id,
                b.taskIntegral,
                b.taskName,
-               b.imgUrl
+               b.imgUrl,
+               b.checkStatus
         from user_task_logs a
                  left join
              carbon_task b
@@ -67,9 +68,9 @@
     <select id="myOath" resultType="com.summer.model.vo.MyOathVO">
         select b.taskName, b.taskIntegral, b.imgUrl, b.checkStatus status
         from carbon_task b
-                 left join dona_users_integral_wallets_logs a on
-            a.type = b.id
-        where a.userId = 36
+                 left join user_task_logs a on
+            a.taskId = b.id
+        where a.userId = #{userId}
     </select>
 
 
@@ -80,16 +81,17 @@
     </select>
 
     <select id="carbonFootprintRemark" resultType="com.summer.model.vo.CarbonFootprintRemarkVO">
-        select a.remark,a.taskIntegral,a.taskName,a.joinedCount
+        select a.remark, a.taskIntegral, a.taskName, a.joinedCount, a.checkStatus
         from carbon_task a
-        where a.id = #{id}
+        where a.id = #{taskId}
     </select>
 
     <select id="task" resultType="com.summer.model.dto.PaticiTaskDTO">
         select b.id,
                b.taskIntegral,
                b.taskName,
-               b.imgUrl
+               b.imgUrl,
+               b.checkStatus
         from carbon_task b
     </select>
 
@@ -115,6 +117,8 @@
         select min(createTime)
         from wallet_ttt_logs
     </select>
+
+
 
     <select id="sumTotalAmountByTypeAndDateBetween" resultType="java.math.BigDecimal">
         select sum(amount)
@@ -370,6 +374,8 @@
         and
         <include refid="yesterday"></include>
     </select>
+
+
 
     <select id="sumYesterdayTotalZeroAmountAndParentId" resultType="java.math.BigDecimal">
         <include refid="sumAmountByParent"></include>

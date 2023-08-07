@@ -20,7 +20,17 @@ public class AllIntegralUsersDTO {
     /**
      * 用户积分
      */
-    private Integer userIntegralAmount;
+    private BigDecimal userIntegralAmount;
+    
+    /**
+     * 钱包余额
+     */
+    private BigDecimal walletAmount;
+    
+    /**
+     * 钱包余额
+     */
+    private BigDecimal donaUsdtAmount;
     
     
     /**
@@ -33,6 +43,4 @@ public class AllIntegralUsersDTO {
      */
     private Integer rank;
     
-    
-
 }

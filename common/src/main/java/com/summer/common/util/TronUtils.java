@@ -104,10 +104,12 @@ public class TronUtils {
     }
 
     public static void main(String args[]) {
-        byte[] bytes = ByteArray.fromHexString("419E211C9E4E004D37765393CEF79BDB0B5259CD20");
-        String encode = encode58Check(bytes);
-        System.out.println(encode);
-        System.out.println(toHexAddress("TAwXr4R2v8sEAiHpzX3BTsQG6uza6oNpVF"));
+//        byte[] bytes = ByteArray.fromHexString("419E211C9E4E004D37765393CEF79BDB0B5259CD20");
+
+//        String encode = encode58Check(bytes);
+        BigDecimal a = BigDecimal.valueOf(1000000);
+        System.out.println(a);
+//        System.out.println(toHexAddress("TAwXr4R2v8sEAiHpzX3BTsQG6uza6oNpVF"));
 
         //	System.out.println(toHexAddress("TYeAt1DW74hFN3Zd3f4nvbRYpkXDBmQAkh").equals("41f8b137fd24bf1e480f2504d19bcdcac10c98468f"));
 //		414c488a9061587ecf9bdd654c1ba1123371e7f732

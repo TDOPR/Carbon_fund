@@ -22,9 +22,9 @@ public class CheckTaskCondition extends BaseCondition<LocalDateTime> {
      */
     private String email;
     /**
-     * tiktok账号
+     * 用户昵称
      */
-    private String username;
+    private String userName;
     /**
      * 任务类型  1=关注任务 2=评论  3=点赞
      */

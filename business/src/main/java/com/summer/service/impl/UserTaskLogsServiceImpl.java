@@ -20,6 +20,7 @@ public class UserTaskLogsServiceImpl extends ServiceImpl<UserTaskLogsMapper, Use
         UserTaskLogs userTaskLogs = UserTaskLogs.builder()
                 .userId(userId)
                 .taskId(taskId)
+                .status(Integer.valueOf(1))
                 .build();
         this.save(userTaskLogs);
         

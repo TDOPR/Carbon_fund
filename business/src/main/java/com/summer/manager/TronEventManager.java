@@ -31,6 +31,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.math.RoundingMode;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -101,7 +102,7 @@ public class TronEventManager {
                 String eventName = eventObj.get("event_name").toString();
                 JSONObject eventParams = JSONObject.parseObject(eventObj.get("result").toString());
                 String userAddress = TronUtils.fromHexAddress("41" + eventParams.get(0).toString().substring(2)).toLowerCase();
-                BigDecimal rechargeAmount = new BigDecimal(eventParams.get(1).toString());
+                BigDecimal rechargeAmount = new BigDecimal(eventParams.get(1).toString()).divide(new BigDecimal(10).pow(6),2, RoundingMode.FLOOR);
                 EvmEvent eventEntity = new EvmEvent();
                 if (eventName.equals("TransferUsdt")) {
                     tradeManager.evmRecharge(userAddress, rechargeAmount, Integer.valueOf(chainIdsConfig.getTron()));

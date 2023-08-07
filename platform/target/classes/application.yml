@@ -216,13 +216,13 @@ app:
   #注册页面访问地址
   registerUrl: http://47.242.107.138:9091/register/
   #是否为正式环境 (false 忽略验证码验证)
-  prodEnv: true
+  prodEnv: false
   #回调端口
   callBackPort: 8999
   #回调地址
   callBackUrl: http://${app.ip}:${app.callBackPort}
   #是否主动拉取订单状态
-  enableQueryOrdersStatus: false
+  enableQueryOrdersStatus: true
   #源文件
   sourceFile: C:\\Users\\Administrator\\Desktop\\exmple.png
   #suffix

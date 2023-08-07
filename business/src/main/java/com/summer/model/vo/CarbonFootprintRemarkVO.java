@@ -33,9 +33,15 @@ public class CarbonFootprintRemarkVO {
     private String remark;
     
     /**
-     * 参与状态
+     * 参与人数
      *
      */
     private Integer joinedCount;
+    
+    /**
+     * 参与状态
+     *
+     */
+    private Integer status;
 
 }

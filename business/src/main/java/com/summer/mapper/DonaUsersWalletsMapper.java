@@ -2,6 +2,7 @@ package com.summer.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.summer.model.DonaUsersWallets;
+import com.summer.model.UserTaskLogs;
 import com.summer.model.Wallets;
 import com.summer.model.dto.AppUsersAmountDTO;
 import com.summer.model.dto.UserWalletsDTO;
@@ -70,5 +71,7 @@ public interface DonaUsersWalletsMapper extends BaseMapper<DonaUsersWallets> {
     int sendAlgebraRewardUpdateAddUsdWallet(@Param("userId")Integer userId,@Param("amount") BigDecimal amount);
     
     void deleteTodayTask();
+    
+    List<UserTaskLogs> allUserTaskLogs();
 
 }

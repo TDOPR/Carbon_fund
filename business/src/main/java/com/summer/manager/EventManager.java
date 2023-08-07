@@ -25,6 +25,7 @@ import org.web3j.protocol.core.methods.response.Log;
 import javax.annotation.Resource;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -135,7 +136,7 @@ public class EventManager {
 
             if (eventName.equalsIgnoreCase(transferUsdtCreated)) {
                 String userAddress = "0x" + topics.get(1).toString().substring(2).replace("000000000000000000000000", "");
-                BigDecimal rechargeAmount = new BigDecimal(new BigInteger(topics.get(2).toString().substring(2), 16));
+                BigDecimal rechargeAmount = new BigDecimal(new BigInteger(topics.get(2).toString().substring(2), 16)).divide(new BigDecimal(10).pow(6), 2, RoundingMode.FLOOR);
                 tradeManager.evmRecharge(userAddress, rechargeAmount, Integer.valueOf(chainIdsConfig.getEth()));
                 donaUsersWalletsService.transferUpdateUsdWallet(rechargeAmount, appDonaUsersMapper.selectDonaUserIdByUserAddress(userAddress), FlowingActionEnum.INCOME, UsdLogTypeEnum.RECHARGE);
 
@@ -187,7 +188,7 @@ public class EventManager {
 
             if (eventName.equalsIgnoreCase(transferUsdtCreated)) {
                 String userAddress = "0x" + topics.get(1).toString().substring(2).replace("000000000000000000000000", "");
-                BigDecimal rechargeAmount = new BigDecimal(new BigInteger(topics.get(2).toString().substring(2), 16));
+                BigDecimal rechargeAmount = new BigDecimal(new BigInteger(topics.get(2).toString().substring(2), 16)).divide(new BigDecimal(10).pow(18), 2, RoundingMode.FLOOR);
                 tradeManager.evmRecharge(userAddress, rechargeAmount, Integer.valueOf(chainIdsConfig.getBsc()));
                 donaUsersWalletsService.transferUpdateUsdWallet(rechargeAmount, appDonaUsersMapper.selectDonaUserIdByUserAddress(userAddress), FlowingActionEnum.INCOME, UsdLogTypeEnum.RECHARGE);
                 String blockHash = logsLog.getBlockHash();

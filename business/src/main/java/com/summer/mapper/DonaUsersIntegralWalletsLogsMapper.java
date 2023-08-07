@@ -71,7 +71,7 @@ public interface DonaUsersIntegralWalletsLogsMapper extends BaseMapper<DonaUsers
     
     Page<MyOathVO> myOath(Integer userId, Page page);
     
-    CarbonFootprintRemarkVO carbonFootprintRemark(Integer userId);
+    CarbonFootprintRemarkVO carbonFootprintRemark(Integer taskId);
     
     Integer joinedCount(Integer taskId);
 }

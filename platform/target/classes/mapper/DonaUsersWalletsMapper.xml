@@ -79,7 +79,8 @@
     <update id="lockUpdateReduceUsdWallet">
         update
             dona_users_wallets
-        set walletAmount=walletAmount - #{amount}
+        set walletAmount=walletAmount - #{amount},
+            donaUsdtAmount=donaUsdtAmount+#{amount}
         where userId = #{userId}
     </update>
 
@@ -134,6 +135,12 @@
     <select id="sumUsdAmount" resultType="java.math.BigDecimal">
         select sum(usdWalletAmount)
         from wallets
+    </select>
+
+    <select id="allUserTaskLogs" resultType="com.summer.model.UserTaskLogs">
+        select *
+        from user_task_logs
+        where status = 1
     </select>
 
     <!--    <select id="selectWalletRecord" resultType="java.math.BigDecimal">-->

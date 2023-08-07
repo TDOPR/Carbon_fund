@@ -1,15 +1,23 @@
 package com.summer.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.summer.common.annotation.PrintLog;
 import com.summer.common.annotation.RepeatSubmit;
+import com.summer.common.config.GlobalProperties;
+import com.summer.common.constant.CacheKeyPrefixConstants;
+import com.summer.common.constant.SystemConstants;
+import com.summer.common.enums.ReturnMessageEnum;
 import com.summer.common.model.JsonResult;
 import com.summer.common.model.ThreadLocalManager;
 import com.summer.common.model.vo.PageVO;
+import com.summer.common.util.IdUtil;
 import com.summer.common.util.IpAddrUtil;
 import com.summer.common.util.JwtTokenUtil;
+import com.summer.common.util.redis.RedisUtil;
 import com.summer.mapper.AppDonaUsersMapper;
 import com.summer.mapper.DonaUsersWalletsLogsMapper;
 import com.summer.mapper.DonaUsersWalletsMapper;
+import com.summer.model.AppUsers;
 import com.summer.model.dto.*;
 import com.summer.model.vo.MyDirectPushVO;
 import com.summer.model.vo.MyMemberInfoVO;
@@ -26,6 +34,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.time.Duration;
 import java.util.List;
 
 /**
@@ -75,8 +84,8 @@ public class ZHomeController {
     @PrintLog
     @RepeatSubmit
     @PostMapping("/bindMail")
-    public JsonResult bindMail(@RequestBody HomeBindMailDTO homeBindMailDTO) {
-        return appUserService.bindMail(homeBindMailDTO);
+    public JsonResult bindMail(@RequestBody AppDonaUserRegisterDTO appDonaUserRegisterDTO) {
+        return appUserService.bindMail(appDonaUserRegisterDTO);
     }
     
     /**
@@ -146,6 +155,27 @@ public class ZHomeController {
         Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
         
         return JsonResult.successResult(new PageVO<>(donaUsersWalletsLogsMapper.rechargeRecord(userId, pageDTO.getPage())));
+    }
+    
+    /**
+     * 跳转第三方页面生成token
+     */
+    @PrintLog
+    @RepeatSubmit
+    @PostMapping("/getThirdPageToken")
+    public JsonResult getThirdPageToken() {
+        Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
+        AppUsers appUsers = appUserService.selectColumnsByUserId(userId, AppUsers::getEmail, AppUsers::getUserAddress);
+        if(appUsers.getEmail() != null){
+            Integer appDonaUserId = appDonaUsersMapper.selectDonaUserIdByUserAddress(appUsers.getUserAddress());
+            String token = JwtTokenUtil.getToken(appDonaUserId);
+            String tokenKey = CacheKeyPrefixConstants.APP_TOKEN + appDonaUserId + ":" + IdUtil.simpleUUID();
+            RedisUtil.setCacheObject(tokenKey, token, Duration.ofSeconds(GlobalProperties.getTokenExpire()));
+            JSONObject json = new JSONObject();
+            json.put(SystemConstants.TOKEN_NAME, tokenKey);
+            return JsonResult.successResult(json);
+        }
+        return JsonResult.failureResult(ReturnMessageEnum.EMAIL_NOT_BIND);
     }
 
 

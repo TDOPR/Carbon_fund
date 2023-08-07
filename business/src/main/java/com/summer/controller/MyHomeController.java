@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.summer.common.annotation.PrintLog;
 import com.summer.common.enums.ReturnMessageEnum;
 import com.summer.common.model.JsonResult;
+import com.summer.common.model.PageParam;
 import com.summer.common.model.ThreadLocalManager;
 import com.summer.common.model.dto.UpdatePasswordDTO;
 import com.summer.common.model.vo.PageVO;
@@ -20,11 +21,9 @@ import com.summer.model.CarbonTask;
 import com.summer.model.Medal;
 import com.summer.model.PaticiTaskToday;
 import com.summer.model.UserTaskLogs;
+import com.summer.model.condition.GlobalUserCondition;
 import com.summer.model.dto.*;
-import com.summer.model.vo.CarbonFootprintRemarkVO;
-import com.summer.model.vo.CarbonInfoVO;
-import com.summer.model.vo.MyOathVO;
-import com.summer.model.vo.SelectDoTaskVO;
+import com.summer.model.vo.*;
 import com.summer.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -103,8 +102,8 @@ public class MyHomeController {
      * 全球捐款名单
      */
     @PostMapping("/allUsers")
-    public JsonResult<PageVO<AllDonaUsersDTO>> allusers(@RequestBody PageDTO pageDTO) {
-        return JsonResult.successResult(new PageVO<>(appDonaUsersMapper.allDonaUsers(pageDTO.getPage())));
+    public JsonResult<PageVO<AllDonaUsersDTO>> allusers(@RequestBody PageParam<AllDonaUsersDTO, GlobalUserCondition> pageParam) {
+        return appDonaUserService.allUsers(pageParam);
     }
     
     /**
@@ -118,10 +117,10 @@ public class MyHomeController {
     /**
      * 积分排行榜
      */
+    //@PrintLog
     @PostMapping("/integralRanking")
-    public JsonResult<PageVO<AllIntegralUsersDTO>> integralRanking(@RequestBody PageDTO pageDTO) {
-        Page<AllIntegralUsersDTO> ranking = appDonaUsersMapper.integralUsersRanking(pageDTO.getPage());
-        return JsonResult.successResult(new PageVO<>(ranking));
+    public JsonResult<PageVO<AllIntegralUsersDTO>> integralRanking(@RequestBody PageParam<AllIntegralUsersDTO, GlobalUserCondition> pageParam) {
+        return appDonaUserService.integralRanking(pageParam);
     }
 
 //    /**
@@ -154,7 +153,14 @@ public class MyHomeController {
      */
     @PostMapping("/carbonFootprintRemark")
     public JsonResult carbonFootprintRemark(@RequestBody ParticiTaskDTO particiTaskDTO) {
+        Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
         CarbonFootprintRemarkVO carbonFootprintRemarkVO = donaUsersIntegralWalletsLogsMapper.carbonFootprintRemark(particiTaskDTO.getTaskId());
+        SelectDoTaskVO selectDoTaskVO = donaUsersIntegralWalletsLogsMapper.selectDoTask(userId, particiTaskDTO.getTaskId());
+        if(selectDoTaskVO == null){
+            carbonFootprintRemarkVO.setStatus(Integer.valueOf(0));
+        }else{
+            carbonFootprintRemarkVO.setStatus(Integer.valueOf(1));
+        }
         CarbonTask carbonTask = carbonTaskService.getOne(new LambdaQueryWrapper<CarbonTask>().select(CarbonTask::getId, CarbonTask::getJoinedCount).eq(CarbonTask::getId, particiTaskDTO.getTaskId()));
         if (carbonFootprintRemarkVO.getJoinedCount() == null) {
             Integer joinedCount = donaUsersIntegralWalletsLogsMapper.joinedCount(particiTaskDTO.getTaskId());
@@ -298,7 +304,7 @@ public class MyHomeController {
      * 探索咨询详情
      */
     @PostMapping("/carbonInfoDetail")
-    public JsonResult<CarbonInfoVO> carbonInfoDetail(@RequestBody CarbonInfoDetailDTO carbonInfoDetailDTO) {
+    public JsonResult<CarbonInfoDetailVO> carbonInfoDetail(@RequestBody CarbonInfoDetailDTO carbonInfoDetailDTO) {
         return JsonResult.successResult(articleMapper.carbonInfoDetail(carbonInfoDetailDTO.getId()));
     }
     

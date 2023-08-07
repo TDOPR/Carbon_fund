@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 import com.summer.common.config.ChainIdsConfig;
@@ -164,27 +165,30 @@ public class AppUserServiceImpl extends ServiceImpl<AppUserMapper, AppUsers> imp
     }
 
     @Override
-    public JsonResult bindMail(HomeBindMailDTO homeBindMailDTO) {
+    public JsonResult bindMail(AppDonaUserRegisterDTO appDonaUserRegisterDTO) {
         
         if (GlobalProperties.isProdEnv()) {
-            String cacheKey = CacheKeyPrefixConstants.CAPTCHA_CODE + homeBindMailDTO.getUuid();
+            String cacheKey = CacheKeyPrefixConstants.CAPTCHA_CODE + appDonaUserRegisterDTO.getUuid();
             String code = RedisUtil.getCacheObject(cacheKey);
             if (code == null) {
                 return JsonResult.failureResult(ReturnMessageEnum.VERIFICATION_CODE_EXPIRE);
             }
-            if (!code.equals(homeBindMailDTO.getCode())) {
+            if (!code.equals(appDonaUserRegisterDTO.getCode())) {
                 return JsonResult.failureResult(ReturnMessageEnum.VERIFICATION_CODE_ERROR);
             }
         }
+    
+        Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
+        
         AppUsers appUsers;
-        appUsers = this.getOne(new LambdaQueryWrapper<AppUsers>().eq(AppUsers::getEmail, homeBindMailDTO.getEmail()));
-        if (appUsers == null) {
+        appUsers = this.getOne(new LambdaQueryWrapper<AppUsers>().eq(AppUsers::getId, userId));
+        if (appUsers.getEmail() == null) {
             UpdateWrapper<AppUsers> updateWrapper = Wrappers.update();
             updateWrapper.lambda()
-                    .set(AppUsers::getEmail, homeBindMailDTO.getEmail())
+                    .set(AppUsers::getEmail, appDonaUserRegisterDTO.getEmail())
                     .eq(AppUsers::getId, JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken()));
             boolean flag = this.update(updateWrapper);
-            appDonaUserService.registerDonaUser(homeBindMailDTO);
+            appDonaUserService.registerDonaUser(appDonaUserRegisterDTO);
             return JsonResult.build(flag);
         } else {
             return JsonResult.failureResult(ReturnMessageEnum.EMAIL_EXISTS);
@@ -213,5 +217,14 @@ public class AppUserServiceImpl extends ServiceImpl<AppUserMapper, AppUsers> imp
             homeUserInfoDTO.setIsEmailRegister(true);
             return JsonResult.successResult(homeUserInfoDTO);
         }
+    }
+    
+    @Override
+    public AppUsers selectColumnsByUserId(Integer userId, SFunction<AppUsers, ?>... columns) {
+        return this.getOne(
+                new LambdaQueryWrapper<AppUsers>()
+                        .select(columns)
+                        .eq(AppUsers::getId, userId)
+        );
     }
 }

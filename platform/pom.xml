@@ -67,17 +67,18 @@
     </dependencies>
 
     <build>
-        <finalName>tiktok-${artifactId}-${parent.version}</finalName>
+        <finalName>carbon-${artifactId}-${parent.version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <!--不含依赖配置-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.haoliang.PlatformApplication</mainClass>
+                    <mainClass>com.summer.PlatformApplication</mainClass>
                     <layout>ZIP</layout>
                     <includes>
                         <include>

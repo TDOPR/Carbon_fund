@@ -35,6 +35,11 @@ public class UserTaskLogs extends BaseModel {
     private Integer taskIntegral;
     
     /**
+     * 今日是否参与任务
+     */
+    private Integer status;
+    
+    /**
      * 任务名称
      */
     private String taskName;

@@ -19,6 +19,8 @@ public enum ReturnMessageEnum {
     TIKTOK_USERNAME_EXISTS("tiktok_username_exists", "tiktik用户Id已被绑定！"),
 
     MOBILE_EXISTS("mobile_exists", "手机号已被绑定！"),
+    EMAIL_NOT_BIND("email_not_bind", "邮箱号未绑定！"),
+    USER_NOT_EXISTS("email_not_bind", "邮箱号未绑定！"),
     SEND_EMAIL_ERROR("send_eamil_error", "发送验证码失败！"),
     ACCOUNT_DISABLED("account_disabled", "账号已被禁用！"),
     PASSWORD_ERROR("pwd_error", "密码错误！"),

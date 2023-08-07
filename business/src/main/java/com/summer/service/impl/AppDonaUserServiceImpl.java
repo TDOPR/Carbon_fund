@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.summer.common.config.GlobalProperties;
 import com.summer.common.config.LoginConfig;
@@ -15,9 +16,11 @@ import com.summer.common.constant.SystemConstants;
 import com.summer.common.enums.ReturnMessageEnum;
 import com.summer.common.enums.UserTypeEnum;
 import com.summer.common.model.JsonResult;
+import com.summer.common.model.PageParam;
 import com.summer.common.model.SysLoginLog;
 import com.summer.common.model.ThreadLocalManager;
 import com.summer.common.model.dto.UpdatePasswordDTO;
+import com.summer.common.model.vo.PageVO;
 import com.summer.common.service.SysLoginLogService;
 import com.summer.common.util.IdUtil;
 import com.summer.common.util.JwtTokenUtil;
@@ -28,6 +31,7 @@ import com.summer.constant.CarbonConfig;
 import com.summer.enums.*;
 import com.summer.mapper.AppDonaUsersMapper;
 import com.summer.model.*;
+import com.summer.model.condition.GlobalUserCondition;
 import com.summer.model.dto.*;
 import com.summer.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -269,20 +273,21 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
     
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public void registerDonaUser(HomeBindMailDTO homeBindMailDTO) {
+    public void registerDonaUser(AppDonaUserRegisterDTO appDonaUserRegisterDTO) {
         AppDonaUsers appDonaUsers;
         UserDonaLogs userDonaLogs;
-        appDonaUsers = this.getOne(new LambdaQueryWrapper<AppDonaUsers>().eq(AppDonaUsers::getEmail, homeBindMailDTO.getEmail()));
+        appDonaUsers = this.getOne(new LambdaQueryWrapper<AppDonaUsers>().eq(AppDonaUsers::getEmail, appDonaUserRegisterDTO.getEmail()));
         if (appDonaUsers == null) {
             //注册
             String zeroCertificate = MyIncrementGeneratorUtil.usingMath(CarbonConfig.STRING_LENGTH);
             appDonaUsers = new AppDonaUsers();
-            appDonaUsers.setEmail(homeBindMailDTO.getEmail());
+            appDonaUsers.setEmail(appDonaUserRegisterDTO.getEmail());
             appDonaUsers.setLevel(VipLevelEnum.ZERO.getLevel());
             appDonaUsers.setZeroCertificate(zeroCertificate);
             appDonaUsers.setNickName(appDonaUsers.getEmail());
             //设置密码加密用的盐
             appDonaUsers.setSalt(IdUtil.simpleUUID());
+            appDonaUsers.setPassword(AESUtil.encrypt(appDonaUserRegisterDTO.getPassword(), appDonaUsers.getSalt()));
             this.save(appDonaUsers);
             
             certificateService.generateCertificate(appDonaUsers.getId(), appDonaUsers.getNickName(), appDonaUsers.getZeroCertificate(), VipLevelEnum.ZERO.getLevel().toString(), appDonaUsers.getCreateTime());
@@ -305,6 +310,24 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
             donaUsersIntegralLogs.setType(IntegralEnum.ZERO.getType());
             donaUsersIntegralWalletsLogsService.save(donaUsersIntegralLogs);
         }
+    }
+    
+    @Override
+    public JsonResult<PageVO<AllDonaUsersDTO>> allUsers(PageParam<AllDonaUsersDTO, GlobalUserCondition> pageParam){
+        if (pageParam.getSearchParam() == null) {
+            pageParam.setSearchParam(new GlobalUserCondition());
+        }
+        Page<AllDonaUsersDTO> page = this.baseMapper.allDonaUsers(pageParam.getPage(), pageParam.getSearchParam());
+        return JsonResult.successResult(new PageVO<>(page));
+    }
+    
+    @Override
+    public JsonResult<PageVO<AllIntegralUsersDTO>> integralRanking(PageParam<AllIntegralUsersDTO, GlobalUserCondition> pageParam){
+        if (pageParam.getSearchParam() == null) {
+            pageParam.setSearchParam(new GlobalUserCondition());
+        }
+        Page<AllIntegralUsersDTO> page = this.baseMapper.integralUsersRanking(pageParam.getPage(), pageParam.getSearchParam());
+        return JsonResult.successResult(new PageVO<>(page));
     }
     
 }

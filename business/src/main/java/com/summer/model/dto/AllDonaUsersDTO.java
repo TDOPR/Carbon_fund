@@ -28,7 +28,7 @@ public class AllDonaUsersDTO {
     /**
      *
      */
-    private String rechargeUsdtAmount;
+    private String donaUsdtAmount;
     
     
 

@@ -4,15 +4,15 @@
 
     <select id="carbonInfo" resultType="com.summer.model.vo.CarbonInfoVO">
         select
-            id, bannerUrl, createTime, title,source,description
+            id, title, bannerUrl, createTime
         from
             article
-        where
+
     </select>
 
-    <select id="carbonInfoDetail" resultType="com.summer.model.vo.CarbonInfoVO">
+    <select id="carbonInfoDetail" resultType="com.summer.model.vo.CarbonInfoDetailVO">
         select
-            id, title, bannerUrl, createTime
+            id, title, bannerUrl, info, createTime
         from
             article
         where

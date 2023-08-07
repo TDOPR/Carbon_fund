@@ -3,9 +3,12 @@ package com.summer.service;
 import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.summer.common.model.JsonResult;
+import com.summer.common.model.PageParam;
 import com.summer.common.model.dto.UpdatePasswordDTO;
+import com.summer.common.model.vo.PageVO;
 import com.summer.model.AppDonaUsers;
 import com.summer.model.AppUsers;
+import com.summer.model.condition.GlobalUserCondition;
 import com.summer.model.dto.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -27,7 +30,11 @@ public interface AppDonaUserService extends IService<AppDonaUsers> {
         
         JsonResult updatePassword(UpdatePasswordDTO updatePasswordDTO);
         
-        void registerDonaUser(HomeBindMailDTO homeBindMailDTO);
+        void registerDonaUser(AppDonaUserRegisterDTO appDonaUserRegisterDTO);
+        
+        JsonResult<PageVO<AllDonaUsersDTO>> allUsers(PageParam<AllDonaUsersDTO, GlobalUserCondition> pageParam);
+        
+        JsonResult<PageVO<AllIntegralUsersDTO>> integralRanking(PageParam<AllIntegralUsersDTO, GlobalUserCondition> pageParam);
         
         
 

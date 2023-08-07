@@ -31,6 +31,7 @@ public class CarbonInfoVO {
      * banner
      */
     private String bannerUrl;
+    
 
     /**
      * 发布时间

@@ -124,7 +124,7 @@
     </select>
 
     <select id="donaUsersMedalDTO" resultType="com.summer.model.dto.MedalDTO">
-        select b.id, b.title, b.description, b.imgUrl, a.certificate, b.amount, b.status
+        select b.id, b.title, b.description, b.imgUrl, b.amount, b.status
         from medal b
                  left join
              user_dona_logs a
