@@ -5,5 +5,5 @@ import com.summer.model.UserDonaLogs;
 import com.summer.model.usd.EvmRecharge;
 
 public interface UserDonaLogsService extends IService<UserDonaLogs> {
-
+    void updateUserDonaLogs(Integer userId, Integer level);
 }

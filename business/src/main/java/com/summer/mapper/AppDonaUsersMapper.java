@@ -35,9 +35,9 @@ public interface AppDonaUsersMapper extends BaseMapper<AppDonaUsers> {
     
     Page<AllDonaUsersDTO> allDonaUsers(Page page);
     
-    List<AllDonaUsersDTO> selectUsers(String nickName);
+    Page<AllDonaUsersDTO> selectUsers(String nickName, Page page);
     Page<AllIntegralUsersDTO> integralUsersRanking(Page page);
-    List<AllIntegralUsersDTO> integralRankingSelect(String nickName);
+    Page<AllIntegralUsersDTO> integralRankingSelect(String nickName, Page page);
     AllIntegralUsersDTO myIntegral(String email);
     Integer selectUserIdByEmail(String email);
     

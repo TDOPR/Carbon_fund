@@ -5,5 +5,6 @@ import com.summer.model.UserDonaLogs;
 import com.summer.model.UserTaskLogs;
 
 public interface UserTaskLogsService extends IService<UserTaskLogs> {
-
+    
+    void updateUserTaskLogs(Integer userId, Integer taskId);
 }

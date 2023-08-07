@@ -72,7 +72,7 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
     private UserDonaLogsService userDonaLogsService;
     
     @Autowired
-    private TradeManager tradeManager;
+    private UserTaskLogsService userTaskLogsService;
 
 
 //    BigDecimal totalAmount;
@@ -96,7 +96,7 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
         boolean flag = this.lookIntegralUpdateWallets(amount, userId, flowingActionEnum);
         if (flag) {
             //插入流水记录
-            donaUsersIntegralWalletsLogsService.insertDonaUsersIntegralWalletsLogs(userId, amount, VipLevelEnum.getByIntegralAmount(amount).getLevel(), flowingActionEnum, integralEnum);
+            donaUsersIntegralWalletsLogsService.insertDonaUsersIntegralWalletsLogs(userId, amount, flowingActionEnum, integralEnum);
         }
         return flag;
     }
@@ -309,17 +309,17 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
             this.updateIntegralWallet(userId, donaNodeDTO.getAmount().multiply(new BigDecimal(CarbonConfig.RATE)), FlowingActionEnum.EXPENDITURE, IntegralEnum.ELEVENTH);
             if (appDonaUsers.getLevel().compareTo(VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel()) <= 0) {
                 appDonaUsers.setLevel(VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel());
-                appDonaUserService.save(appDonaUsers);
+                appDonaUserService.updateById(appDonaUsers);
                 UserDonaLogs userDonaLogs = userDonaLogsService.getOne(new LambdaQueryWrapper<UserDonaLogs>()
                         .eq(UserDonaLogs::getUserId, userId).eq(UserDonaLogs::getLevel, VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel()));
                 if (userDonaLogs == null) {
-                    tradeManager.updateUserDonaLogs(userId, VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel());
+                    userDonaLogsService.updateUserDonaLogs(userId, VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel());
                 }
             }else {
                 UserDonaLogs userDonaLogs = userDonaLogsService.getOne(new LambdaQueryWrapper<UserDonaLogs>()
                         .eq(UserDonaLogs::getUserId, userId).eq(UserDonaLogs::getLevel, VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel()));
                 if (userDonaLogs == null) {
-                    tradeManager.updateUserDonaLogs(userId, VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel());
+                    userDonaLogsService.updateUserDonaLogs(userId, VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel());
                 }
             }
             return  JsonResult.successResult(ReturnMessageEnum.INTEGRAL_DEDUCE_PURCHASE_SUCCESS);
@@ -339,11 +339,11 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
             //更新用户的vip等级
             if (appDonaUsers.getLevel().compareTo(VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel()) <= 0) {
                 appDonaUsers.setLevel(VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel());
-                appDonaUserService.save(appDonaUsers);
+                appDonaUserService.updateById(appDonaUsers);
                 UserDonaLogs userDonaLogs = userDonaLogsService.getOne(new LambdaQueryWrapper<UserDonaLogs>()
                         .eq(UserDonaLogs::getUserId, userId).eq(UserDonaLogs::getLevel, VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel()));
                 if (userDonaLogs == null) {
-                    tradeManager.updateUserDonaLogs(userId, VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel());
+                    userDonaLogsService.updateUserDonaLogs(userId, VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel());
                 }
 //                switch (VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel()) {
 //                    case 1:
@@ -401,7 +401,7 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
                 UserDonaLogs userDonaLogs = userDonaLogsService.getOne(new LambdaQueryWrapper<UserDonaLogs>()
                         .eq(UserDonaLogs::getUserId, userId).eq(UserDonaLogs::getLevel, VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel()));
                 if (userDonaLogs == null) {
-                    tradeManager.updateUserDonaLogs(userId, VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel());
+                    userDonaLogsService.updateUserDonaLogs(userId, VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel());
                 }
 //                switch (VipLevelEnum.getByAmount(donaNodeDTO.getAmount()).getLevel()) {
 //                    case 1:
@@ -456,22 +456,22 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
     
     @Override
     @Transactional(rollbackFor = Exception.class)
+    @Async
     public JsonResult superReward() {
         List<AppDonaUsers> allUsers = appDonaUsersMapper.findAllUsers();
         for (AppDonaUsers user : allUsers) {
             BigDecimal myTeamRechargeAmount = treePathMapper.getTeamRechargeAmount(user.getId());
             Integer myTeamNum = treePathMapper.getTeamNum(user.getId());
-            if (myTeamNum.compareTo(300) < 0) {
+            if (myTeamNum.compareTo(CarbonConfig.SPECIAL_AWARD_TEAM_MEM_AMOUNT) < 0) {
                 continue;
             }
-            if (myTeamRechargeAmount.compareTo(new BigDecimal(30000)) < 0) {
+            if (myTeamRechargeAmount.compareTo(CarbonConfig.SPECIAL_AWARD_TEAM_RECHARGE_AMOUNT) < 0) {
                 continue;
             }
             if (user.getLevel().compareTo(VipLevelEnum.THREE.getLevel()) < 0) {
                 continue;
             }
             UpdateWrapper<AppDonaUsers> updateWrapper = Wrappers.update();
-            updateWrapper = Wrappers.update();
             updateWrapper.lambda()
                     .set(AppDonaUsers::getSuperNode, BooleanEnum.TRUE.intValue())
                     .eq(AppDonaUsers::getId, user.getId());

@@ -22,9 +22,9 @@ import java.util.List;
 public enum VipLevelEnum {
 
     ZERO(0, new BigDecimal("0"), new BigDecimal("0"), new BigDecimal("0"), new BigDecimal("0"), new BigDecimal("0"), "Zero Carbon Volunteer/"),
-    ONE(1, new BigDecimal("9.9"), new BigDecimal("990"), new BigDecimal("0.3"), new BigDecimal("0.15"), new BigDecimal("0"), "Zero Carbon Envoy/"),
-    TWO(2, new BigDecimal("50"), new BigDecimal("5000"), new BigDecimal("0.4"), new BigDecimal("0.15"), new BigDecimal("0"), "Zero Carbon Ambassador/"),
-    THREE(3, new BigDecimal("150"), new BigDecimal("15000"), new BigDecimal("0.5"), new BigDecimal("0.15"), new BigDecimal("0.05"), "Zero Carbon Special/");
+    ONE(1, new BigDecimal("9.9"), new BigDecimal("9900.0"), new BigDecimal("0.3"), new BigDecimal("0.15"), new BigDecimal("0"), "Zero Carbon Envoy/"),
+    TWO(2, new BigDecimal("50"), new BigDecimal("50000"), new BigDecimal("0.4"), new BigDecimal("0.15"), new BigDecimal("0"), "Zero Carbon Ambassador/"),
+    THREE(3, new BigDecimal("150"), new BigDecimal("150000"), new BigDecimal("0.5"), new BigDecimal("0.15"), new BigDecimal("0.05"), "Zero Carbon Special/");
     VipLevelEnum(Integer level, BigDecimal amount, BigDecimal integralAmount, BigDecimal oneLevelNum, BigDecimal twoLevelNum, BigDecimal threeLevelNum, String description) {
         this.level = level;
         this.amount = amount;

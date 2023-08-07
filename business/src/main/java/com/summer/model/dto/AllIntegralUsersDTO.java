@@ -22,15 +22,6 @@ public class AllIntegralUsersDTO {
      */
     private Integer userIntegralAmount;
     
-    /**
-     * 用户捐赠USDT
-     */
-    private BigDecimal donaUsdtAmount;
-    
-    /**
-     * 用户钱包余额
-     */
-    private BigDecimal rechargeUsdtAmount;
     
     /**
      * 我的等级

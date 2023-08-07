@@ -40,19 +40,22 @@
                    dona_users_wallets b
                    on a.id = b.userId
               where a.level > 0
-                AND a.nickName = #{nickName}) z
+                AND a.nickName like CONCAT('%', #{nickName}, '%')) z
                  left join medal y on z.level = y.id
     </select>
 
     <select id="integralUsersRanking" resultType="com.summer.model.dto.AllIntegralUsersDTO">
-        select a.nickName,
-               b.userIntegralAmount,
-               a.level
-        from app_dona_users a
-                 left join
-             dona_users_wallets b
-             on a.id = b.userId
-        order by b.userIntegralAmount desc
+        SELECT id,
+               level,
+               nickName,
+               RANK() OVER (ORDER BY userIntegralAmount DESC) RANK, donaUsdtAmount,
+               userIntegralAmount
+        FROM (SELECT a.id, a.level, a.nickName, b.userIntegralAmount, b.donaUsdtAmount
+              FROM app_dona_users a
+                       left join
+                   dona_users_wallets b
+                   on a.id = b.userId
+             ) ranked_students
     </select>
 
     <select id="myIntegralRank" resultType="com.summer.model.dto.AllIntegralUsersDTO">
@@ -120,7 +123,7 @@
              dona_users_wallets b
              on a.id = b.userId
         where 1 = 1
-          AND a.nickName = #{nickName}
+          AND a.nickName like CONCAT('%', #{nickName}, '%')
     </select>
 
     <select id="getMyTeamInfo" resultType="com.summer.model.vo.MyMemberInfoVO">

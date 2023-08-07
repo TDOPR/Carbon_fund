@@ -271,6 +271,7 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
     @Transactional(rollbackFor = Exception.class)
     public void registerDonaUser(HomeBindMailDTO homeBindMailDTO) {
         AppDonaUsers appDonaUsers;
+        UserDonaLogs userDonaLogs;
         appDonaUsers = this.getOne(new LambdaQueryWrapper<AppDonaUsers>().eq(AppDonaUsers::getEmail, homeBindMailDTO.getEmail()));
         if (appDonaUsers == null) {
             //注册
@@ -285,7 +286,12 @@ public class AppDonaUserServiceImpl extends ServiceImpl<AppDonaUsersMapper, AppD
             this.save(appDonaUsers);
             
             certificateService.generateCertificate(appDonaUsers.getId(), appDonaUsers.getNickName(), appDonaUsers.getZeroCertificate(), VipLevelEnum.ZERO.getLevel().toString(), appDonaUsers.getCreateTime());
-            
+            userDonaLogs = new UserDonaLogs();
+            userDonaLogs.setUserId(appDonaUsers.getId());
+            userDonaLogs.setCertificate(zeroCertificate);
+            userDonaLogs.setLevel(VipLevelEnum.ZERO.getLevel());
+            userDonaLogs.setTitle(MedalEnum.ZERO.getTitle());
+            userDonaLogsService.save(userDonaLogs);
             
             DonaUsersWallets donaUsersWallets = new DonaUsersWallets();
             //注册即送100积分

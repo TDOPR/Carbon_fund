@@ -26,10 +26,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="business" options="-parameters" />
-      <module name="common" options="-parameters" />
-      <module name="platform" options="-parameters" />
-      <module name="sms" options="-parameters" />
+      <module name="business" options="-parameters -extdirs src\main\webapp\WEB-INF\lib" />
+      <module name="common" options="-parameters -extdirs src\main\webapp\WEB-INF\lib" />
+      <module name="platform" options="-parameters -extdirs src\main\webapp\WEB-INF\lib" />
+      <module name="sms" options="-parameters -extdirs src\main\webapp\WEB-INF\lib" />
     </option>
   </component>
 </project>

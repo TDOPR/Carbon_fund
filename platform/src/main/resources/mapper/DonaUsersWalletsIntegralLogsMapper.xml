@@ -56,13 +56,12 @@
                b.taskIntegral,
                b.taskName,
                b.imgUrl
-        from dona_users_integral_wallets_logs a
+        from user_task_logs a
                  left join
              carbon_task b
              on
-                 a.type = b.id
+                 a.taskId = b.id
         where a.userId = #{userId}
-        group by a.type
     </select>
 
     <select id="myOath" resultType="com.summer.model.vo.MyOathVO">

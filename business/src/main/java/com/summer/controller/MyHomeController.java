@@ -78,7 +78,7 @@ public class MyHomeController {
     private UserTaskLogsService userTaskLogsService;
     
     @Autowired
-    private TradeManager tradeManager;
+    private UserDonaLogsService userDonaLogsService;
     
     
     /**
@@ -111,8 +111,8 @@ public class MyHomeController {
      * 查询用户
      */
     @PostMapping("/selectUsers")
-    public JsonResult<List<AllDonaUsersDTO>> selectUsers(@RequestBody SelectUserDTO selectUserDTO) {
-        return JsonResult.successResult(appDonaUsersMapper.selectUsers(selectUserDTO.getNickName()));
+    public JsonResult<PageVO<AllDonaUsersDTO>> selectUsers(@RequestBody SelectUserDTO selectUserDTO) {
+        return JsonResult.successResult(new PageVO<>(appDonaUsersMapper.selectUsers(selectUserDTO.getNickName(), selectUserDTO.getPage())));
     }
     
     /**
@@ -137,8 +137,8 @@ public class MyHomeController {
      * 查询积分排行榜
      */
     @PostMapping("/integralRankingSelect")
-    public JsonResult<List<AllIntegralUsersDTO>> integralRankingSelect(@RequestBody SelectMyIntegralDTO selectMyIntegralDTO) {
-        return JsonResult.successResult(appDonaUsersMapper.integralRankingSelect(selectMyIntegralDTO.getNickName()));
+    public JsonResult<PageVO<AllIntegralUsersDTO>> integralRankingSelect(@RequestBody SelectMyIntegralDTO selectMyIntegralDTO) {
+        return JsonResult.successResult(new PageVO<>(appDonaUsersMapper.integralRankingSelect(selectMyIntegralDTO.getNickName(), selectMyIntegralDTO.getPage())));
     }
     
     /**
@@ -265,7 +265,7 @@ public class MyHomeController {
                                 .eq(UserTaskLogs::getUserId, userId).eq(UserTaskLogs::getTaskId, particiTaskDTO.getTaskId())
                 );
                 if (userTaskLogs == null) {
-                    tradeManager.updateUserTaskLogs(userId, particiTaskDTO.getTaskId());
+                    userTaskLogsService.updateUserTaskLogs(userId, particiTaskDTO.getTaskId());
                 }
                 
                 return JsonResult.successResult(ReturnMessageEnum.OK);

@@ -52,6 +52,10 @@ public class CarbonConfig {
      */
     public static final Integer SPECIAL_AWARD_TEAM_MEM_AMOUNT = 300;
     /**
+     * 特别奖分红人数要求
+     */
+    public static final BigDecimal SPECIAL_AWARD_TEAM_RECHARGE_AMOUNT = new BigDecimal(30000);
+    /**
      * 积分兑换比例
      */
     public static final Integer RATE = 1000;

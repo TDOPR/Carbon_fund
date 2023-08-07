@@ -2,6 +2,7 @@ package com.summer.model;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.summer.common.base.BaseModel;
+import com.summer.common.base.BaseModelCID;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -14,14 +15,9 @@ import java.time.LocalDateTime;
  **/
 @Data
 @TableName("carbon_task")
-public class CarbonTask extends BaseModel {
+public class CarbonTask extends BaseModelCID {
 
 
-
-    /**
-     * 任务Id
-     */
-    private Long taskId;
 
     /**
      * 任务积分
