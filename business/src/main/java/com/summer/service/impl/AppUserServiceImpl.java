@@ -22,6 +22,7 @@ import com.summer.mapper.AppDonaUsersMapper;
 import com.summer.mapper.AppUserMapper;
 import com.summer.model.*;
 import com.summer.model.dto.*;
+import com.summer.model.vo.AppTokenLinkVO;
 import com.summer.model.vo.AppTokenVO;
 import com.summer.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -140,10 +141,15 @@ public class AppUserServiceImpl extends ServiceImpl<AppUserMapper, AppUsers> imp
             sysLoginLogService.save(new SysLoginLog(user.getUserAddress(), localIp, 2));
             
             //返回token给客户端
-            AppTokenVO appTokenVO = new AppTokenVO();
-            appTokenVO.setToken(tokenKey);
-            appTokenVO.setInviteCode(user.getInviteCode());
-            return JsonResult.successResult(appTokenVO);
+            AppTokenLinkVO appTokenLinkVO = new AppTokenLinkVO();
+            appTokenLinkVO.setToken(tokenKey);
+            appTokenLinkVO.setInviteCode(user.getInviteCode());
+            if(user.getEmail() == null){
+                appTokenLinkVO.setEmailStatus(Integer.valueOf(0));
+            }else{
+                appTokenLinkVO.setEmailStatus(Integer.valueOf(1));
+            }
+            return JsonResult.successResult(appTokenLinkVO);
         }
     }
     

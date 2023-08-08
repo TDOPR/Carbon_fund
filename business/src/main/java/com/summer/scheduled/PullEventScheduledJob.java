@@ -66,7 +66,8 @@ public class PullEventScheduledJob {
 
     }
     
-//    @Scheduled(cron = "0 0 2 * * ?")
+//    @Scheduled(cron = "0 0 2 * *
+    @Scheduled(cron = "* */10 * * * ?")
     public void deleteTodayTask(){
         log.info("定时任务开始......");
         if (appParamProperties.isEnableQueryOrdersStatus()) {
@@ -75,6 +76,7 @@ public class PullEventScheduledJob {
     }
     
 //    @Scheduled(cron = "0 0 23 L * ?")
+//    @Scheduled(cron = "*/5 * * * * ?")
     public void sendSuperNodeReward(){
         log.info("开始发放超级节点奖励......");
         if (appParamProperties.isEnableQueryOrdersStatus()) {

@@ -37,6 +37,7 @@ public class AllIntegralUsersDTO {
      * 我的等级
      */
     private BigDecimal level;
+    
 
     /**
      *用户排名

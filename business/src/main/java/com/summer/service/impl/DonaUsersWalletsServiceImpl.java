@@ -363,13 +363,13 @@ public class DonaUsersWalletsServiceImpl extends ServiceImpl<DonaUsersWalletsMap
     
     @Override
     @Transactional(rollbackFor = Exception.class)
-    @Async
     public JsonResult superReward() {
         List<AppDonaUsers> allUsers = appDonaUsersMapper.findAllUsers();
         for (AppDonaUsers user : allUsers) {
             BigDecimal myTeamRechargeAmount = treePathMapper.getTeamRechargeAmount(user.getId());
             Integer myTeamNum = treePathMapper.getTeamNum(user.getId());
-            if (myTeamNum.compareTo(CarbonConfig.SPECIAL_AWARD_TEAM_MEM_AMOUNT) < 0) {
+//            测试数据  团队人数达到10人
+            if (myTeamNum.compareTo(Integer.valueOf(10)) < 0) {
                 continue;
             }
             if (myTeamRechargeAmount.compareTo(CarbonConfig.SPECIAL_AWARD_TEAM_RECHARGE_AMOUNT) < 0) {

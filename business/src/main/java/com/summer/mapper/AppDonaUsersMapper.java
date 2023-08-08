@@ -7,6 +7,7 @@ import com.summer.model.condition.GlobalUserCondition;
 import com.summer.model.dto.AllDonaUsersDTO;
 import com.summer.model.dto.AllIntegralUsersDTO;
 import com.summer.model.dto.HomeUserInfoDTO;
+import com.summer.model.vo.AllIntegralUsersVO;
 import com.summer.model.vo.MyDirectPushVO;
 import com.summer.model.vo.MyMemberInfoVO;
 import com.summer.model.vo.MyTeamInfoVO;
@@ -43,7 +44,7 @@ public interface AppDonaUsersMapper extends BaseMapper<AppDonaUsers> {
     AllIntegralUsersDTO myIntegral(String email);
     Integer selectUserIdByEmail(String email);
     
-    AllIntegralUsersDTO myIntegralRank(Integer userId);
+    AllIntegralUsersVO myIntegralRank(Integer userId);
     
     HomeUserInfoDTO getUserInfo(Integer userId, String email);
     List<MyMemberInfoVO> getMyTeamInfo(Integer userId);

@@ -1,5 +1,5 @@
 server:
-  port: 8989
+  port: 8988
   #配置ssl证书
 #  ssl:
 #    key-store: E:\ruideng\tiktok\platform\src\main\resources\test.p12
@@ -233,7 +233,7 @@ token:
   #web3ETH服务地址
   web3EthServiceUrl: https://ethereum-goerli.publicnode.com
   #web3BSC服务地址
-  web3BscServiceUrl: https://bsc-testnet.publicnode.com
+  web3BscServiceUrl: https://ethereum-sepolia.blockpi.network/v1/rpc/public
   #web3TRON服务地址
   #  web3TronServiceUrl: https://bsc-testnet.publicnode.com
   #钱包地址
@@ -244,7 +244,7 @@ chainids:
   #以太坊链id
   ETH: 5
   #BSC链id
-  BSC: 97
+  BSC: 11155111
   #TRON链id
   TRON: 0
 

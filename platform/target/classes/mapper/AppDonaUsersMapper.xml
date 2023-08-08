@@ -65,20 +65,29 @@
         </if>
     </select>
 
-    <select id="myIntegralRank" resultType="com.summer.model.dto.AllIntegralUsersDTO">
-        select z.id, z.level, z.nickName, z.rank, z.walletAmount, z.donaUsdtAmount, z.userIntegralAmount
-        from (SELECT id,
-                     level,
-                     nickName,
-                     RANK() OVER (ORDER BY userIntegralAmount DESC) RANK, walletAmount,
-                     donaUsdtAmount,
-                     userIntegralAmount
-              FROM (SELECT a.id, a.level, a.nickName, b.userIntegralAmount, b.walletAmount, b.donaUsdtAmount
-                    FROM app_dona_users a
-                             left join
-                         dona_users_wallets b
-                         on a.id = b.userId) ranked_students) z
-        where z.id = #{userId}
+    <select id="myIntegralRank" resultType="com.summer.model.vo.AllIntegralUsersVO">
+        select y.id,
+               y.level,
+               y.nickName,
+               y.rank,
+               y.walletAmount,
+               y.donaUsdtAmount,
+               y.userIntegralAmount,
+               x.title
+        from (select z.id, z.level, z.nickName, z.rank, z.walletAmount, z.donaUsdtAmount, z.userIntegralAmount
+              from (SELECT id,
+                           level,
+                           nickName,
+                           RANK() OVER (ORDER BY userIntegralAmount DESC) RANK, walletAmount,
+                           donaUsdtAmount,
+                           userIntegralAmount
+                    FROM (SELECT a.id, a.level, a.nickName, b.userIntegralAmount, b.walletAmount, b.donaUsdtAmount
+                          FROM app_dona_users a
+                                   left join
+                               dona_users_wallets b
+                               on a.id = b.userId) ranked_students) z) y
+                 LEFT JOIN medal x on y.level = x.id
+        where y.id = #{userId}
 
     </select>
 
@@ -131,7 +140,7 @@
     <select id="getMyTeamInfo" resultType="com.summer.model.vo.MyMemberInfoVO">
         select a.id level, i.q value, a.title
         from medal a left join (
-            select x.level, count(*) q
+            select x.level, count (*) q
             from (select a.user userid, b.email email
             from (select a.id id,
             b.descendant user
@@ -167,27 +176,18 @@
     </select>
 
     <select id="getMyDirectPushVO" resultType="com.summer.model.vo.MyDirectPushVO">
-        select z.address, x.level
-        from (select a.user u, b.email email, b.userAddress address
-              from (select a.id id,
-                           b.descendant user
-                    from app_users a
-                        left join
-                        tree_paths b
-                    on a.id = b.ancestor
-
-                    where b.level
-                        > 0
-                      and a.id = #{userId}) a
-                       LEFT JOIN
-                   app_users b
-                   on
-                       a.user = b.id) z
+        select z.id, z.user, z.email, y.level
+        from (select a.id id,
+                     b.descendant user,a.email
+              from app_users a
+                  left join
+                  tree_paths b
+              on a.id = b.ancestor
+              where b.level > 0) z
                  left join
-             app_dona_users x
-             on
-                 z.email = x.email
-        where x.level is NOT null
+             app_dona_users y
+             on y.email = z.email
+        where z.id = #{userId}
     </select>
 
     <select id="findAllUsers" resultType="com.summer.model.AppDonaUsers">

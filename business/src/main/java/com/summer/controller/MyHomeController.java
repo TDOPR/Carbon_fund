@@ -206,7 +206,7 @@ public class MyHomeController {
      * 钱包明细
      */
     @PostMapping("/walletInfo")
-    public JsonResult<AllIntegralUsersDTO> selectWallet() {
+    public JsonResult<AllIntegralUsersVO> selectWallet() {
         Integer userId = JwtTokenUtil.getUserIdFromToken(ThreadLocalManager.getToken());
         return JsonResult.successResult(appDonaUsersMapper.myIntegralRank(userId));
     }
